@@ -1,0 +1,5 @@
+Pass — the no-op statement.
+
+Pass does nothing. It exists because python requires something in a block — an empty body is a syntax error. Use pass as a placeholder when you are sketching out a function, class, or branch you will fill in later.
+
+In code, picture def to-do-later parens colon pass. Class future-feature colon pass. If false colon pass. Then print kept going to show execution continues.

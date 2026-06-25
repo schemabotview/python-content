@@ -1,0 +1,9 @@
+Regular expressions.
+
+Import r-e. Search with r-e dot search of a raw-string pattern and a target string returns a match object or none. M dot group returns the matched text. Compile for repeated use — pattern equals r-e dot compile of a raw-string pattern, then pattern dot match of an input. M dot groups returns the captured groups.
+
+Substitution — r-e dot sub of pattern, replacement, input — gives the substituted string. All matches — r-e dot find-all of pattern and input — returns the list.
+
+Use raw strings — r-prefix quote — for patterns. Saves the backslash-escaping dance.
+
+For complex parsing — j-s-o-n, c-s-v, structured data — reach for the dedicated library before reaching for regex. Regex is the right tool for find these patterns in unstructured text, not for parsing grammars.

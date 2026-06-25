@@ -1,0 +1,7 @@
+Is-instance, is-subclass, and the duck-typing alternative.
+
+Is-instance of x and t — is x an instance of t, or a subclass. Is-subclass of s and t — is s a subclass of t. Both accept a tuple of types for any of these — is-instance of x and the tuple int comma float.
+
+Duck typing is the more pythonic alternative. Instead of asking is this thing a file, just call dot read on it. If it works, it is file-enough. The acronym e-a-f-p — easier to ask forgiveness than permission — captures the pythonic preference. Try the operation, catch the exception if it fails. Compare with l-b-y-l — look before you leap — typing checks before acting, common in defensive c code.
+
+Is-instance still earns its keep for type-based dispatch and for match-case patterns. But before reaching for it, ask — can I just do what I want, and let the exception speak for itself.

@@ -1,0 +1,11 @@
+Concurrency versus parallelism versus asynchrony.
+
+Three related but distinct ideas.
+
+Concurrency — structuring a program so that multiple things are in progress at once, even if only one runs at a time. A web server handling one thousand connections concurrently with one c-p-u core. Asyncio fits here.
+
+Parallelism — actually running multiple computations at the same instant on different c-p-u cores. Requires multiple cores and the ability to use them — which under the g-i-l means processes, not threads.
+
+Asynchrony — not blocking while waiting for something. A function that fires off a network request and returns immediately, with a callback or await to handle the result later. Asyncio is the in-language form.
+
+Python gives you tools for all three. Threading provides concurrency, parallelism for i-o only, and implicit asynchrony where the operating system does it. Multiprocessing provides concurrency, parallelism, and implicit asynchrony. Asyncio provides concurrency, no parallelism, and explicit asynchrony via await.

@@ -1,0 +1,9 @@
+Abstract base classes.
+
+Sometimes you want to declare any subclass must implement these methods, but the base class itself cannot be instantiated. That is an abstract base class.
+
+The standard library's a-b-c module provides a-b-c and the at-abstractmethod decorator. Class storage of a-b-c with abstract methods save and load, both decorated. Cannot instantiate storage directly — it has abstract methods. Subclass file-storage implements both — and can be instantiated.
+
+Abstract base classes are useful for documenting contracts and for the standard-library shapes — collections dot a-b-c dot iterable, sized, container. For most everyday use, protocols from notebook eight are the more pythonic choice — they let you express anything with these methods without inheritance.
+
+In code, picture class shape of a-b-c with abstract methods area and perimeter, both returning float. Concrete method describe formats both. Subclass circle implements area and perimeter using radius. Subclass rectangle uses width and height. Trying to instantiate shape directly raises type-error. Circle and rectangle instances work.

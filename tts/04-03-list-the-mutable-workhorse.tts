@@ -1,0 +1,11 @@
+Sequences split into mutable — list and bytearray — and immutable — tuple, string, bytes, range. Same protocol, different behavior for in-place operations.
+
+List — the mutable workhorse.
+
+List is the everyday container. Heterogeneous, accepting any types, mutable, ordered.
+
+Construction. Empty brackets for an empty list. Brackets one, two, three for a literal. List of a string gives the list of its characters. List of range of five gives the list zero through four.
+
+The methods you will use daily. X-s dot append of x adds one item to the end — constant time amortized. X-s dot extend of an iterable adds many items — order k. X-s dot insert of i and x inserts at index i — order n because it shifts the tail. X-s dot pop returns and removes the last, or at index i if specified — constant or order n. X-s dot remove of x removes the first occurrence — order n. X-s dot index of x returns the first index of x, or raises. X-s dot count of x counts occurrences. X-s dot sort and x-s dot reverse mutate in place. Sorted of x-s and reversed of x-s return new collections without mutating. X-s dot copy or x-s at full slice gives a shallow copy.
+
+In code, picture x-s as a list of one, two, three. Append four, extend with five and six, insert ninety-nine at position zero. Pop the last, remove the ninety-nine. Then sort versus sorted. X-s dot sort mutates x-s in place. Sorted of y-s leaves y-s alone and returns a new list. Sort with a key — sorted of words with key equals l-e-n sorts by length. Sort with key equals string dot lower and reverse equals true gives case-insensitive descending.

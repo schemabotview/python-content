@@ -1,0 +1,7 @@
+Lambda — small anonymous functions.
+
+Lambda parameters colon expression produces an anonymous function value. The body is a single expression — no statements. Useful as a one-liner argument to higher-order functions — the key parameter on sorted, predicates passed to filter, and so on.
+
+If you find yourself writing a lambda that is more than a short expression, define a real function with def. It will be more readable and easier to debug — real functions have names.
+
+In code, picture words as a list of three strings. Sorted of words with key equals lambda w colon l-e-n of w sorts by length. As a filter — list of filter with lambda n colon n modulo two equals zero, on a list of numbers, returns the evens. The list comprehension form is more idiomatic. Lambdas stored in a dict — handy for dispatch tables. A dict mapping add, sub, mul to lambdas of two arguments each. Looking up by name and calling gives the corresponding operation.

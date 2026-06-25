@@ -1,0 +1,2372 @@
+{
+  "concept": "Python",
+  "design": "DESIGN.md",
+  "scenes": [
+    {
+      "id": "python-cpython",
+      "title": "Python on CPython",
+      "status": "built"
+    },
+    {
+      "id": "python-anatomy",
+      "title": "Python — Anatomy",
+      "status": "built"
+    }
+  ],
+  "presentations": [
+    {
+      "id": "01-intro-and-setup",
+      "title": "Intro & Setup",
+      "notebook": "notebooks/01-intro-and-setup.ipynb",
+      "defaultScene": "python-cpython",
+      "sections": [
+        {
+          "heading": "What Python is",
+          "scene": "python-cpython",
+          "spine": true,
+          "role": "hook",
+          "audio": "audio/01-01-what-python-is.wav"
+        },
+        {
+          "heading": "Where Python sits next to its neighbours",
+          "scene": "python-cpython",
+          "spine": true,
+          "audio": "audio/01-02-where-python-sits-next-to-its-neighbours.wav"
+        },
+        {
+          "heading": "CPython, PyPy, and friends — \"Python\" is a language, not an implementation",
+          "scene": "python-cpython",
+          "spine": true,
+          "highlight": [
+            "py-compiler",
+            "pyc-file",
+            "ceval"
+          ],
+          "focus": [
+            "py-pipeline",
+            "exec-engine-py"
+          ],
+          "audio": "audio/01-03-cpython-pypy-and-friends-python-is-a.wav"
+        },
+        {
+          "heading": "Python 2 is dead. Python 3.10+ is the target.",
+          "scene": "python-cpython",
+          "spine": true,
+          "audio": "audio/01-04-python-2-is-dead-python-3-10-is-the-target.wav"
+        },
+        {
+          "heading": "How a `.py` file actually runs",
+          "scene": "python-cpython",
+          "spine": true,
+          "highlight": [
+            "py-source",
+            "py-compiler",
+            "pyc-file",
+            "ceval"
+          ],
+          "focus": [
+            "py-pipeline",
+            "exec-engine-py"
+          ],
+          "audio": "audio/01-05-how-a-py-file-actually-runs.wav"
+        },
+        {
+          "heading": "Installing Python — `pyenv`, not `brew install python`",
+          "scene": "python-cpython",
+          "spine": false,
+          "audio": "audio/01-06-installing-python-pyenv-not-brew-install.wav"
+        },
+        {
+          "heading": "Virtual environments — the most important hygiene rule",
+          "scene": "python-cpython",
+          "spine": true,
+          "highlight": [
+            "path-finder",
+            "sys-modules"
+          ],
+          "focus": [
+            "import-subsystem"
+          ],
+          "audio": "audio/01-07-virtual-environments-the-most-important.wav"
+        },
+        {
+          "heading": "`pip` and `requirements.txt`",
+          "scene": "python-cpython",
+          "spine": false,
+          "highlight": [
+            "path-finder"
+          ],
+          "focus": [
+            "import-subsystem"
+          ],
+          "audio": "audio/01-08-pip-and-requirements-txt.wav"
+        },
+        {
+          "heading": "Modern alternatives — `uv`, `poetry`, `pip-tools`",
+          "scene": "python-cpython",
+          "spine": false,
+          "audio": "audio/01-09-modern-alternatives-uv-poetry-pip-tools.wav"
+        },
+        {
+          "heading": "The Python REPL, IPython, and Jupyter",
+          "scene": "python-cpython",
+          "spine": true,
+          "highlight": [
+            "ceval"
+          ],
+          "focus": [
+            "exec-engine-py"
+          ],
+          "audio": "audio/01-10-the-python-repl-ipython-and-jupyter.wav"
+        },
+        {
+          "heading": "Three on-ramps to running code",
+          "scene": "python-cpython",
+          "spine": false,
+          "highlight": [
+            "ceval"
+          ],
+          "focus": [
+            "exec-engine-py"
+          ],
+          "audio": "audio/01-11-three-on-ramps-to-running-code.wav"
+        },
+        {
+          "heading": "`python -i` — the hybrid that's underused",
+          "scene": "python-cpython",
+          "spine": false,
+          "highlight": [
+            "ceval"
+          ],
+          "focus": [
+            "exec-engine-py"
+          ],
+          "audio": "audio/01-12-python-i-the-hybrid-that-s-underused.wav"
+        },
+        {
+          "heading": "A minimal project layout",
+          "scene": "python-cpython",
+          "spine": false,
+          "highlight": [
+            "import-subsystem"
+          ],
+          "focus": [
+            "import-subsystem"
+          ],
+          "audio": "audio/01-13-a-minimal-project-layout.wav"
+        },
+        {
+          "heading": "The ecosystem map — what library does what",
+          "scene": "python-cpython",
+          "spine": false,
+          "audio": "audio/01-14-the-ecosystem-map-what-library-does-what.wav"
+        },
+        {
+          "heading": "When NOT to use Python",
+          "scene": "python-cpython",
+          "spine": true,
+          "highlight": [
+            "gil"
+          ],
+          "focus": [
+            "interp-state"
+          ],
+          "audio": "audio/01-15-when-not-to-use-python.wav"
+        }
+      ]
+    },
+    {
+      "id": "02-values-types-operators-expressions",
+      "title": "Values, Types, Operators & Expressions",
+      "notebook": "notebooks/02-values-types-operators-expressions.ipynb",
+      "defaultScene": "python-anatomy",
+      "sections": [
+        {
+          "heading": "The big shift — variables are names",
+          "scene": "python-anatomy",
+          "spine": true,
+          "role": "hook",
+          "highlight": [
+            "pa-name",
+            "pa-mem-stack"
+          ],
+          "focus": [
+            "pa-bind-row"
+          ],
+          "audio": "audio/02-01-the-big-shift-variables-are-names.wav"
+        },
+        {
+          "heading": "Everything is an object",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-value",
+            "pa-mem-heap"
+          ],
+          "focus": [
+            "pa-mem-heap"
+          ],
+          "audio": "audio/02-02-everything-is-an-object.wav"
+        },
+        {
+          "heading": "The built-in types — a quick map",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-type",
+            "pa-t-prim"
+          ],
+          "focus": [
+            "pa-type"
+          ],
+          "audio": "audio/02-03-the-built-in-types-a-quick-map.wav"
+        },
+        {
+          "heading": "Numeric types — int, float, Decimal, Fraction, complex",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-t-prim-int",
+            "pa-t-prim-float"
+          ],
+          "focus": [
+            "pa-t-prim"
+          ],
+          "audio": "audio/02-04-numeric-types-int-float-decimal-fraction.wav"
+        },
+        {
+          "heading": "Strings — Unicode by default, immutable",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-t-prim-str",
+            "pa-value-primitive"
+          ],
+          "focus": [
+            "pa-value"
+          ],
+          "audio": "audio/02-05-strings-unicode-by-default-immutable.wav"
+        },
+        {
+          "heading": "`None` — and the `is None` rule",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-t-optional"
+          ],
+          "focus": [
+            "pa-type"
+          ],
+          "audio": "audio/02-06-none-and-the-is-none-rule.wav"
+        },
+        {
+          "heading": "Arithmetic operators",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-value-primitive"
+          ],
+          "focus": [
+            "pa-bind-row"
+          ],
+          "audio": "audio/02-07-arithmetic-operators.wav"
+        },
+        {
+          "heading": "Comparison operators and chain comparisons",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-ctrl-bool"
+          ],
+          "focus": [
+            "pa-control"
+          ],
+          "audio": "audio/02-08-comparison-operators-and-chain-comparisons.wav"
+        },
+        {
+          "heading": "Boolean operators and short-circuit evaluation",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-ctrl-bool"
+          ],
+          "focus": [
+            "pa-control"
+          ],
+          "audio": "audio/02-09-boolean-operators-and-short-circuit.wav"
+        },
+        {
+          "heading": "Identity vs equality — `is` vs `==`",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-mem-stack",
+            "pa-mem-heap-refs"
+          ],
+          "focus": [
+            "pa-memory"
+          ],
+          "audio": "audio/02-10-identity-vs-equality-is-vs.wav"
+        },
+        {
+          "heading": "Truthiness — what counts as false",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-ctrl-if"
+          ],
+          "focus": [
+            "pa-control"
+          ],
+          "audio": "audio/02-11-truthiness-what-counts-as-false.wav"
+        },
+        {
+          "heading": "Mutable vs immutable — the property that explains aliasing",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-mem-heap",
+            "pa-mem-heap-refs"
+          ],
+          "focus": [
+            "pa-memory"
+          ],
+          "audio": "audio/02-12-mutable-vs-immutable-the-property-that.wav"
+        },
+        {
+          "heading": "Type conversion — explicit only",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-type"
+          ],
+          "focus": [
+            "pa-type"
+          ],
+          "audio": "audio/02-13-type-conversion-explicit-only.wav"
+        },
+        {
+          "heading": "The walrus operator `:=`",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-ctrl-walrus"
+          ],
+          "focus": [
+            "pa-control"
+          ],
+          "audio": "audio/02-14-the-walrus-operator.wav"
+        },
+        {
+          "heading": "Operator precedence — the table you bookmark",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-value-primitive"
+          ],
+          "focus": [
+            "pa-bind-row"
+          ],
+          "audio": "audio/02-15-operator-precedence-the-table-you-bookmark.wav"
+        }
+      ]
+    },
+    {
+      "id": "03-control-flow-and-functions",
+      "title": "Control Flow & Functions",
+      "notebook": "notebooks/03-control-flow-and-functions.ipynb",
+      "defaultScene": "python-anatomy",
+      "sections": [
+        {
+          "heading": "Part 1 — Control Flow",
+          "scene": "python-anatomy",
+          "spine": true,
+          "role": "hook",
+          "highlight": [
+            "pa-control",
+            "pa-loops"
+          ],
+          "focus": [
+            "pa-verbs"
+          ],
+          "audio": "audio/03-01-part-1-control-flow.wav"
+        },
+        {
+          "heading": "`if` / `elif` / `else`",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-ctrl-if"
+          ],
+          "focus": [
+            "pa-control"
+          ],
+          "audio": "audio/03-02-if-elif-else.wav"
+        },
+        {
+          "heading": "The conditional expression — `x if cond else y`",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-ctrl-tern"
+          ],
+          "focus": [
+            "pa-control"
+          ],
+          "audio": "audio/03-03-the-conditional-expression-x-if-cond-else.wav"
+        },
+        {
+          "heading": "`while` loops",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-loop-while"
+          ],
+          "focus": [
+            "pa-loops"
+          ],
+          "audio": "audio/03-04-while-loops.wav"
+        },
+        {
+          "heading": "`for` loops — and what they actually do",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-loop-for"
+          ],
+          "focus": [
+            "pa-loops"
+          ],
+          "audio": "audio/03-05-for-loops-and-what-they-actually-do.wav"
+        },
+        {
+          "heading": "`range()` — the lazy integer sequence",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-loop-for"
+          ],
+          "focus": [
+            "pa-loops"
+          ],
+          "audio": "audio/03-06-range-the-lazy-integer-sequence.wav"
+        },
+        {
+          "heading": "`break` and `continue`",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-loop-break"
+          ],
+          "focus": [
+            "pa-loops"
+          ],
+          "audio": "audio/03-07-break-and-continue.wav"
+        },
+        {
+          "heading": "`for-else` and `while-else` — the loop's `else` clause",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-loop-break"
+          ],
+          "focus": [
+            "pa-loops"
+          ],
+          "audio": "audio/03-08-for-else-and-while-else-the-loop-s-else.wav"
+        },
+        {
+          "heading": "`match` / `case` — structural pattern matching (3.10+)",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-match",
+            "pa-match-stmt",
+            "pa-match-dest"
+          ],
+          "focus": [
+            "pa-match"
+          ],
+          "audio": "audio/03-09-match-case-structural-pattern-matching-3.wav"
+        },
+        {
+          "heading": "`pass` — the no-op statement",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-ctrl-if"
+          ],
+          "focus": [
+            "pa-control"
+          ],
+          "audio": "audio/03-10-pass-the-no-op-statement.wav"
+        },
+        {
+          "heading": "Part 2 — Functions",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-fn"
+          ],
+          "focus": [
+            "pa-fn"
+          ],
+          "audio": "audio/03-11-part-2-functions.wav"
+        },
+        {
+          "heading": "`def` — the basic shape",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-fn-def"
+          ],
+          "focus": [
+            "pa-fn"
+          ],
+          "audio": "audio/03-12-def-the-basic-shape.wav"
+        },
+        {
+          "heading": "Positional vs keyword arguments",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-fn-def"
+          ],
+          "focus": [
+            "pa-fn"
+          ],
+          "audio": "audio/03-13-positional-vs-keyword-arguments.wav"
+        },
+        {
+          "heading": "Default parameter values — and the mutable-default trap",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-fn-varargs",
+            "pa-mem-heap"
+          ],
+          "focus": [
+            "pa-fn"
+          ],
+          "audio": "audio/03-14-default-parameter-values-and-the-mutable.wav"
+        },
+        {
+          "heading": "`*args` and `**kwargs` — variable-length parameters",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-fn-varargs"
+          ],
+          "focus": [
+            "pa-fn"
+          ],
+          "audio": "audio/03-15-args-and-kwargs-variable-length-parameters.wav"
+        },
+        {
+          "heading": "Positional-only `/` and keyword-only `*`",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-fn-def"
+          ],
+          "focus": [
+            "pa-fn"
+          ],
+          "audio": "audio/03-16-positional-only-and-keyword-only.wav"
+        },
+        {
+          "heading": "`lambda` — small anonymous functions",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-fn-def",
+            "pa-value-fn"
+          ],
+          "focus": [
+            "pa-fn"
+          ],
+          "audio": "audio/03-17-lambda-small-anonymous-functions.wav"
+        },
+        {
+          "heading": "Scopes — LEGB lookup",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-mem-stack"
+          ],
+          "focus": [
+            "pa-memory"
+          ],
+          "audio": "audio/03-18-scopes-legb-lookup.wav"
+        },
+        {
+          "heading": "Closures — capturing state in a function",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-value-fn",
+            "pa-mem-heap"
+          ],
+          "focus": [
+            "pa-fn"
+          ],
+          "audio": "audio/03-19-closures-capturing-state-in-a-function.wav"
+        },
+        {
+          "heading": "First-class functions",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-value-fn"
+          ],
+          "focus": [
+            "pa-value"
+          ],
+          "audio": "audio/03-20-first-class-functions.wav"
+        },
+        {
+          "heading": "Docstrings and `help()`",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-fn-def"
+          ],
+          "focus": [
+            "pa-fn"
+          ],
+          "audio": "audio/03-21-docstrings-and-help.wav"
+        }
+      ]
+    },
+    {
+      "id": "04-collections-and-comprehensions",
+      "title": "Collections & Comprehensions",
+      "notebook": "notebooks/04-collections-and-comprehensions.ipynb",
+      "defaultScene": "python-anatomy",
+      "sections": [
+        {
+          "heading": "Part 1 — Sequences",
+          "scene": "python-anatomy",
+          "spine": true,
+          "role": "hook",
+          "highlight": [
+            "pa-value-container"
+          ],
+          "focus": [
+            "pa-value"
+          ],
+          "audio": "audio/04-01-part-1-sequences.wav"
+        },
+        {
+          "heading": "The sequence protocol",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-loop-for"
+          ],
+          "focus": [
+            "pa-loops"
+          ],
+          "audio": "audio/04-02-the-sequence-protocol.wav"
+        },
+        {
+          "heading": "`list` — the mutable workhorse",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-value-container"
+          ],
+          "focus": [
+            "pa-value"
+          ],
+          "audio": "audio/04-03-list-the-mutable-workhorse.wav"
+        },
+        {
+          "heading": "Indexing and slicing",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-value-container"
+          ],
+          "focus": [
+            "pa-value"
+          ],
+          "audio": "audio/04-04-indexing-and-slicing.wav"
+        },
+        {
+          "heading": "Unpacking — the `*` in assignment and literals",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-ctx-unpack",
+            "pa-ctx-star"
+          ],
+          "focus": [
+            "pa-context"
+          ],
+          "audio": "audio/04-05-unpacking-the-in-assignment-and-literals.wav"
+        },
+        {
+          "heading": "`tuple` — the immutable cousin",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-value-container"
+          ],
+          "focus": [
+            "pa-value"
+          ],
+          "audio": "audio/04-06-tuple-the-immutable-cousin.wav"
+        },
+        {
+          "heading": "`str` — sequence of characters",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-t-prim-str"
+          ],
+          "focus": [
+            "pa-value"
+          ],
+          "audio": "audio/04-07-str-sequence-of-characters.wav"
+        },
+        {
+          "heading": "Part 2 — Keyed collections",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-value-container"
+          ],
+          "focus": [
+            "pa-value"
+          ],
+          "audio": "audio/04-08-part-2-keyed-collections.wav"
+        },
+        {
+          "heading": "`dict` — the mapping workhorse",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-comp-dict",
+            "pa-value-container"
+          ],
+          "focus": [
+            "pa-value"
+          ],
+          "audio": "audio/04-09-dict-the-mapping-workhorse.wav"
+        },
+        {
+          "heading": "Updating dicts — `update`, `setdefault`, the `|` merge",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-value-container"
+          ],
+          "focus": [
+            "pa-value"
+          ],
+          "audio": "audio/04-10-updating-dicts-update-setdefault-the-merge.wav"
+        },
+        {
+          "heading": "`collections` — the specialized containers",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-value-container"
+          ],
+          "focus": [
+            "pa-value"
+          ],
+          "audio": "audio/04-11-collections-the-specialized-containers.wav"
+        },
+        {
+          "heading": "`set` and `frozenset`",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-comp-set",
+            "pa-value-container"
+          ],
+          "focus": [
+            "pa-value"
+          ],
+          "audio": "audio/04-12-set-and-frozenset.wav"
+        },
+        {
+          "heading": "Hashability — what makes a key valid",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-mem-heap-type"
+          ],
+          "focus": [
+            "pa-memory"
+          ],
+          "audio": "audio/04-13-hashability-what-makes-a-key-valid.wav"
+        },
+        {
+          "heading": "Part 3 — Comprehensions",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-comp"
+          ],
+          "focus": [
+            "pa-comp"
+          ],
+          "audio": "audio/04-14-part-3-comprehensions.wav"
+        },
+        {
+          "heading": "List comprehensions — the shape",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-comp-list"
+          ],
+          "focus": [
+            "pa-comp"
+          ],
+          "audio": "audio/04-15-list-comprehensions-the-shape.wav"
+        },
+        {
+          "heading": "Set and dict comprehensions",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-comp-set",
+            "pa-comp-dict"
+          ],
+          "focus": [
+            "pa-comp"
+          ],
+          "audio": "audio/04-16-set-and-dict-comprehensions.wav"
+        },
+        {
+          "heading": "Generator expressions — the parenthesized cousin",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-comp-gen"
+          ],
+          "focus": [
+            "pa-comp"
+          ],
+          "audio": "audio/04-17-generator-expressions-the-parenthesized.wav"
+        },
+        {
+          "heading": "Nested comprehensions",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-comp-list"
+          ],
+          "focus": [
+            "pa-comp"
+          ],
+          "audio": "audio/04-18-nested-comprehensions.wav"
+        },
+        {
+          "heading": "Walrus in a comprehension",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-ctrl-walrus",
+            "pa-comp-list"
+          ],
+          "focus": [
+            "pa-comp"
+          ],
+          "audio": "audio/04-19-walrus-in-a-comprehension.wav"
+        },
+        {
+          "heading": "When NOT to comprehensionify",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-comp"
+          ],
+          "focus": [
+            "pa-comp"
+          ],
+          "audio": "audio/04-20-when-not-to-comprehensionify.wav"
+        }
+      ]
+    },
+    {
+      "id": "05-oop",
+      "title": "Object-Oriented Programming",
+      "notebook": "notebooks/05-oop.ipynb",
+      "defaultScene": "python-anatomy",
+      "sections": [
+        {
+          "heading": "`class` — the basic shape",
+          "scene": "python-anatomy",
+          "spine": true,
+          "role": "hook",
+          "highlight": [
+            "pa-oop-dog"
+          ],
+          "focus": [
+            "pa-model"
+          ],
+          "audio": "audio/05-01-class-the-basic-shape.wav"
+        },
+        {
+          "heading": "Instance attributes vs class attributes",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-mem-heap-val"
+          ],
+          "focus": [
+            "pa-model"
+          ],
+          "audio": "audio/05-02-instance-attributes-vs-class-attributes.wav"
+        },
+        {
+          "heading": "`@classmethod` and `@staticmethod`",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-fn-deco"
+          ],
+          "focus": [
+            "pa-fn"
+          ],
+          "audio": "audio/05-03-classmethod-and-staticmethod.wav"
+        },
+        {
+          "heading": "Visibility — convention, not enforcement",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-name"
+          ],
+          "focus": [
+            "pa-bind-row"
+          ],
+          "audio": "audio/05-04-visibility-convention-not-enforcement.wav"
+        },
+        {
+          "heading": "`@property` — methods that look like attributes",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-fn-deco"
+          ],
+          "focus": [
+            "pa-fn"
+          ],
+          "audio": "audio/05-05-property-methods-that-look-like-attributes.wav"
+        },
+        {
+          "heading": "`@dataclass` — boilerplate-free data records",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-fn-deco",
+            "pa-value-object"
+          ],
+          "focus": [
+            "pa-model"
+          ],
+          "audio": "audio/05-06-dataclass-boilerplate-free-data-records.wav"
+        },
+        {
+          "heading": "`NamedTuple` — the typed tuple alternative",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-value-container",
+            "pa-t-custom"
+          ],
+          "focus": [
+            "pa-type"
+          ],
+          "audio": "audio/05-07-namedtuple-the-typed-tuple-alternative.wav"
+        },
+        {
+          "heading": "Inheritance — `class Sub(Base):` and `super()`",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-oop-mammal",
+            "pa-oop-dog"
+          ],
+          "focus": [
+            "pa-model"
+          ],
+          "audio": "audio/05-08-inheritance-class-sub-base-and-super.wav"
+        },
+        {
+          "heading": "Multiple inheritance and the MRO",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-oop-animal",
+            "pa-oop-walker",
+            "pa-oop-mammal"
+          ],
+          "focus": [
+            "pa-model"
+          ],
+          "audio": "audio/05-09-multiple-inheritance-and-the-mro.wav"
+        },
+        {
+          "heading": "Mixins — composition via inheritance, done right",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-oop-walker"
+          ],
+          "focus": [
+            "pa-model"
+          ],
+          "audio": "audio/05-10-mixins-composition-via-inheritance-done.wav"
+        },
+        {
+          "heading": "Abstract base classes",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-oop-animal",
+            "pa-t-protocol"
+          ],
+          "focus": [
+            "pa-model"
+          ],
+          "audio": "audio/05-11-abstract-base-classes.wav"
+        },
+        {
+          "heading": "Dunder methods — the protocol catalog",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-fn-def"
+          ],
+          "focus": [
+            "pa-fn"
+          ],
+          "audio": "audio/05-12-dunder-methods-the-protocol-catalog.wav"
+        },
+        {
+          "heading": "`__slots__` — the memory and speed knob",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-mem-heap",
+            "pa-mem-heap-val"
+          ],
+          "focus": [
+            "pa-memory"
+          ],
+          "audio": "audio/05-13-slots-the-memory-and-speed-knob.wav"
+        },
+        {
+          "heading": "`isinstance`, `issubclass`, and the duck-typing alternative",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-t-protocol",
+            "pa-oop-walker"
+          ],
+          "focus": [
+            "pa-model"
+          ],
+          "audio": "audio/05-14-isinstance-issubclass-and-the-duck-typing.wav"
+        },
+        {
+          "heading": "When NOT to write a class",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-value-fn"
+          ],
+          "focus": [
+            "pa-value"
+          ],
+          "audio": "audio/05-15-when-not-to-write-a-class.wav"
+        }
+      ]
+    },
+    {
+      "id": "06-errors-files-modules",
+      "title": "Errors, Files & Modules",
+      "notebook": "notebooks/06-errors-files-modules.ipynb",
+      "defaultScene": "python-anatomy",
+      "sections": [
+        {
+          "heading": "Part 1 — Errors",
+          "scene": "python-anatomy",
+          "spine": true,
+          "role": "hook",
+          "highlight": [
+            "pa-ret-raise"
+          ],
+          "focus": [
+            "pa-results"
+          ],
+          "audio": "audio/06-01-part-1-errors.wav"
+        },
+        {
+          "heading": "The exception hierarchy",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-ret-raise"
+          ],
+          "focus": [
+            "pa-results"
+          ],
+          "audio": "audio/06-02-the-exception-hierarchy.wav"
+        },
+        {
+          "heading": "`try` / `except` / `else` / `finally`",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-ret-raise"
+          ],
+          "focus": [
+            "pa-results"
+          ],
+          "audio": "audio/06-03-try-except-else-finally.wav"
+        },
+        {
+          "heading": "Catching exceptions",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-ret-raise"
+          ],
+          "focus": [
+            "pa-results"
+          ],
+          "audio": "audio/06-04-catching-exceptions.wav"
+        },
+        {
+          "heading": "`raise` and exception chaining",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-ret-raise"
+          ],
+          "focus": [
+            "pa-results"
+          ],
+          "audio": "audio/06-05-raise-and-exception-chaining.wav"
+        },
+        {
+          "heading": "Custom exception classes",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-ret-raise",
+            "pa-oop-dog"
+          ],
+          "focus": [
+            "pa-results"
+          ],
+          "audio": "audio/06-06-custom-exception-classes.wav"
+        },
+        {
+          "heading": "EAFP vs LBYL",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-ret-raise"
+          ],
+          "focus": [
+            "pa-results"
+          ],
+          "audio": "audio/06-07-eafp-vs-lbyl.wav"
+        },
+        {
+          "heading": "The `with` statement and context managers",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-ctx-with"
+          ],
+          "focus": [
+            "pa-context"
+          ],
+          "audio": "audio/06-08-the-with-statement-and-context-managers.wav"
+        },
+        {
+          "heading": "Writing your own context manager",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-ctx-with"
+          ],
+          "focus": [
+            "pa-context"
+          ],
+          "audio": "audio/06-09-writing-your-own-context-manager.wav"
+        },
+        {
+          "heading": "`ExceptionGroup` and `except*` — 3.11+",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-ret-raise"
+          ],
+          "focus": [
+            "pa-results"
+          ],
+          "audio": "audio/06-10-exceptiongroup-and-except-3-11.wav"
+        },
+        {
+          "heading": "Part 2 — Files",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-ctx-with"
+          ],
+          "focus": [
+            "pa-context"
+          ],
+          "audio": "audio/06-11-part-2-files.wav"
+        },
+        {
+          "heading": "`open()` — the basics",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-ctx-with"
+          ],
+          "focus": [
+            "pa-context"
+          ],
+          "audio": "audio/06-12-open-the-basics.wav"
+        },
+        {
+          "heading": "Text mode vs binary mode",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-ctx-with"
+          ],
+          "focus": [
+            "pa-context"
+          ],
+          "audio": "audio/06-13-text-mode-vs-binary-mode.wav"
+        },
+        {
+          "heading": "`pathlib.Path` — use this, not `os.path`",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-value-object"
+          ],
+          "focus": [
+            "pa-value"
+          ],
+          "audio": "audio/06-14-pathlib-path-use-this-not-os-path.wav"
+        },
+        {
+          "heading": "Temporary files and directories",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-ctx-with"
+          ],
+          "focus": [
+            "pa-context"
+          ],
+          "audio": "audio/06-15-temporary-files-and-directories.wav"
+        },
+        {
+          "heading": "Part 3 — Modules and packages",
+          "scene": "python-cpython",
+          "spine": true,
+          "highlight": [
+            "import-subsystem"
+          ],
+          "focus": [
+            "import-subsystem"
+          ],
+          "audio": "audio/06-16-part-3-modules-and-packages.wav"
+        },
+        {
+          "heading": "What a module is",
+          "scene": "python-cpython",
+          "spine": true,
+          "highlight": [
+            "module-dicts",
+            "sys-modules"
+          ],
+          "focus": [
+            "object-heap"
+          ],
+          "audio": "audio/06-17-what-a-module-is.wav"
+        },
+        {
+          "heading": "`import`, `from x import y`, `import x as alias`",
+          "scene": "python-cpython",
+          "spine": true,
+          "highlight": [
+            "import-subsystem",
+            "sys-modules"
+          ],
+          "focus": [
+            "import-subsystem"
+          ],
+          "audio": "audio/06-18-import-from-x-import-y-import-x-as-alias.wav"
+        },
+        {
+          "heading": "`if __name__ == \"__main__\":` — script vs imported",
+          "scene": "python-cpython",
+          "spine": true,
+          "highlight": [
+            "py-initialization"
+          ],
+          "focus": [
+            "import-subsystem"
+          ],
+          "audio": "audio/06-19-if-name-main-script-vs-imported.wav"
+        },
+        {
+          "heading": "Where Python looks for modules — `sys.path`",
+          "scene": "python-cpython",
+          "spine": true,
+          "highlight": [
+            "path-finder",
+            "sys-modules"
+          ],
+          "focus": [
+            "import-subsystem"
+          ],
+          "audio": "audio/06-20-where-python-looks-for-modules-sys-path.wav"
+        },
+        {
+          "heading": "Relative imports — `from . import x`",
+          "scene": "python-cpython",
+          "spine": false,
+          "highlight": [
+            "path-finder"
+          ],
+          "focus": [
+            "import-subsystem"
+          ],
+          "audio": "audio/06-21-relative-imports-from-import-x.wav"
+        },
+        {
+          "heading": "`pyproject.toml` and `pip install -e .` — make your project importable",
+          "scene": "python-cpython",
+          "spine": false,
+          "highlight": [
+            "source-loader",
+            "path-finder"
+          ],
+          "focus": [
+            "import-subsystem"
+          ],
+          "audio": "audio/06-22-pyproject-toml-and-pip-install-e-make.wav"
+        }
+      ]
+    },
+    {
+      "id": "07-iterators-generators-decorators",
+      "title": "Iterators, Generators & Decorators",
+      "notebook": "notebooks/07-iterators-generators-decorators.ipynb",
+      "defaultScene": "python-anatomy",
+      "sections": [
+        {
+          "heading": "Part 1 — Iteration",
+          "scene": "python-anatomy",
+          "spine": true,
+          "role": "hook",
+          "highlight": [
+            "pa-loop-for"
+          ],
+          "focus": [
+            "pa-loops"
+          ],
+          "audio": "audio/07-01-part-1-iteration.wav"
+        },
+        {
+          "heading": "The iteration protocol",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-loop-for"
+          ],
+          "focus": [
+            "pa-loops"
+          ],
+          "audio": "audio/07-02-the-iteration-protocol.wav"
+        },
+        {
+          "heading": "Writing your own iterable",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-loop-for",
+            "pa-oop-dog"
+          ],
+          "focus": [
+            "pa-loops"
+          ],
+          "audio": "audio/07-03-writing-your-own-iterable.wav"
+        },
+        {
+          "heading": "Iterators are single-pass",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-loop-for"
+          ],
+          "focus": [
+            "pa-loops"
+          ],
+          "audio": "audio/07-04-iterators-are-single-pass.wav"
+        },
+        {
+          "heading": "`itertools` — the standard library's iterator toolbox",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-comp-gen"
+          ],
+          "focus": [
+            "pa-loops"
+          ],
+          "audio": "audio/07-05-itertools-the-standard-library-s-iterator.wav"
+        },
+        {
+          "heading": "Part 2 — Generators",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-loop-yield",
+            "pa-ret-yield"
+          ],
+          "focus": [
+            "pa-loops"
+          ],
+          "audio": "audio/07-06-part-2-generators.wav"
+        },
+        {
+          "heading": "`yield` — turning a function into a generator",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-loop-yield",
+            "pa-ret-yield"
+          ],
+          "focus": [
+            "pa-loops"
+          ],
+          "audio": "audio/07-07-yield-turning-a-function-into-a-generator.wav"
+        },
+        {
+          "heading": "Generators are memory-efficient",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-comp-gen",
+            "pa-ret-yield"
+          ],
+          "focus": [
+            "pa-results"
+          ],
+          "audio": "audio/07-08-generators-are-memory-efficient.wav"
+        },
+        {
+          "heading": "`yield from` — delegating to another iterable",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-loop-yield"
+          ],
+          "focus": [
+            "pa-loops"
+          ],
+          "audio": "audio/07-09-yield-from-delegating-to-another-iterable.wav"
+        },
+        {
+          "heading": "Modeling pipelines as chained generators",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-comp-gen",
+            "pa-ret-yield"
+          ],
+          "focus": [
+            "pa-results"
+          ],
+          "audio": "audio/07-10-modeling-pipelines-as-chained-generators.wav"
+        },
+        {
+          "heading": "Two-way generators — `.send()`, `.throw()`, `.close()`",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-loop-yield"
+          ],
+          "focus": [
+            "pa-loops"
+          ],
+          "audio": "audio/07-11-two-way-generators-send-throw-close.wav"
+        },
+        {
+          "heading": "Part 3 — Decorators",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-fn-deco"
+          ],
+          "focus": [
+            "pa-fn"
+          ],
+          "audio": "audio/07-12-part-3-decorators.wav"
+        },
+        {
+          "heading": "A decorator is a function that takes a function",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-fn-deco",
+            "pa-value-fn"
+          ],
+          "focus": [
+            "pa-fn"
+          ],
+          "audio": "audio/07-13-a-decorator-is-a-function-that-takes-a.wav"
+        },
+        {
+          "heading": "`functools.wraps` — preserve metadata",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-fn-deco"
+          ],
+          "focus": [
+            "pa-fn"
+          ],
+          "audio": "audio/07-14-functools-wraps-preserve-metadata.wav"
+        },
+        {
+          "heading": "Decorators that take arguments — the three-level shape",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-fn-deco"
+          ],
+          "focus": [
+            "pa-fn"
+          ],
+          "audio": "audio/07-15-decorators-that-take-arguments-the-three.wav"
+        },
+        {
+          "heading": "Class decorators",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-fn-deco",
+            "pa-oop-dog"
+          ],
+          "focus": [
+            "pa-fn"
+          ],
+          "audio": "audio/07-16-class-decorators.wav"
+        },
+        {
+          "heading": "Stacking decorators",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-fn-deco"
+          ],
+          "focus": [
+            "pa-fn"
+          ],
+          "audio": "audio/07-17-stacking-decorators.wav"
+        },
+        {
+          "heading": "Common standard-library decorators",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-fn-deco"
+          ],
+          "focus": [
+            "pa-fn"
+          ],
+          "audio": "audio/07-18-common-standard-library-decorators.wav"
+        },
+        {
+          "heading": "When NOT to decorate",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-fn-deco"
+          ],
+          "focus": [
+            "pa-fn"
+          ],
+          "audio": "audio/07-19-when-not-to-decorate.wav"
+        }
+      ]
+    },
+    {
+      "id": "08-type-hints-and-best-practices",
+      "title": "Type Hints & Best Practices",
+      "notebook": "notebooks/08-type-hints-and-best-practices.ipynb",
+      "defaultScene": "python-anatomy",
+      "sections": [
+        {
+          "heading": "Part 1 — Type hints",
+          "scene": "python-anatomy",
+          "spine": true,
+          "role": "hook",
+          "highlight": [
+            "pa-type"
+          ],
+          "focus": [
+            "pa-type"
+          ],
+          "audio": "audio/08-01-part-1-type-hints.wav"
+        },
+        {
+          "heading": "The promise — and what they don't do",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-type"
+          ],
+          "focus": [
+            "pa-type"
+          ],
+          "audio": "audio/08-02-the-promise-and-what-they-don-t-do.wav"
+        },
+        {
+          "heading": "The basics — primitives, collections, callables",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-t-prim",
+            "pa-t-generic",
+            "pa-t-callable"
+          ],
+          "focus": [
+            "pa-type"
+          ],
+          "audio": "audio/08-03-the-basics-primitives-collections.wav"
+        },
+        {
+          "heading": "`Optional[T]`, `T | None`, and union types",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-t-optional"
+          ],
+          "focus": [
+            "pa-type"
+          ],
+          "audio": "audio/08-04-optional-t-t-none-and-union-types.wav"
+        },
+        {
+          "heading": "`Literal[...]` — exact set of allowed values",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-t-custom"
+          ],
+          "focus": [
+            "pa-type"
+          ],
+          "audio": "audio/08-05-literal-exact-set-of-allowed-values.wav"
+        },
+        {
+          "heading": "`TypedDict` — typed dictionaries",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-t-generic"
+          ],
+          "focus": [
+            "pa-type"
+          ],
+          "audio": "audio/08-06-typeddict-typed-dictionaries.wav"
+        },
+        {
+          "heading": "`Protocol` — structural typing",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-t-protocol"
+          ],
+          "focus": [
+            "pa-type"
+          ],
+          "audio": "audio/08-07-protocol-structural-typing.wav"
+        },
+        {
+          "heading": "Generic functions and classes",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-t-generic",
+            "pa-t-custom"
+          ],
+          "focus": [
+            "pa-type"
+          ],
+          "audio": "audio/08-08-generic-functions-and-classes.wav"
+        },
+        {
+          "heading": "`Any`, `cast`, and `# type: ignore` — escape hatches",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-type"
+          ],
+          "focus": [
+            "pa-type"
+          ],
+          "audio": "audio/08-09-any-cast-and-type-ignore-escape-hatches.wav"
+        },
+        {
+          "heading": "`mypy` and `pyright` — the checkers",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-type"
+          ],
+          "focus": [
+            "pa-type"
+          ],
+          "audio": "audio/08-10-mypy-and-pyright-the-checkers.wav"
+        },
+        {
+          "heading": "Part 2 — Best practices",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-name"
+          ],
+          "focus": [
+            "pa-bind-row"
+          ],
+          "audio": "audio/08-11-part-2-best-practices.wav"
+        },
+        {
+          "heading": "PEP 8 and the tools that automate it",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-name"
+          ],
+          "focus": [
+            "pa-bind-row"
+          ],
+          "audio": "audio/08-12-pep-8-and-the-tools-that-automate-it.wav"
+        },
+        {
+          "heading": "Naming conventions",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-name"
+          ],
+          "focus": [
+            "pa-bind-row"
+          ],
+          "audio": "audio/08-13-naming-conventions.wav"
+        },
+        {
+          "heading": "Import sorting and grouping",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-value-module"
+          ],
+          "focus": [
+            "pa-value"
+          ],
+          "audio": "audio/08-14-import-sorting-and-grouping.wav"
+        },
+        {
+          "heading": "Project layout — the `src/` layout",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-value-module"
+          ],
+          "focus": [
+            "pa-value"
+          ],
+          "audio": "audio/08-15-project-layout-the-src-layout.wav"
+        },
+        {
+          "heading": "`__init__.py` patterns",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-value-module"
+          ],
+          "focus": [
+            "pa-value"
+          ],
+          "audio": "audio/08-16-init-py-patterns.wav"
+        },
+        {
+          "heading": "Logging — `print` vs `logging`",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-ret-mutate"
+          ],
+          "focus": [
+            "pa-results"
+          ],
+          "audio": "audio/08-17-logging-print-vs-logging.wav"
+        },
+        {
+          "heading": "Configuration — environment variables, `.env` for development",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-value-module"
+          ],
+          "focus": [
+            "pa-value"
+          ],
+          "audio": "audio/08-18-configuration-environment-variables-env.wav"
+        },
+        {
+          "heading": "Performance — measure before you optimize",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-mem-heap"
+          ],
+          "focus": [
+            "pa-memory"
+          ],
+          "audio": "audio/08-19-performance-measure-before-you-optimize.wav"
+        },
+        {
+          "heading": "Style choices that age well",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-name"
+          ],
+          "focus": [
+            "pa-bind-row"
+          ],
+          "audio": "audio/08-20-style-choices-that-age-well.wav"
+        }
+      ]
+    },
+    {
+      "id": "09-concurrency-threading-multiprocessing-asyncio",
+      "title": "Concurrency — Threading, Multiprocessing & Asyncio",
+      "notebook": "notebooks/09-concurrency-threading-multiprocessing-asyncio.ipynb",
+      "defaultScene": "python-cpython",
+      "sections": [
+        {
+          "heading": "The GIL — what it is",
+          "scene": "python-cpython",
+          "spine": true,
+          "role": "hook",
+          "highlight": [
+            "gil"
+          ],
+          "focus": [
+            "interp-state"
+          ],
+          "audio": "audio/09-01-the-gil-what-it-is.wav"
+        },
+        {
+          "heading": "Concurrency vs parallelism vs asynchrony",
+          "scene": "python-cpython",
+          "spine": true,
+          "highlight": [
+            "per-thread"
+          ],
+          "focus": [
+            "memory-area-py"
+          ],
+          "audio": "audio/09-02-concurrency-vs-parallelism-vs-asynchrony.wav"
+        },
+        {
+          "heading": "I/O-bound vs CPU-bound",
+          "scene": "python-cpython",
+          "spine": true,
+          "highlight": [
+            "gil",
+            "ceval"
+          ],
+          "focus": [
+            "exec-engine-py"
+          ],
+          "audio": "audio/09-03-i-o-bound-vs-cpu-bound.wav"
+        },
+        {
+          "heading": "Part 1 — Threads",
+          "scene": "python-cpython",
+          "spine": true,
+          "highlight": [
+            "per-thread",
+            "thread-1",
+            "thread-n"
+          ],
+          "focus": [
+            "per-thread"
+          ],
+          "audio": "audio/09-04-part-1-threads.wav"
+        },
+        {
+          "heading": "`threading` and `ThreadPoolExecutor`",
+          "scene": "python-cpython",
+          "spine": true,
+          "highlight": [
+            "thread-1",
+            "thread-n"
+          ],
+          "focus": [
+            "per-thread"
+          ],
+          "audio": "audio/09-05-threading-and-threadpoolexecutor.wav"
+        },
+        {
+          "heading": "Threads do NOT help for CPU-bound work",
+          "scene": "python-cpython",
+          "spine": true,
+          "highlight": [
+            "gil"
+          ],
+          "focus": [
+            "interp-state"
+          ],
+          "audio": "audio/09-06-threads-do-not-help-for-cpu-bound-work.wav"
+        },
+        {
+          "heading": "Thread safety — `Lock`, `Queue`, immutable data",
+          "scene": "python-cpython",
+          "spine": true,
+          "highlight": [
+            "gil",
+            "object-heap"
+          ],
+          "focus": [
+            "interp-state"
+          ],
+          "audio": "audio/09-07-thread-safety-lock-queue-immutable-data.wav"
+        },
+        {
+          "heading": "Part 2 — Processes",
+          "scene": "python-cpython",
+          "spine": true,
+          "highlight": [
+            "per-thread"
+          ],
+          "focus": [
+            "per-thread"
+          ],
+          "audio": "audio/09-08-part-2-processes.wav"
+        },
+        {
+          "heading": "`multiprocessing` and `ProcessPoolExecutor`",
+          "scene": "python-cpython",
+          "spine": true,
+          "highlight": [
+            "thread-1",
+            "thread-n",
+            "cpu-py"
+          ],
+          "focus": [
+            "per-thread"
+          ],
+          "audio": "audio/09-09-multiprocessing-and-processpoolexecutor.wav"
+        },
+        {
+          "heading": "Pickling — what crosses the process boundary",
+          "scene": "python-cpython",
+          "spine": false,
+          "highlight": [
+            "code-object",
+            "object-heap"
+          ],
+          "focus": [
+            "object-heap"
+          ],
+          "audio": "audio/09-10-pickling-what-crosses-the-process-boundary.wav"
+        },
+        {
+          "heading": "Part 3 — Asyncio",
+          "scene": "python-cpython",
+          "spine": true,
+          "highlight": [
+            "ceval",
+            "frames-1"
+          ],
+          "focus": [
+            "exec-engine-py"
+          ],
+          "audio": "audio/09-11-part-3-asyncio.wav"
+        },
+        {
+          "heading": "Coroutines, the event loop, `async`/`await`",
+          "scene": "python-cpython",
+          "spine": true,
+          "highlight": [
+            "frames-1",
+            "ceval"
+          ],
+          "focus": [
+            "exec-engine-py"
+          ],
+          "audio": "audio/09-12-coroutines-the-event-loop-async-await.wav"
+        },
+        {
+          "heading": "`asyncio.gather` and `asyncio.TaskGroup` (3.11+)",
+          "scene": "python-cpython",
+          "spine": false,
+          "highlight": [
+            "frames-1"
+          ],
+          "focus": [
+            "exec-engine-py"
+          ],
+          "audio": "audio/09-13-asyncio-gather-and-asyncio-taskgroup-3-11.wav"
+        },
+        {
+          "heading": "Async vs threads — when each fits",
+          "scene": "python-cpython",
+          "spine": true,
+          "highlight": [
+            "gil",
+            "per-thread"
+          ],
+          "focus": [
+            "interp-state"
+          ],
+          "audio": "audio/09-14-async-vs-threads-when-each-fits.wav"
+        },
+        {
+          "heading": "Mixing them — `loop.run_in_executor`",
+          "scene": "python-cpython",
+          "spine": false,
+          "highlight": [
+            "per-thread",
+            "ceval"
+          ],
+          "focus": [
+            "exec-engine-py"
+          ],
+          "audio": "audio/09-15-mixing-them-loop-run-in-executor.wav"
+        },
+        {
+          "heading": "3.13's no-GIL build — the road ahead",
+          "scene": "python-cpython",
+          "spine": true,
+          "highlight": [
+            "gil"
+          ],
+          "focus": [
+            "interp-state"
+          ],
+          "audio": "audio/09-16-3-13-s-no-gil-build-the-road-ahead.wav"
+        },
+        {
+          "heading": "A decision matrix",
+          "scene": "python-cpython",
+          "spine": false,
+          "highlight": [
+            "gil",
+            "per-thread"
+          ],
+          "focus": [
+            "memory-area-py"
+          ],
+          "audio": "audio/09-17-a-decision-matrix.wav"
+        },
+        {
+          "heading": "The honest \"what to reach for first\" rule",
+          "scene": "python-cpython",
+          "spine": true,
+          "highlight": [
+            "gil"
+          ],
+          "focus": [
+            "interp-state"
+          ],
+          "audio": "audio/09-18-the-honest-what-to-reach-for-first-rule.wav"
+        }
+      ]
+    },
+    {
+      "id": "10-testing-with-pytest",
+      "title": "Testing with pytest & the Standard Library",
+      "notebook": "notebooks/10-testing-with-pytest.ipynb",
+      "defaultScene": "python-anatomy",
+      "sections": [
+        {
+          "heading": "Part 1 — Pytest",
+          "scene": "python-anatomy",
+          "spine": true,
+          "role": "hook",
+          "highlight": [
+            "pa-results"
+          ],
+          "focus": [
+            "pa-results"
+          ],
+          "audio": "audio/10-01-part-1-pytest.wav"
+        },
+        {
+          "heading": "Why pytest",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-ret-value"
+          ],
+          "focus": [
+            "pa-results"
+          ],
+          "audio": "audio/10-02-why-pytest.wav"
+        },
+        {
+          "heading": "The basic shape — `def test_foo():`",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-fn-def"
+          ],
+          "focus": [
+            "pa-fn"
+          ],
+          "audio": "audio/10-03-the-basic-shape-def-test-foo.wav"
+        },
+        {
+          "heading": "Discovery — where pytest looks",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-value-module"
+          ],
+          "focus": [
+            "pa-value"
+          ],
+          "audio": "audio/10-04-discovery-where-pytest-looks.wav"
+        },
+        {
+          "heading": "`pytest.raises` — testing for exceptions",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-ret-raise"
+          ],
+          "focus": [
+            "pa-results"
+          ],
+          "audio": "audio/10-05-pytest-raises-testing-for-exceptions.wav"
+        },
+        {
+          "heading": "Fixtures — `@pytest.fixture`",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-fn-deco"
+          ],
+          "focus": [
+            "pa-fn"
+          ],
+          "audio": "audio/10-06-fixtures-pytest-fixture.wav"
+        },
+        {
+          "heading": "Fixture scopes — `function`, `class`, `module`, `session`",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-fn-deco"
+          ],
+          "focus": [
+            "pa-fn"
+          ],
+          "audio": "audio/10-07-fixture-scopes-function-class-module.wav"
+        },
+        {
+          "heading": "Built-in fixtures — `tmp_path`, `monkeypatch`, `capsys`, `caplog`",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-ctx-with"
+          ],
+          "focus": [
+            "pa-context"
+          ],
+          "audio": "audio/10-08-built-in-fixtures-tmp-path-monkeypatch.wav"
+        },
+        {
+          "heading": "Parametrization — one test, many inputs",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-fn-deco"
+          ],
+          "focus": [
+            "pa-fn"
+          ],
+          "audio": "audio/10-09-parametrization-one-test-many-inputs.wav"
+        },
+        {
+          "heading": "Markers — skip, xfail, custom",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-fn-deco"
+          ],
+          "focus": [
+            "pa-fn"
+          ],
+          "audio": "audio/10-10-markers-skip-xfail-custom.wav"
+        },
+        {
+          "heading": "`conftest.py` — sharing fixtures",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-value-module"
+          ],
+          "focus": [
+            "pa-value"
+          ],
+          "audio": "audio/10-11-conftest-py-sharing-fixtures.wav"
+        },
+        {
+          "heading": "Mocking — `unittest.mock` and `monkeypatch`",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-ret-mutate"
+          ],
+          "focus": [
+            "pa-results"
+          ],
+          "audio": "audio/10-12-mocking-unittest-mock-and-monkeypatch.wav"
+        },
+        {
+          "heading": "Test coverage — `pytest-cov`",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-ret-value"
+          ],
+          "focus": [
+            "pa-results"
+          ],
+          "audio": "audio/10-13-test-coverage-pytest-cov.wav"
+        },
+        {
+          "heading": "CI integration — what to run, what to gate on",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-ret-value"
+          ],
+          "focus": [
+            "pa-results"
+          ],
+          "audio": "audio/10-14-ci-integration-what-to-run-what-to-gate-on.wav"
+        },
+        {
+          "heading": "Part 2 — Standard library essentials",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-value-module"
+          ],
+          "focus": [
+            "pa-value"
+          ],
+          "audio": "audio/10-15-part-2-standard-library-essentials.wav"
+        },
+        {
+          "heading": "`datetime` — dates, times, durations, time zones",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-value-object"
+          ],
+          "focus": [
+            "pa-value"
+          ],
+          "audio": "audio/10-16-datetime-dates-times-durations-time-zones.wav"
+        },
+        {
+          "heading": "`pathlib` — paths",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-value-object"
+          ],
+          "focus": [
+            "pa-value"
+          ],
+          "audio": "audio/10-17-pathlib-paths.wav"
+        },
+        {
+          "heading": "`json` — read and write JSON",
+          "scene": "python-anatomy",
+          "spine": true,
+          "highlight": [
+            "pa-value-container"
+          ],
+          "focus": [
+            "pa-value"
+          ],
+          "audio": "audio/10-18-json-read-and-write-json.wav"
+        },
+        {
+          "heading": "`re` — regular expressions",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-t-prim-str"
+          ],
+          "focus": [
+            "pa-value"
+          ],
+          "audio": "audio/10-19-re-regular-expressions.wav"
+        },
+        {
+          "heading": "`argparse` — command-line arguments",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-value-module"
+          ],
+          "focus": [
+            "pa-value"
+          ],
+          "audio": "audio/10-20-argparse-command-line-arguments.wav"
+        },
+        {
+          "heading": "Standard library — the rest worth knowing",
+          "scene": "python-anatomy",
+          "spine": false,
+          "highlight": [
+            "pa-value-module"
+          ],
+          "focus": [
+            "pa-value"
+          ],
+          "audio": "audio/10-21-standard-library-the-rest-worth-knowing.wav"
+        },
+        {
+          "heading": "The end of the track",
+          "scene": "python-anatomy",
+          "spine": true,
+          "audio": "audio/10-22-the-end-of-the-track.wav"
+        }
+      ]
+    }
+  ]
+}

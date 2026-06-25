@@ -1,0 +1,9 @@
+Literal — exact set of allowed values.
+
+When a parameter accepts only a few specific values, literal documents the choices and lets the type checker enforce them.
+
+The shape — def sort-by taking direction colon literal of the string a-s-c, the string d-e-s-c, returning none. Sort-by of a-s-c is ok. Sort-by of u-p — my-py flags as argument one must be a-s-c or d-e-s-c.
+
+This is python's cleanest answer to enum-but-just-three-strings. For larger sets, reach for a real enum or a literal of more values.
+
+In code, picture def fetch taking method colon literal of GET, POST, PUT, DELETE, url colon string. Fetch of GET works. Fetch of POST works. Fetch of HEAD does not match any literal — my-py flags.

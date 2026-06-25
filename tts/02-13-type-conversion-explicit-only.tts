@@ -1,0 +1,7 @@
+Type conversion — explicit only.
+
+Python is strongly typed. It will not implicitly convert int to string, string to int, or int to float in most arithmetic operations. The conversions are explicit calls to the type. Int of quote forty-two equals forty-two. Int of quote zero-x-f-f with base sixteen equals two hundred fifty-five. Float of quote three point one four equals three point one four. Str of forty-two equals quote forty-two. Bool of zero equals false. List of quote hello equals the list of its five characters. Tuple of list-one-two-three equals the tuple one, two, three.
+
+The exception that proves the rule. Arithmetic between int and float produces a float — that one widening is automatic. Concatenation between string and int is not — quote value colon plus forty-two raises type error. Use f-string brace n instead.
+
+In code, picture int of quote forty-two equals forty-two. Int of quote zero-x-f-f with base sixteen equals two hundred fifty-five. Float of quote three point one four-e two equals three hundred fourteen. Str of forty-two. Bool of empty string is false. List of quote hello produces the five-character list. What does not happen automatically — n equals forty-two, the expression value-colon-plus-n raises type-error. F-string brace n works. Str of n then concatenated also works, less readable. Numeric widening is automatic — one plus two point zero is three point zero, type float.

@@ -1,0 +1,9 @@
+Set and frozen-set.
+
+A set is an unordered collection of unique, hashable elements. Membership is constant time.
+
+The set operators map directly to set algebra. Pipe for union — in either. Ampersand for intersection — in both. Minus for difference — in left, not in right. Caret for symmetric difference — in one or the other, not both. Less-equal and less-than for subset and proper subset — every element of left in right. Greater-equal and greater-than for the reverse.
+
+Frozen-set is the immutable variant — same operations, no mutation. Required when you need a set as a dict key or as an element of another set.
+
+In code, picture warm as red, orange, yellow. Cool as blue, green, violet. Primary as red, blue, yellow. Warm pipe cool is the union. Warm ampersand primary is the intersection — red, yellow. Warm minus primary is orange. Warm caret primary is the symmetric difference, orange plus blue. Subset checks — warm less-equal warm pipe cool is true. The set red less-equal warm is true. Mutating methods — add, discard which is no-error if absent, remove which is key-error if absent. Frozen-set — hashable, can be a set element or dict key. A container of two frozen-sets works.

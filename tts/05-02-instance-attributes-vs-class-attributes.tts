@@ -1,0 +1,9 @@
+Instance attributes versus class attributes.
+
+Two different scopes within a class. Class attributes — defined at the class level, outside any method. Shared by all instances. Use for constants, defaults, and class-level state. Instance attributes — assigned to self dot name inside dunder-init or any method. Each instance has its own.
+
+The gotcha. Lookups go instance first, then class. Reading self dot x finds an instance attribute first, falls back to the class attribute. Writing self dot x always creates or updates the instance attribute, never the class one. This is fine until you start with a mutable class attribute — then all instances share it.
+
+In code, picture class counter with total-count equals zero at the class level — shared. Dunder-init takes a name and sets self dot name and self dot count. The tick method increments self dot count and also increments counter dot total-count via the class. Build counter a and counter b, call tick a few times on each. A dot count and b dot count are independent. Counter dot total-count is the sum — shared.
+
+The classic mutable-class-attribute trap. Class buggy has items equals an empty list at the class level — shared across all instances. The add method appends to self dot items. Build x and y, call add on each. Both see the combined list because they share it.

@@ -1,0 +1,7 @@
+Functools dot wraps — preserve metadata.
+
+The naive wrapper above replaces add with wrapper. That means add dot dunder-name becomes the string wrapper, add dot dunder-doc is lost, and signature introspection sees the wrapper instead of the wrapped function.
+
+Functools dot wraps is a tiny decorator-of-decorators that copies the relevant metadata from the wrapped function to the wrapper. Always use it when writing a decorator.
+
+In code, picture from functools import wraps. Def log-calls taking func. Inside, at-wraps of func, then def wrapper. Now greet dot dunder-name is greet, and greet dot dunder-doc is preserved.

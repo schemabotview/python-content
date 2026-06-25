@@ -1,0 +1,9 @@
+Decorators that take arguments — the three-level shape.
+
+When you want at-retry of times equals three instead of plain at-retry, you need one extra level. The signature changes from function in, function out to args in, decorator out, which itself is function in, function out.
+
+Picture def retry taking times. Inner def decorator takes func. Inside that, at-wraps of func, def wrapper takes star-args double-star-kwargs and does the retry logic. Return wrapper. Return decorator.
+
+The shape is awkward the first time. The trick to reading it — count the levels from the outside in. Each def is one rung. And the at-retry of times equals three call site evaluates from the outside in too.
+
+In code, picture from functools import wraps. Def retry of times. Inner def decorator of func. Inner def wrapper with star-args. Body loops up to times, tries func, catches any exception, prints attempt failed. If all attempts fail, raises the last error. Then a flaky function — at-retry of times equals three on def flaky, which fails seventy percent of the time. Calling flaky retries until it succeeds.

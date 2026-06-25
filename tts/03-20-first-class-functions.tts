@@ -1,0 +1,7 @@
+First-class functions.
+
+Functions are values in python. You can assign them to variables. Store them in lists, dicts, sets. Pass them as arguments to other functions. Return them from other functions.
+
+This is what makes higher-order operations work — map, filter, sorted with a key. It is what makes decorators possible in notebook seven. And it lets you build dispatch tables of functions keyed by a string.
+
+In code, picture def apply taking f and x, returns f of x. Apply of string dot upper and hello returns capital hello. Apply of lambda n colon n times n, and seven, returns forty-nine. Function as return value — already shown with make-adder. Function in a data structure — handlers equals a dict mapping uppercase to str dot upper, lowercase to str dot lower, reverse to a lambda. Looking up and calling gives the corresponding transformation.

@@ -1,0 +1,11 @@
+The walrus operator.
+
+Added in python three point eight. Lets you assign inside an expression — combining compute and name the result in one step. Useful in while conditions and if checks where you would otherwise compute the value twice or assign on a separate line.
+
+The shape — name walrus expression — returns the value of the expression and binds it to the name. Always written inside parentheses except in specific positions where the grammar allows it bare.
+
+In code, picture reading lines from a file-like object. The pre-walrus version assigns once, checks, repeats inside a while-true loop. The with-walrus version does it in one condition — while parens line walrus f dot read-line dot strip — assigns and checks in one line.
+
+In an if — also clean for length checks. If parens n walrus l-e-n of data greater-than thirty, then print the message with n.
+
+In list comprehensions — defer expensive calls. Import math. Build a list of y for x drawn from range of five, if parens y walrus math dot square-root of x times ten greater-than three. The walrus computes y once and uses it both in the filter and in the projection.

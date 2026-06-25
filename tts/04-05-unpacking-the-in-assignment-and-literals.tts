@@ -1,0 +1,9 @@
+Unpacking — the star in assignment and literals.
+
+Python's unpacking syntax composes nicely once you have seen it once. A comma b comma c equals a three-element iterable unpacks. A comma star-rest equals a longer iterable binds a to the first and rest to the rest. First comma star-middle comma last splits at both ends.
+
+Inside literals, the splat into a new collection. Combined equals bracket star-x-s star-y-s ninety-nine bracket concatenates two lists into a new one. Merged equals brace star-set-a star-set-b brace unions into a new set. All-pairs equals brace double-star-dict-a double-star-dict-b brace merges dicts — right wins on duplicates.
+
+The star-name form on the left side of equals is sometimes called starred assignment. On the right side of equals, or inside a literal, it is splat or unpacking. Same star, different meaning by position.
+
+In code, picture first, star-middle, last equals a list of one through five. First is one, middle is the list two, three, four, last is five. Swap — a comma b equals one and two, then a comma b equals b comma a flips them. Splat inside literals. X-s equals one, two. Y-s equals three, four. Combined equals bracket star-x-s star-y-s ninety-nine bracket is one, two, three, four, ninety-nine. Set splat — brace star-of-set-one-two-three star-of-set-three-four-five brace gives one through five with the duplicate three folded. Dict merge with double-star and with the pipe operator since python three point nine.

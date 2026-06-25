@@ -1,0 +1,9 @@
+Mocking — unittest dot mock and monkey-patch.
+
+When your code calls into something external — a database, an application programming interface, a filesystem — you usually want to replace that dependency in tests with a controlled fake. Two tools.
+
+Unittest dot mock dot patch — the standard-library mocking framework. Patches an attribute on a module for the duration of a test. Py-test's monkey-patch — fixture form, scoped to one test. Auto-undone. Py-test dash mock — a thin wrapper around unittest dot mock that exposes a mocker fixture. Saves you the with-patch ceremony.
+
+The pattern. Replace requests dot get with a stub that returns canned data, then assert that your code calls it with the right arguments and processes the result correctly.
+
+In code, picture a get-user function that calls requests dot get and returns the j-s-o-n. The test uses with patch of requests dot get as mock-get, sets mock-get dot return-value to a magic-mock with a json method returning the canned dict. Calls get-user of forty-two, asserts the result equals the canned dict, asserts mock-get was called once with the expected u-r-l.

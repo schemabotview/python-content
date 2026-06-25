@@ -1,0 +1,7 @@
+Two-way generators — send, throw, close.
+
+Generators can receive values back from the caller via dot send of a value. Inside the generator, the expression yield x evaluates to the value send was called with. Dot throw injects an exception at the current yield. Dot close raises generator-exit and shuts the generator down.
+
+These are the building blocks of older coroutine patterns, pre-async-await. You rarely write these by hand in modern code — asyncio from notebook nine is the right tool — but the mechanism exists.
+
+In code, picture def echoer with an infinite while-true loop. Each iteration, received equals yield. If received is none, return. Otherwise print received. Build e equals echoer. Call next of e to prime the generator — advance to the first yield. Send hello, send world — each gets printed. Close shuts it down cleanly.

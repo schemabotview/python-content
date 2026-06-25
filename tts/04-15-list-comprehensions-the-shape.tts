@@ -1,0 +1,9 @@
+List comprehensions — the shape.
+
+A list comprehension builds a new list by transforming or filtering an existing iterable, in one expression.
+
+The shape — bracket expression for x in iterable if condition bracket. Reads as — for each x in iterable, if condition, evaluate expression and collect into a new list.
+
+This pattern replaces almost every short for-and-append loop. Use a comprehension when the body is one expression. Reach for an explicit loop when there is branching, side effects, or multiple statements per element.
+
+In code, picture squares equals a comprehension that yields x times x for x in range of ten. With a filter — even-squares equals the same, plus if x modulo two equals zero. Transform a list of names — upper equals n dot upper for n in names. Compare against the explicit-loop equivalent — initialize an empty result list, then for n in names, append n dot upper. Same result, three lines versus one.

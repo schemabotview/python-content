@@ -1,0 +1,9 @@
+Markers — skip, x-fail, custom.
+
+A marker is a label on a test that influences its behaviour or selection.
+
+Built-in. At-py-test dot mark dot skip with a reason — unconditionally skip. At-py-test dot mark dot skip-if with a condition and a reason — skip if the condition is true, like s-y-s dot version-info less than three point eleven. At-py-test dot mark dot x-fail with a reason — expected to fail. If it fails, it is reported as x-fail, not a failure. If it unexpectedly passes, it is x-pass — a warning.
+
+Custom markers — declare in py-project dot t-o-m-l, then label tests with them. Select at the command line. At-py-test dot mark dot slow on def test-full-integration. Run only slow tests with py-test dash-m slow. Run non-slow tests with py-test dash-m not-slow.
+
+In py-project dot t-o-m-l, the markers list under py-test config declares which markers exist and a short description. The dash-dash strict-markers flag — recommended — makes py-test reject unknown marker names. Catches typos.

@@ -1,0 +1,7 @@
+Yield-from — delegating to another iterable.
+
+Yield-from sub-iterable yields every value from sub-iterable, transparently. Useful when a generator wants to forward through another iterable without an explicit loop.
+
+Picture def chain of a and b — yield-from a, yield-from b. This is the same idea as itertools dot chain, written by hand. It also forwards exception-handling and dot-send values, so it is the right tool when composing generators.
+
+In code, picture def chain-iters taking star-iters. For each iterable, yield from it. List of chain-iters of three lists gives the flat concatenation. Def flatten-once takes a nested list. For each sublist, yield from sublist. List of flatten-once of a nested list gives the one-level-flattened version.

@@ -1,0 +1,11 @@
+Inheritance — class sub of base and super.
+
+A class can inherit from another. The subclass gets all the parent's attributes and methods. You override by defining a same-named method. Inside an override, call super dot method to invoke the parent's version.
+
+The shape. Class animal with dunder-init taking name. Class dog of animal — dog extends animal. Dog's dunder-init calls super dot dunder-init of name, then sets breed. Dog's greet returns its own message instead of the parent's.
+
+Super with no arguments works as long as you are inside a regular method — python figures out the class and instance from the call site. In older python two code you will see super of dog and self dot method — you do not need it in three.
+
+In code, picture animal, dog, and puppy. Puppy extends dog and overrides greet to call super dot greet and append puppy. Animal of generic dot greet. Dog of rex, lab dot greet. Puppy of buddy, poodle dot greet — each gives the chained message.
+
+Is-instance checks the inheritance chain. P equals puppy. Is-instance of p, puppy is true. Is-instance of p, dog is true. Is-instance of p, animal is true.

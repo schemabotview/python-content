@@ -1,0 +1,9 @@
+Tuple — the immutable cousin.
+
+Tuple is the immutable sequence type. Same indexing and slicing as list. No methods that mutate.
+
+Two distinct uses, often conflated. Record-like — a fixed-shape group of values, each position meaning something, like host, port, ssl. When you reach for tuple here and find yourself naming positions in comments, switch to a data-class or named-tuple from notebook five for clarity. Frozen sequence — a list-like collection you do not want anyone to mutate. Useful as a dict key, because lists cannot be keys but tuples can, if their elements are hashable.
+
+Literal form. Parentheses, or just commas — the comma is what makes a tuple, not the parens. A single-element tuple needs a trailing comma — parens forty-two comma parens. Just parens forty-two parens is the integer forty-two in parentheses.
+
+In code, picture empty equals empty parens. Single equals parens forty-two comma parens — the comma is required. Multi equals parens one, two, three. Without parens equals one comma two comma three — also a tuple, the commas are what matter. Type of without-parens is tuple. Indexing and slicing are the same as list. Immutability — no append, no item assignment. Tuples can be dict keys, lists cannot. A dict mapping the tuple one comma two to north-east and negative-one comma negative-one to south-west looks up cleanly. Multiple return values are tuples — def divmod-simple returns a comma b commas — the commas make a tuple. Unpack with q comma r equals divmod-simple of seventeen and five.

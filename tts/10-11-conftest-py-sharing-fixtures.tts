@@ -1,0 +1,9 @@
+Conftest dot p-y — sharing fixtures.
+
+A conftest dot p-y file is a special py-test file. Any fixtures defined in it are visible to every test file in the same directory and below, with no imports needed.
+
+Use it for fixtures that span many test files — a database connection, a client for testing a flask or fast-a-p-i app, a base config dict.
+
+Picture a tests directory with conftest dot p-y for fixtures spanning everything. An api subdirectory with its own conftest dot p-y for api-only fixtures, plus its test files. A db subdirectory with its test files.
+
+Conftest dot p-y runs implicitly — py-test discovers and loads it before running tests. Never import from it directly.

@@ -1,0 +1,7 @@
+What a module is.
+
+A module is any dot p-y file. When you import my-module, python loads the file, runs it top to bottom, and gives you a namespace object whose attributes are the names defined in the file.
+
+A package is a directory containing a dunder-init dot p-y, or since three point three, no dunder-init dot p-y at all in namespace packages — but mostly use the explicit form. It groups multiple modules under one importable name.
+
+Picture my-project as a top directory. Dunder-init dot p-y makes it a package. Core dot p-y is a module. Utils slash with its own dunder-init dot p-y and text dot p-y — imported as my-project dot utils dot text.

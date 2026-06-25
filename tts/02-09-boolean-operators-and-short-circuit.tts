@@ -1,0 +1,9 @@
+Boolean operators and short-circuit evaluation.
+
+And, or, not are spelled out as words — no double-ampersand or double-pipe. Two important properties.
+
+Short-circuit evaluation. A and b does not evaluate b if a is falsy. A or b does not evaluate b if a is truthy. Returns the value, not just a bool. Quote hello and quote world returns quote world, not true. Zero or quote default returns quote default, not true. This is the basis of the classic x equals something or default idiom.
+
+For the strict bool form, use bool of x explicitly, or the comparison operators, which always return real bools.
+
+In code, picture short-circuit protecting a divide-by-zero. N equals zero. If n not-equals zero and parens one slash n greater-than point five — the one-slash-n is never evaluated because n not-equals zero is false. Then boolean operators return the actual operand, not a bool. Hello and world returns world — last truthy operand wins. Empty-string and world returns the empty string — short-circuits on the empty string. None or default returns default — first truthy wins. Zero or zero or zero or forty-two returns forty-two. To force a bool, wrap with bool of parens.

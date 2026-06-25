@@ -1,0 +1,7 @@
+Closures — capturing state in a function.
+
+The make-counter example is a closure — a function that captures variables from its enclosing scope. The returned function carries a reference to the enclosing scope's count, even after make-counter has finished executing.
+
+Closures are how python implements private state without a class — useful for callbacks, decorators in notebook seven, and small stateful helpers. Each call to make-counter produces a fresh closure with its own captured state.
+
+In code, picture def make-adder taking base. Inner def add taking x, returns base plus x. Return add. Bind add-five to make-adder of five. Add-ten to make-adder of ten. Add-five of three returns eight, add-ten of three returns thirteen. Each instance has its own captured base. You can even inspect with add-five dot dunder-closure at position zero dot cell-contents — that prints five.

@@ -1,0 +1,9 @@
+The basics — primitives, collections, callables.
+
+Same-named types you already know. Int, float, string, bool, bytes, none. For containers, since python three point nine, you can use the built-in types directly as generics. Def total taking prices colon list of float, returning float. Def lookup taking table colon dict of string and integer, key colon string, returning integer. Def first-pair taking pairs colon list of tuple of string and integer, returning tuple of string and integer.
+
+Older code uses imports from typing — from typing import list with capital L, dict with capital D. Both forms work in three point nine plus. New code should prefer the built-in lowercase form.
+
+For callables, use callable from collections dot a-b-c, or typing dot callable pre-three-point-nine. Def apply taking f of type callable of bracket integer bracket arrow integer, x colon integer, returning integer.
+
+In code, picture the imports and the four function shapes. Total of a list of three floats. Lookup of a dict with one entry. First-pair of a list of two pairs. Apply-n of a doubling lambda starting at one for five iterations gives thirty-two.

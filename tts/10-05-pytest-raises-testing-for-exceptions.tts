@@ -1,0 +1,9 @@
+Py-test dot raises — testing for exceptions.
+
+When a function is supposed to raise an exception, py-test dot raises captures it as a context manager.
+
+The pattern. Import py-test. Def parse-age takes a string, ints it, raises value-error if negative, otherwise returns. Def test-negative-age-rejected uses with py-test dot raises of value-error, match equals non-negative, then calls parse-age of negative five.
+
+Match accepts a regular expression against the exception's string. The with block must raise an exception of the expected type, or the test fails.
+
+In code, picture exactly that test. Wrap the negative call in a with-raises and confirm it works. Then wrap a non-failing call in with-raises — that test fails because no exception was raised.

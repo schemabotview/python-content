@@ -1,0 +1,9 @@
+Why py-test.
+
+The standard library ships unittest — x-unit-style, class-based, self dot assert-equal of a and b. It works, but py-test dominates new projects for four reasons.
+
+Plain assert. No self dot assert-equal of a and b ceremony; just assert a equals-equals b. Py-test rewrites failing asserts to show you both sides. Fixtures. Py-test's fixture system is dependency injection for tests. Cleaner than x-unit's set-up and tear-down once you know it. Parametrization. One test function, many input cases, one decorator. A huge plugin ecosystem. Py-test dash cov, py-test dash asyncio, py-test dash mock, py-test dash x-dist for parallel, py-test dash django, and hundreds more.
+
+You can still run unittest-style classes under py-test — py-test discovers and runs both. So adoption is incremental.
+
+Install — pip install py-test.

@@ -1,0 +1,11 @@
+None — and the is-none rule.
+
+None is python's null. It is a singleton — there is exactly one none object in the entire interpreter. That singleton-ness is why you should always compare with is-none, never double-equals-none.
+
+If x is none — correct. If x equals-equals none — works but worse, because it invokes the equals method, which can be overridden.
+
+Is-none checks object identity — same object. Equals-equals checks equality — does the equals method return true. Some objects override their equals in ways that make them compare equal to none. Is-none is faster, clearer, and immune to that.
+
+The same rule applies to true and false — if x is true is rarely what you want. Use if x for truthiness. But if you really mean literally the true singleton, is-true is the right form.
+
+In code, picture x equals none. The right form — if x is none, print absent. Then a class weird-equal whose equals method returns true for everything. Bind w to a weird-equal instance. W equals-equals none returns true — surprise. W is none returns false — correctly distinguishes.

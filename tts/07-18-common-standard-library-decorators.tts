@@ -1,0 +1,5 @@
+Common standard-library decorators.
+
+Worth recognizing. At-property, at-staticmethod, at-classmethod from builtin. At-dataclass from data-classes. At-cache from functools — memoize unbounded. At-l-r-u-cache with maxsize from functools — memoize with size limit. At-cached-property from functools — compute once, cache as instance attribute. At-singledispatch from functools — type-based dispatch. At-wraps from functools — preserve metadata when writing decorators. At-context-manager from contextlib — generator to context manager from notebook six. At-fixture from py-test — declare a test fixture from notebook ten.
+
+In code, picture from functools import cache, l-r-u-cache, cached-property, singledispatch. At-cache on def fib for memoization — fib of fifty becomes near-instant. At-cached-property on profile dot expensive — first read computes, second read uses cached value. At-singledispatch on def render with no type — defaults to a generic message. At-render dot register for an int handler. At-render dot register for a list handler. Calling render of a string, int, or list dispatches to the right one.

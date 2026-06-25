@@ -1,0 +1,9 @@
+The honest what-to-reach-for-first rule.
+
+When in doubt, reach for concurrent dot futures dot thread-pool-executor for i-o work and process-pool-executor for c-p-u work. They have the same application programming interface, they are in the standard library, and they handle the common cases without ceremony.
+
+Move to asyncio when your i-o concurrency needs are large — thousands or more of in-flight operations. When you are using async-native libraries already. When you are writing a server or long-running service and can commit to async from the start.
+
+Move to actual c-extension or compiled code — num-py, numba, cython, rust via py-o-three — when profiling shows you are c-p-u-bound. When you have tried process-pool-executor and the overhead is killing you.
+
+Skip threading-and-locks-by-hand unless you really know why you need it. Queue-mediated worker pools or thread-pool-executor cover ninety percent of cases without giving you a chance to deadlock.

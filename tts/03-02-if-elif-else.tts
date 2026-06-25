@@ -1,0 +1,7 @@
+If, elif, else.
+
+Python uses indentation for blocks instead of braces. The colon marks the start of a block; everything indented under it is the block body. The convention is four spaces per indent level — never tabs, never mixed.
+
+The shape — if condition colon body, optionally one or more elif condition colon body, optionally one else colon body. The conditions are evaluated top-to-bottom; the first true branch wins. Elif is short for else if — python made it one keyword to keep nested if-chains flat.
+
+In code, picture score equals seventy-three. An if-elif chain assigns grade to a, b, c, or f depending on the score. Print grade and you see c.

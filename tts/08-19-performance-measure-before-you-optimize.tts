@@ -1,0 +1,15 @@
+Performance — measure before you optimize.
+
+Three layers of performance work, in the order you should reach for them.
+
+Algorithm. Order n squared versus order n log n matters more than any micro-optimization. Do not reach for the next two until you have checked the asymptotic shape.
+
+Profiling. C-profile, built-in, shows where time is actually spent. Py-spy, third-party, does the same for production processes without instrumentation. Profile first; optimize second.
+
+Micro-benchmarks. Once you have identified the hot path, use timeit, or its percent-timeit magic in i-python or jupyter, to compare alternatives.
+
+The wrong order — guessing what is slow, optimizing things that are not on the critical path — wastes time and adds complexity.
+
+When you have measured and know the bottleneck is genuinely c-p-u-bound pure python — vectorize with num-py, rewrite the hot loop in cython or rust, or move the algorithm into a library that releases the global interpreter lock. Notebook nine covers the global interpreter lock implications.
+
+In code, picture import timeit. Three timing comparisons of summing squares of one through a thousand — a plain loop with a running total, a generator expression passed to sum, and a list comprehension passed to sum. Each is run ten thousand times. Print the elapsed seconds for each. The list comprehension is often the fastest because the c-level summation iterates a list quickly; the generator avoids the list construction.

@@ -1,0 +1,5 @@
+Set and dict comprehensions.
+
+Same shape, different surrounding brackets. Braces with no key-colon-value gives a set comprehension. Braces with k colon v gives a dict comprehension.
+
+In code, picture nums with positive and negative values. Unique-squares equals a set comprehension of n times n for n in nums. Duplicates from positive and negative are folded. Dict comprehension — name-lengths equals brace n colon l-e-n of n for n in names. With a filter — adults equals brace name colon age for name comma age in ages dot items if age greater-equal eighteen. Invert a dict — flipped equals brace v colon k for k comma v in ages dot items.

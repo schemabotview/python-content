@@ -1,0 +1,7 @@
+Catching exceptions.
+
+Three patterns. Specific type — preferred — except key-error as e. Multiple types in one handler — tuple — except the tuple of key-error, index-error, type-error as e. Catch-all, exception not base-exception — usually last, often re-raises — except exception as e, log it, raise.
+
+Never write a bare except. It catches keyboard-interrupt, your control-c, and system-exit, your s-y-s dot exit. If you really need to catch absolutely everything, write except base-exception — but you almost never need to.
+
+In code, picture safe-lookup taking a container and a key. Try return container at key. Except the tuple of key-error, index-error, type-error as e, return missing followed by the exception type name. Lookup on a dict with missing key gives missing key-error. On a list with too-large index gives missing index-error. On none with any key gives missing type-error.

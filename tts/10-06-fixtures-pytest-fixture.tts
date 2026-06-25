@@ -1,0 +1,9 @@
+Fixtures — at-py-test dot fixture.
+
+A fixture is a function decorated with at-py-test dot fixture that provides test setup. Tests request fixtures by listing them as parameters; py-test looks them up by name and injects them.
+
+The pattern. At-py-test dot fixture def sample-users returns a list of user dicts. Def test-count-users takes sample-users as parameter, asserts the length is two. Def test-first-user-name takes the same fixture, asserts the first name is alice.
+
+Both tests request sample-users by parameter name; py-test runs the fixture function once per test by default and passes the result in.
+
+The win over x-unit set-up. You do not pay for setup you do not need, and you can compose fixtures — fixtures can request other fixtures.

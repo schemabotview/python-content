@@ -1,0 +1,15 @@
+Style choices that age well.
+
+Opinions you will thank yourself for in two years.
+
+Small functions. A function that fits on a screen is debuggable. A function that does not is not. Split aggressively.
+
+Explicit data. Pass dictionaries, data-classes, named-tuples — not the third positional argument is the count. Type hints make this concrete.
+
+Pure when you can. A function that does not mutate its inputs and does not read global state is testable and composable. Reach for mutation only when you have decided you need it.
+
+Hard-to-misuse application programming interfaces. Keyword-only flags, default arguments that fail loud when wrong, names that say what they mean — timeout-seconds, not just timeout. The reader of your code in six months is yourself with no memory of the conversation that led to this design.
+
+Comments explain why, not what. The code says what. The comment says why it is that way and not the other way.
+
+Tests as the second documentation. A failing test pins down what was promised. A passing test demonstrates how the application programming interface is meant to be used. Notebook ten covers py-test.

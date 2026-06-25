@@ -1,0 +1,9 @@
+Exception-group and except-star — three point eleven plus.
+
+Python three point eleven added exception groups, for code that runs many things concurrently and may produce multiple errors at once. Typically asyncio dot task-group.
+
+Exception-group of a message and a list of exceptions packages several exceptions into one. The new except-star syntax handles them group-aware — splits the group, handles matching ones, lets the rest propagate.
+
+You will rarely write raise exception-group by hand. The reason to know it exists — asyncio dot task-group from notebook nine uses it to collect failures across concurrent tasks.
+
+In code, picture manually constructing an exception-group with a message and a list containing a value-error and a key-error. The try block raises it. Except-star value-error as e-g handles the value-errors. Except-star key-error as e-g handles the key-errors. Each prints the matching exceptions.

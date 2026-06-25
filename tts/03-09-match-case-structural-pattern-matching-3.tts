@@ -1,0 +1,11 @@
+Match-case — structural pattern matching from three point ten.
+
+Python three point ten added match-case — its take on a switch statement, with structural patterns over the matched value. The patterns can match literals like case zero. Match shapes like case bracket a b bracket matches any two-element sequence, or case brace key colon v matches a dict with that key. Match types like case int parens. Bind values with the matched parts like case point of x and y. Use the pipe operator for or-patterns like case zero pipe one. Use a guard like case x if x greater-than zero. And the underscore is the wildcard — matches anything, binds nothing.
+
+This is not just switch with patterns. The case clauses can destructure deeply. It rewards reading carefully, because the cases that look like variable references are sometimes patterns.
+
+In code, picture def day-name taking n integer returning string. Match n — case zero returns monday, case one returns tuesday, case two returns wednesday, case three pipe four returns later in the week, case underscore returns weekend.
+
+Structural matching — destructure a dict. Def describe taking an event dict. Match event — case brace type colon click, target colon target close brace returns click on target. Case brace type colon key, key colon k close brace returns key pressed. Case brace type colon scroll, amount colon amt close brace, if amt greater-than zero, returns scrolled down by amt. Case underscore returns unknown event.
+
+Class patterns — destructure attributes. From data-classes import data-class. At data-class. Class point with fields x and y. Def quadrant taking a point returning string. Match p — case point of zero zero returns origin. Case point of x zero returns on x-axis at x. Case point of zero y returns on y-axis at y. Then four cases with guards for the four quadrants based on sign of x and y.

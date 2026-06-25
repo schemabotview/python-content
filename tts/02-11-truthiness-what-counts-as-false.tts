@@ -1,0 +1,7 @@
+Truthiness — what counts as false.
+
+Every python object can be used in a boolean context — if x, while x, bool of x. The default rule. An object is truthy unless it is one of these — false, none, numeric zero, an empty container, an empty bytes or bytearray, or any object whose dunder bool returns false, or whose dunder len returns zero.
+
+This rule is the basis of python's most idiomatic is there anything here check. If items, do something — not if l-e-n of items greater than zero. The same trick fires for strings, dicts, and so on. It is the python equivalent of is it set, and not empty, in one line.
+
+In code, picture a loop over a list of values — false, none, zero, zero point zero, empty string, empty list, empty dict, empty tuple, empty set, empty bytes — and the truthy counterparts. For each, print the value and what bool returns. You see all the empties resolve to false; all the populated values resolve to true.

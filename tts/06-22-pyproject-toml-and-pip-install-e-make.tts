@@ -1,0 +1,9 @@
+Py-project dot t-o-m-l and pip install dash e dot — make your project importable.
+
+When you have a real project, you want import my-project to work from anywhere in the activated venv — not just from the directory that happens to contain the my-project folder.
+
+The modern way. A py-project dot t-o-m-l declaring your project, plus pip install dash e dot to install it in editable mode — changes to source are picked up immediately, no reinstall.
+
+Minimal py-project dot t-o-m-l. Bracket project bracket section with name, version, and dependencies as a list. Bracket build-system bracket section requiring setup-tools and pointing at setup-tools dot build-meta as the build backend.
+
+Then from the project root, with your venv activated, pip install dash e dot. Now from my-project dot core import x works from any directory. The dash e makes it editable — your source files in s-r-c slash my-project are what gets imported. You do not need to reinstall after every code change.

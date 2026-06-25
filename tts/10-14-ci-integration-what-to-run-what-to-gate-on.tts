@@ -1,0 +1,7 @@
+Continuous integration — what to run, what to gate on.
+
+A reasonable continuous integration pipeline for a python project. Pip install dash e dot bracket dev bracket. Ruff check on source and tests. Ruff format dash dash check on source and tests. My-py on source. Py-test with dash r-a, dash dash cov on source, dash dash cov dash report equals term, dash dash cov dash fail dash under equals eighty.
+
+Gate the merge on all of them. The cost of failing a check at pull-request time is small. The cost of a regression in main is large.
+
+Run py-test with dash r-a to show short summaries of failures and skips at the end. Add dash-x to stop on first failure for local iteration. Use py-test dash x-dist with dash-n auto to parallelize across cores once the suite is large enough to matter.

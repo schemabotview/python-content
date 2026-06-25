@@ -1,0 +1,13 @@
+Numeric types — int, float, decimal, fraction, complex.
+
+Int is arbitrary-precision. Unlike c, java, or even most modern languages, python integers have no max value. They grow as large as you have memory for. Ten to the hundredth is a number, not an overflow.
+
+Float is i-e-e-e seven fifty-four double. Same caveats as every other language — zero point one plus zero point two does not equal zero point three. Special values like inf and nan. For exact decimal arithmetic, reach for decimal dot decimal. For exact fractions, fractions dot fraction.
+
+Bool is a subclass of int. True equals one and false equals zero, and true plus one equals two. This sounds weird, and it occasionally is. Sum of a list of true, true, false, true equals three is technically correct python.
+
+Complex exists in the standard language. Three plus four j is a literal. Not used heavily outside scientific work; mentioned for completeness.
+
+In code, picture this. Bind big to two to the thousandth. The number-of-digits in the string form is three hundred two — no overflow. Different bases for int literals — zero-b ten gives ten in binary, zero-o seventeen gives fifteen in octal, zero-x f-f gives two hundred fifty-five. Underscores for readability — one underscore zero zero zero underscore zero zero zero is one million.
+
+Float reality. Zero point one plus zero point two prints with the long tail. One-e three-zero-eight times ten gives inf. Float of nan equals float of nan is false — nan is never equal to itself. Decimal — import decimal, then decimal of quote zero point one plus decimal of quote zero point two gives exact zero point three. Fraction — fraction of one and three plus fraction of one and six gives one-half. And bool is an int — true plus true plus false plus true equals three. Is-instance of true and int is true.

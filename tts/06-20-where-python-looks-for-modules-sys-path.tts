@@ -1,0 +1,7 @@
+Where python looks for modules — s-y-s dot path.
+
+When you import x, python looks for x dot p-y, or x slash dunder-init dot p-y, in the directories listed in s-y-s dot path, in order. The search order. The directory of the script being run, or the current directory in an interactive session. The directories listed in the python-path environment variable. The installation-dependent default paths — your site-packages, where pip install puts things.
+
+You can inspect s-y-s dot path directly. Manipulating it at runtime is occasionally necessary but usually a smell — proper packaging with py-project dot t-o-m-l and pip install dash e dot is the right answer.
+
+In code, picture import s-y-s, then for p in s-y-s dot path, print p. You see the search order.

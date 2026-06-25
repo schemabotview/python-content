@@ -1,0 +1,7 @@
+Updating dicts — update, set-default, the pipe merge.
+
+Dict dot update of another dict merges another dict into this one, in place. Dict dot set-default of k and v is the if-not-present-set, either-way-return-the-value idiom.
+
+Python three point nine adds the pipe operator for merge into a new dict, and pipe-equals for merge in place. Right-hand wins on duplicates.
+
+In code, picture a equals a dict of x, y. B equals a dict of y, z, where b has a different y value. Update — a dot update of b mutates a to have y from b and the new z. The pipe operator — a pipe b returns a new dict without mutating a. Pipe-equals mutates in place. Set-default — useful for grouping. Build a groups dict by iterating words and calling groups dot set-default of the first letter and an empty list, then appending the word. The dict accumulates groupings.

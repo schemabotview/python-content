@@ -1,0 +1,11 @@
+Mutable versus immutable — the property that explains aliasing.
+
+Every python type is either mutable, can be changed in place after creation, or immutable, cannot be changed after creation.
+
+Immutable. Int, float, bool, string, bytes, tuple, frozenset, none. Mutable. List, dict, set, bytearray, most user-defined classes.
+
+This property explains every aliasing surprise. Two names pointing at the same immutable object can never go out of sync — neither can change it. Two names pointing at the same mutable object can, and you have to know they share state.
+
+In code, picture x equals hello, y equals x. Y equals y dot upper creates a new string and rebinds y. X is still hello, unchanged. Then x-s equals a list of one, two, three. Y-s equals x-s. Y-s dot append of ninety-nine mutates the shared list. X-s now shows one, two, three, ninety-nine — surprise.
+
+To get an independent copy, use dot copy or square-bracket-colon-square-bracket. Y-s equals x-s dot copy. Append ninety-nine to y-s. X-s is unchanged. For deeply nested structures, the standard library has copy dot deep-copy. Import copy. Bind nested to a list of two inner lists. Shallow equals nested dot copy. Deep equals copy dot deep-copy of nested. Append ninety-nine to shallow's inner list — that mutates the inner list, which is shared with nested. So nested now shows the mutation. Deep is truly independent.

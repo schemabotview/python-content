@@ -1,0 +1,9 @@
+Discovery — where py-test looks.
+
+From the directory you run py-test, it walks the tree and picks up files matching test-underscore-star dot p-y or star-underscore-test dot p-y. Inside those, classes named test-capital-star with no dunder-init by convention. And inside files and test-classes, functions and methods named test-underscore-star.
+
+So a typical layout. A project root with py-project dot t-o-m-l, a source directory with the package, and a tests directory containing test files and a conftest dot p-y for shared fixtures.
+
+You do not need a dunder-init dot p-y in tests. Py-test handles imports through its own discovery mechanism.
+
+Common configuration goes in py-project dot t-o-m-l. Bracket tool dot py-test dot i-n-i dash options bracket. Test-paths equals the tests directory. Add-opts equals dash r-a dash-dash strict-markers dash-dash strict-config.

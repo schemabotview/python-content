@@ -1,0 +1,9 @@
+Typed-dict — typed dictionaries.
+
+For a dict with known string keys — config blobs, j-s-o-n payloads — typed-dict documents the shape. Class user-dict of typed-dict with name colon string, age colon integer, active colon bool. Then u colon user-dict equals a dict literal with the three keys.
+
+The type checker now ensures every required key is present and that each value has the right type. Useful when you cannot — or will not — replace the dict with a data-class.
+
+Mark optional keys with total equals false, or per-key not-required since three point eleven.
+
+In code, picture class user-dict with required name and age, plus not-required email. Def describe takes a user-dict, returns a string. Builds the base from name and age, optionally appends the email. Describe of a dict with just name and age works. Describe of a dict with all three works.

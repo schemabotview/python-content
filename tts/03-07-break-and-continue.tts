@@ -1,0 +1,5 @@
+Break and continue.
+
+Break exits the innermost enclosing loop immediately. Continue skips the rest of this iteration and goes straight to the next one.
+
+In code, picture break on first match. For x in a list, if x equals five, print found five and break. Continue — for x in a list of mixed positive and negative integers, if x less-than zero, continue. Otherwise add to total. The negatives are skipped.

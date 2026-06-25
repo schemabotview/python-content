@@ -1,0 +1,11 @@
+The ecosystem map — what library does what.
+
+A short map so you can recognize names when they come up.
+
+For hypertext transfer protocol clients — the standard library has u-r-l-lib dot request; the most-reached-for third party is requests for synchronous code or h-t-t-p-x for sync plus async. For h-t-t-p servers — the standard library has h-t-t-p dot server; third-party defaults are fast-a-p-i, flask, or starlette. For tabular data — the standard library has c-s-v and s-q-lite three; third-party defaults are pandas and polars. For numeric data — the standard library has array; third-party defaults are num-py and sci-py. For machine learning — no standard-library entry; defaults are scikit-learn, py-torch, or tensor-flow. For plotting — matplotlib, plotly, seaborn.
+
+For j-s-o-n, the stdlib json module is enough. For y-a-m-l, p-y-y-a-m-l or rumel-y-a-m-l. For reading t-o-m-l, the stdlib toml-lib since three point eleven. For writing t-o-m-l, the third-party tomli dash w.
+
+For testing, the stdlib unittest works but py-test from notebook ten is dominant. For type checking, my-py, py-right, or ruff. For linting and formatting, ruff and black. For async, the stdlib asyncio plus trio or any-io. For command-line interfaces, the stdlib arg-parse, or third-party click or typer. For date and time, the stdlib date-time plus zone-info, or third-party pendulum or arrow. For templating, the stdlib string dot template, or jinja two.
+
+You will install only the ones your project needs. The list is here so the names are not a surprise.

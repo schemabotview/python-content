@@ -1,0 +1,7 @@
+For loops — and what they actually do.
+
+For in python is not c's for loop with index init, condition, step. It iterates over a sequence — anything that produces values one at a time. Lists, tuples, dicts, sets, strings, generators, file handles, ranges — all iterables. The loop body runs once per element, with the loop variable bound to that element.
+
+The shape — for item in iterable colon body. Under the hood, for x in x-s calls iter of x-s to get an iterator, then repeatedly calls next on the iterator until stop-iteration is raised. This means you almost never need an index to walk a sequence. If you do need indices, reach for enumerate.
+
+In code, picture words as a list of alpha, beta, gamma. Idiomatic — just iterate the elements. For w in words, print w. When you need both index and value — for i, w in enumerate of words, print f-string. Two sequences side by side — ages equals a list of three integers. For name comma age in zip of words and ages, print the pairing. Iterating a dict — by default gives keys. Config equals a dict of host, port, ssl. For key in config, print key and config-of-key. Better — items gives key-value pairs. For key comma value in config dot items, print the formatted assignment.

@@ -1,0 +1,3 @@
+A decision matrix.
+
+Network i-o, fewer than a few hundred concurrent — threads. Simple, works with sync libraries. Network i-o, thousands of concurrent — asyncio. Lighter weight, scales better. C-p-u-bound pure-python — processes. Only way around the g-i-l. C-p-u-bound, can use num-py — num-py or numba. Releases the g-i-l; multi-core without multiprocessing. Mixed i-o plus c-p-u — asyncio plus run-in-executor. Offload the c-p-u bit to a process pool. One-shot script with a few jobs — thread-pool-executor dot map. Simplest application programming interface.

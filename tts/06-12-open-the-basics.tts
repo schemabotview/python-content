@@ -1,0 +1,9 @@
+Open — the basics.
+
+Open of path, mode, encoding equals — returns a file object. Always use it inside a with so the file gets closed.
+
+Mode r — read text, the default. Mode w — write text, truncates existing content. Mode a — append text. Mode x — exclusive create, error if exists. Modes r-b, w-b, a-b are binary versions. Modes r-plus, w-plus are read and write.
+
+Always specify encoding equals u-t-f dash eight for text files. The default depends on the platform — c-p twelve fifty-two on windows, u-t-f dash eight on mac and linux — and that platform-dependence is a real source of works-on-my-machine bugs. Be explicit.
+
+In code, picture creating a temp file with three lines. Read all at once with open as f colon, content equals f dot read. Print the repr to see the newlines. Read line by line by iterating the file object directly — memory-efficient. Read into a list of lines with f dot read-lines — loads all into memory.

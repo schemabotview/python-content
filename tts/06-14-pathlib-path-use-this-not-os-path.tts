@@ -1,0 +1,7 @@
+Pathlib's path — use this, not o-s dot path.
+
+The modern path application programming interface. Path is an object that represents a filesystem path, with methods for all the common operations. It replaces the function-based o-s dot path interface — o-s dot path dot join, o-s dot path dot exists, and so on.
+
+Highlights. Path of data divided-by users divided-by ganesh dot t-x-t — the slash operator joins. P dot parent gives the parent path. P dot name gives the file name. P dot stem gives the stem. P dot suffix gives the extension. P dot exists returns bool. P dot is-file and is-dir. P dot read-text and write-text. P dot mkdir of parents equals true, exist-ok equals true — the equivalent of mkdir dash p. P dot iter-dir iterates children. P dot glob with a pattern. P dot resolve gives the absolute path with symlinks resolved.
+
+In code, picture working inside a temp directory. Bind base to a path of the temp dir. P equals base divided-by data divided-by log dot t-x-t. P dot parent dot mkdir with parents and exist-ok creates the directory tree. P dot write-text writes two lines. P dot exists is true. P dot name is log dot t-x-t, suffix is dot t-x-t. P dot read-text gets the content back. Then iterate a directory — create two files and a sub-directory with a file in it. Iter-dir over base gives the top-level children. Glob with star dot t-x-t finds just the t-x-t files at the top level. R-glob with star dot t-x-t finds them recursively.

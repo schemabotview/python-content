@@ -1,0 +1,9 @@
+Project layout — the source layout.
+
+The recommended modern layout. A project directory at the top. Py-project dot t-o-m-l. Read-me dot m-d. Dot git-ignore. Dot python dash version. A source directory containing the actual importable package, with its own dunder-init dot p-y and module files, plus a utils subpackage. A tests directory at the project root with test files.
+
+The source layout — package nested inside s-r-c — avoids a class of import bugs where your tests accidentally import from the working-directory my-project slash instead of the installed one. The cost is one extra directory level; the payoff is reliable test-versus-installed isolation.
+
+After pip install dash e dot, from my-project dot core import x works from anywhere — your tests, your scripts, the read eval print loop.
+
+Tests live in their own tests directory at the project root, not nested inside source slash my-project.

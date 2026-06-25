@@ -1,0 +1,9 @@
+Configuration — environment variables, dot env for development.
+
+Twelve-factor app guidance. Read configuration from environment variables, not from hardcoded constants or checked-in config files.
+
+For local development, python-dotenv loads a dot env file — git-ignored — into the environment. In production, real environment variables come from the orchestrator — kubernetes secrets, docker compose, e-c-s task definitions.
+
+Pip install python-dotenv. In code, import o-s. From dotenv import load-dotenv. Load-dotenv reads dot env if present. Then database-u-r-l equals o-s dot environ at the key — required, fail loud if missing. Timeout equals int of o-s dot get-env of timeout and default thirty — optional with a default.
+
+O-s dot environ at a key raises key-error if missing — good for required config. O-s dot get-env of key and default returns none, or the default, if missing — for optional config.

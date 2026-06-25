@@ -1,0 +1,7 @@
+Built-in fixtures — tmp-path, monkey-patch, capsys, caplog.
+
+Py-test ships a handful of high-value built-in fixtures. The four you will use most.
+
+Tmp-path — a fresh pathlib dot path to a temporary directory, auto-cleaned. Use whenever your test needs to write files. Monkey-patch — patch attributes, dict items, environment variables; auto-undone at test end. The right tool for set this environment variable just for this test. Capsys — capture standard-out and standard-error printed during the test. Read with capsys dot read-out-err. Caplog — capture log records. Inspect with caplog dot records or caplog dot text.
+
+In code, picture three examples. Test-writes-file takes tmp-path, writes a file, reads it back. Test-env-override takes monkey-patch, sets an environment variable that auto-restores. Test-print-output takes capsys, prints something, reads the captured output.

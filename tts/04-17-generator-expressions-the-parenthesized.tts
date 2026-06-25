@@ -1,0 +1,11 @@
+Generator expressions — the parenthesized cousin.
+
+A generator expression has the same shape as a list comprehension but with parentheses instead of brackets. The difference is huge. A generator expression is lazy. It produces values one at a time as you iterate, without materializing the whole sequence in memory.
+
+Brackets x times x for x in range of ten to the eighth builds a hundred-million-element list — out-of-memory risk. Parens of the same builds a generator — uses constant memory.
+
+Use a generator expression when you will iterate the result once and do not need indexed access. Many functions — sum, min, max, any, all, join — accept any iterable, so a generator works directly. Sum of x times x for x in range of ten to the sixth — the parentheses can be omitted when it is the sole argument.
+
+If you need a list — because you will index, slice, or iterate twice — use a list comprehension. If you will iterate once, generators are usually the better default.
+
+In code, picture gen equals parens x times x for x in range of five — prints as generator object. List of gen materializes once. List of gen again returns empty — generators are single-pass. As a function argument — sum of x times x for x in range of ten gives two hundred eighty-five. Any and all are short-circuit and generator-friendly. Any of x greater-than one hundred for x in a list — short-circuits true on first match. All of x greater-than zero for x in positives — short-circuits false on first failure. Joining strings — comma dot join of str of x for x in a list.

@@ -1,0 +1,5 @@
+What python is.
+
+Python is a dynamically typed, interpreted, multi-paradigm language designed by guido van rossum in 1989. It runs anywhere there is a c compiler, which is to say almost everywhere — linux, mac o-s, windows, embedded boards, scientific clusters, browsers via pyodide, and inside large products from instagram to dropbox to industrial light and magic.
+
+Four traits define python in one breath. Dynamically typed — types are attached to values, not to variables. The same name x can hold an integer this line and a string the next. The interpreter checks types at runtime, not at compile time. Interpreted, with a bytecode step underneath — you do not compile to a machine binary. The c python runtime parses your source into bytecode and walks it; no separate build step. Multi-paradigm — procedural by default, object-oriented when you want classes, functional-ish with lambda, map, filter, list comprehensions. Pick the shape that fits. And batteries included — a large standard library covering most everyday needs without a single pip install.

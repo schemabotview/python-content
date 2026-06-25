@@ -1,0 +1,13 @@
+At-dataclass — boilerplate-free data records.
+
+For classes whose main job is to hold data, at-dataclass since python three point seven generates the boilerplate for you — dunder-init, dunder-repr, dunder-eq, and optionally dunder-hash — based on type annotations.
+
+At-dataclass class customer with name colon string, city colon string, credit-score colon integer equals seven hundred. Defaults supported. You get a constructor that takes all the fields, equality by structure, and a useful repr. No self dot x equals x boilerplate.
+
+Three flags worth knowing. At-dataclass frozen equals true makes instances immutable — assigning to a field raises. Also makes the class hashable, so instances can be used as dict keys or set members. At-dataclass slots equals true since python three point ten adds dunder-slots, saving memory and speeding up attribute access. At-dataclass k-w-only equals true since python three point ten makes the constructor accept only keyword arguments. Good for classes with many fields.
+
+In code, picture at-dataclass class customer with three fields. Construct c-one and c-two with the same values — they compare equal because of generated dunder-eq. C-three with different values — not equal. Print c-one shows the formatted repr with all field names.
+
+Mutable default — the same trap as functions. Use field with default-factory equals list, not equals an empty list literal — the literal would raise value-error. At-dataclass class inbox with owner and messages equals field default-factory equals list. Each instance gets a fresh list.
+
+Frozen plus hashable. At-dataclass frozen equals true class point with x and y. P dot x equals ninety-nine raises frozen-instance-error. Hash of p works — frozen dataclasses are hashable. A set of two equal points dedupes to one.

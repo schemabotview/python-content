@@ -1,0 +1,9 @@
+Optional, pipe-none, and union types.
+
+A value that could be none is optional. The classic form is optional of t from typing. Since three point ten, the cleaner form is t pipe none.
+
+Same idea for unions — union of int comma str, the old way, or int pipe str since three point ten. The new form is preferred in modern code.
+
+A method without arrow none and without a return returns none implicitly — but the type checker will not infer that. Write arrow none explicitly on procedures.
+
+In code, picture def find-user taking name colon string, returning dict pipe none. Body looks up a small d-b and returns the result or none. Mixed types — def stringify taking x colon int pipe float pipe str, returning string, body just str of x. Older imports are still valid — typing dot optional, typing dot union. Prefer the pipe form in new code.

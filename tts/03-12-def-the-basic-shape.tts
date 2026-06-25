@@ -1,0 +1,5 @@
+Def — the basic shape.
+
+A function is declared with def, takes parameters in parentheses, and runs its indented body. The optional annotations after colon and arrow are type hints — covered in depth in notebook eight. They are not enforced at runtime; they document, and tools like my-py and py-right check them statically.
+
+In code, picture def greet taking name colon string, returning string, body return f-string hello name. Greet of ganesh returns hello ganesh. Multiple parameters, multiple returns — def stats taking x-s colon list-of-float, returning tuple-of-two-floats. If empty, return zero comma zero. Otherwise compute total and mean and return both. Unpack with t comma m equals stats of a four-element list. No return statement equals returns none — def shout takes a message, prints upper case, returns nothing. Bind result to shout of hello and print r-e-p-r of result — you see the literal none.

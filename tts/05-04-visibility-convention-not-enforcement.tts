@@ -1,0 +1,7 @@
+Visibility — convention, not enforcement.
+
+Python has no real private or protected. Two conventions stand in. Single leading underscore — by convention, internal use only. Tools and humans should treat it as private. Nothing stops you from using it; it is a warning sign. Double leading underscore — name mangling. The interpreter rewrites self dot dunder-x to self dot underscore-class-name dunder-x. This avoids accidental collision with subclass attributes; it is not a security mechanism.
+
+The honest rule. Prefix internal attributes with underscore. Reach for double-underscore only when you need to avoid subclass name collisions in a class meant to be inherited from. For data hiding from external code, type hints, documentation, and at-property do more than naming does.
+
+In code, picture class account with dunder-init taking balance. Self dot underscore-balance equals balance — convention private. Self dot double-underscore-secret equals shh — name-mangled to underscore-account-double-underscore-secret. Methods to deposit and read balance. From outside, acc dot underscore-balance is fully accessible — private is just convention. Name mangling — d-i-r of acc reveals underscore-account-double-underscore-secret in the attribute list. Accessing acc dot double-underscore-secret directly raises attribute-error.

@@ -1,0 +1,11 @@
+The promise — and what they do not do.
+
+Type hints since python three point five let you annotate parameters and return values with the types they expect. The shape — def greet, name colon string, times colon integer equals one, arrow string, body returns the formatted string.
+
+The promise. Tools — my-py, py-right, your i-d-e — check your code statically and flag mismatches before you run. Humans read the signature and know what to pass. Refactors become safer — rename a class and the type checker shows every site that needs updating.
+
+What hints do not do — they do not enforce anything at runtime. Python ignores them when executing your code. Calling greet of forty-two and no runs without error until the string operations in the body fail. If you want runtime validation, reach for pydantic or write is-instance checks yourself.
+
+The mental model. Type hints are like comments that the type checker reads. The interpreter does not.
+
+In code, picture greet returning the formatted string. Greet of ganesh works. Greet of alice and three works. Runtime does not enforce the hints — greet of forty-two and no runs and fails inside the body with a type error. A type checker like my-py would have flagged the call before you ran.

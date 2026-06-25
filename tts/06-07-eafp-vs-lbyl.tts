@@ -1,0 +1,11 @@
+E-a-f-p versus l-b-y-l.
+
+Two styles for is this operation safe.
+
+E-a-f-p — easier to ask forgiveness than permission. Try the operation, catch the exception if it fails. The pythonic default.
+
+L-b-y-l — look before you leap. Check preconditions first, then do the operation. Common in c, sometimes appropriate.
+
+E-a-f-p is preferred because it is atomic — no race between check and use. In concurrent code, an l-b-y-l check followed by use can have the state change between them. It is faster on the success path — exceptions are slow to raise but free when they do not fire. And it maps to how the data actually flows — you describe what you want and handle the cases where it is not there.
+
+L-b-y-l wins when the precondition check is cheap and the expected case is failure — for example, polling for a file that usually does not exist yet.

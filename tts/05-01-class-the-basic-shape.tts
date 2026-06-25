@@ -1,0 +1,7 @@
+Class — the basic shape.
+
+A class is declared with class, takes an optional parent that defaults to object, and runs its indented body. The shape — class customer colon, then dunder-init taking self, name, city, and self dot name equals name, self dot city equals city. Then methods.
+
+Two things to internalize coming from java or c plus plus. Self is explicit and is the first parameter of every instance method. It is not a keyword — you could name it something else, but do not. The interpreter passes the instance as the first argument when you call object dot method. Dunder-init is the constructor. There is no new keyword. Instances are created by calling the class — customer of alice, delhi — which calls dunder-init.
+
+In code, picture class customer with dunder-init taking name and city and binding both as self attributes. A greet method returns an f-string. Construct c equals customer of alice, delhi. C dot greet works. C dot name is alice. Attributes are public by default — c dot city can be reassigned. And new attributes can be added on the fly — c dot note equals v-i-p — sometimes a feature, often a footgun.

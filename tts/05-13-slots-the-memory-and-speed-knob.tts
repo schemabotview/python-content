@@ -1,0 +1,9 @@
+Dunder-slots — the memory and speed knob.
+
+By default, every instance has a dunder-dict for attribute storage. That is flexible — you can add attributes later — but each instance pays the dict overhead, both memory and a slight indirection on every attribute access.
+
+Dunder-slots declares the allowed attributes upfront. The interpreter then uses a fixed-size struct instead of a dict. The win — less memory per instance, faster attribute access. The cost — no dynamic attribute additions; less convenient with multiple inheritance.
+
+Reach for dunder-slots when you will create millions of instances of one class — data points, graph nodes, log records. Most classes do not need it.
+
+In code, picture class with-dict and class with-slots, both holding x and y. With-slots declares dunder-slots equals the tuple x and y. Adding a dynamic attribute works on with-dict but fails on with-slots with attribute-error. Data classes get slots equals true since three point ten — at-dataclass slots equals true gives the same benefit without writing the slots declaration.

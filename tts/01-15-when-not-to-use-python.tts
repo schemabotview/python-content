@@ -1,0 +1,13 @@
+When not to use python.
+
+Four honest cases where reaching for python is the wrong call.
+
+Hard real-time or sub-millisecond latency. Python's garbage collector and interpreter loop introduce unpredictable pauses. Reach for go, rust, or c plus plus when latency matters.
+
+C-p-u bound work that needs to scale across cores. The global interpreter lock serializes pure-python execution. You can work around it with multi-processing, with c extensions, or with native libraries that release the lock — num-py does, pandas mostly does — but if the work is heavy and pure python, python is the wrong shape.
+
+Distribution as a single binary. Py-installer and similar tools can bundle a python program, but the result is a forty-megabyte file that has to extract itself before running. Go and rust produce true single-file binaries.
+
+Mobile. Python on android and i-o-s is possible — bee-ware, kivy — but a small niche. The dominant choices are kotlin, swift, react native, flutter.
+
+The honest rule. Python earns its place when you would rather optimise for time to result than time to execute. The moment execution time becomes the bottleneck, look at what the slow path actually is — usually you can fix it with num-py, with cython, with a c extension, or by replacing one hot loop with a call into rust. Rarely do you need to rewrite the whole program in another language.

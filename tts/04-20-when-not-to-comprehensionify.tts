@@ -1,0 +1,7 @@
+When not to comprehensionify.
+
+Comprehensions are clean only when they are short and the intent is obvious. The cliff.
+
+Side effects. Do not write a comprehension just to print things — that is a loop. The comprehension allocates a list of nones for no reason. Multi-line bodies. If you find yourself spanning three or four lines or chaining multiple if guards plus an else, fall back to a for loop. It will be more readable. Multiple steps. A comprehension that does three transformations in sequence often hides bugs. Break it into named intermediates. If-else for the projection uses the conditional expression form, not the if filter. Bracket x if x greater-than zero else zero for x in x-s bracket — but two of those nested is hard to read.
+
+The honest rule. If you can read the comprehension out loud as a sentence and it makes sense, keep it. Otherwise, use a loop.

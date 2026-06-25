@@ -1,0 +1,7 @@
+P-e-p eight and the tools that automate it.
+
+P-e-p eight is the official style guide for python code. The high-confidence items — four-space indentation, lowercase-with-underscores for functions and variables, cap-words for class names, lines under about one hundred characters, two blank lines between top-level defs.
+
+You should not enforce p-e-p eight by hand. Two tools dominate. Ruff format — formatter. Reformats your code to canonical style. Equivalent to and faster than black. Run it before every commit; you stop having opinions about whitespace. Ruff check — linter. Catches dead code, unused imports, common bugs, style issues. Runs in milliseconds even on big codebases.
+
+Ruff is the rust-based replacement for the old black plus isort plus flake-eight plus py-lint stack — does the same jobs, ten to a hundred times faster, configured once in py-project dot t-o-m-l. New projects should default to ruff.

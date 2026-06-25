@@ -1,0 +1,9 @@
+Python three point thirteen's no-g-i-l build — the road ahead.
+
+Python three point thirteen, released october twenty twenty-four, shipped an experimental free-threaded build without the g-i-l. P-e-p seven oh three makes this an official path forward, with a multi-year migration.
+
+Three point thirteen — experimental build, opt-in via configure dash dash disable g-i-l. Three point fourteen and three point fifteen — still experimental but more libraries support it. Future — free-threaded becomes the default; legacy g-i-l build phased out.
+
+What changes when the g-i-l is gone. Pure-python threads can actually run on multiple cores. Reference counting becomes atomic — small performance cost on single-threaded code, about five to ten percent slowdown today. C extensions must be audited for thread safety — some currently rely on the g-i-l as an implicit lock.
+
+The library ecosystem catch-up will take years. For now, plan as if the g-i-l exists; check whether your dependencies have free-threaded support before betting on it.

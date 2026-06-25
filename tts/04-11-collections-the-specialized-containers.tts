@@ -1,0 +1,7 @@
+The collections module — the specialized containers.
+
+The collections module ships specialized dict and tuple variants for common patterns.
+
+Default-dict of a factory is a dict where missing keys auto-construct via the factory. Avoids the set-default boilerplate. Counter of an iterable counts occurrences of each element. Iterable in, dict of counts out. Ordered-dict preserves insertion order — mostly obsolete since regular dicts do that since three point seven. Still has a couple of unique methods like move-to-end. Named-tuple of a name and a list of fields is a tuple with named fields. Lightweight when a full data-class would be overkill.
+
+In code, picture default-dict of list — group without set-default. Build groups by iterating words and appending to groups of the first letter. Counter — count occurrences in a sentence's word list. Most-common of three gives the top three. Named-tuple — point with x and y. Construct a point of three and four. Print shows point parens x equals three comma y equals four. P dot x and p dot y give three and four. P at zero gives three — also indexable like a regular tuple.

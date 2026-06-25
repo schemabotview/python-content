@@ -1,0 +1,7 @@
+Stacking decorators.
+
+You can stack multiple decorators. They apply bottom-up — the closest one to the function wraps first.
+
+At-log-calls on top of at-retry of times equals three on top of def fetch is equivalent to fetch equals log-calls of retry of times equals three of fetch.
+
+So retry wraps fetch first, then log-calls wraps the result of retry. At runtime, every call goes through log-calls first, then through the retry wrapper, then into fetch. The print-then-retry semantics are usually what you want.

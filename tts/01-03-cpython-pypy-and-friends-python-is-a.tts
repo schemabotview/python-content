@@ -1,0 +1,7 @@
+C python, py-py, and friends — python is a language, not an implementation.
+
+When you brew install python you get c python — the reference implementation, written in c, maintained by the python core team, and used by ninety-nine percent of python code in production. When people say python without qualifying, they usually mean c python.
+
+There are alternatives, each filling a niche. Py-py — a python interpreter written in a subset of python, with a just-in-time compiler. Runs many pure-python programs several times faster than c python. Compatibility with c-extension libraries like num-py and pandas is good but not perfect. Micro-python and circuit-python — python for microcontrollers, running on tiny devices with kilobytes of r-a-m. Pyodide — c python compiled to web assembly, runs in a browser, powers in-browser notebooks like jupyter-lite. Graal-py — python on the graal virtual machine, interoperates with java code. And jython and iron-python — older projects targeting the java virtual machine and dot net. Both are essentially dormant; do not start new projects against them.
+
+For this track, assume c python. The names are mentioned so they do not surprise you.

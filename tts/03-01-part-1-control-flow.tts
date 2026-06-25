@@ -1,0 +1,9 @@
+Control flow and functions.
+
+What is covered. The two halves of this notebook. How python decides what to do next, which is control flow. And how you package code into reusable units, which is functions. Both should already feel familiar from any other language. The goal here is to nail the python-specific shapes that distinguish it.
+
+For control flow. If, elif, else, and why there is no switch until three point ten. The conditional expression — x if condition else y. While loops, and the else clause attached to a loop. For loops, and what they actually do under the hood — iteration. Range, the lazy integer sequence. Break and continue. The for-else and while-else loop-else clause that divides opinion. Match-case, the structural pattern matching from python three point ten. And pass, the no-op statement.
+
+For functions. Def, the basic shape. Positional versus keyword arguments. Default parameter values, and the mutable-default trap. Star-args and double-star-kwargs for variable-length parameters. Positional-only with forward slash and keyword-only with star separators. Return, and what implicit return returns. Docstrings and the help function. Lambda for small anonymous functions. Scopes, with the l-e-g-b lookup order. Global and nonlocal for assigning outside the local scope. Closures — functions that capture surrounding state. And first-class functions — passing them around.
+
+Part one — control flow.

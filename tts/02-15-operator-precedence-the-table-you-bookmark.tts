@@ -1,0 +1,7 @@
+Operator precedence — the table you bookmark.
+
+Python's precedence table, high to low. When in doubt, parenthesize. The compiler does not care; humans reading the code do.
+
+Highest. Grouping and indexing — parentheses, brackets, braces. Function call, attribute access, subscription. Double-star, right-associative. Unary plus, minus, tilde. Multiplication, true division, floor division, modulo, the at-sign for matrix mul. Addition and subtraction. Bit shift. Bitwise and. Bitwise x-or. Bitwise or. Comparisons — equals-equals, not-equals, less-than, greater-than, less-equal, greater-equal, is, is-not, in, not-in. Not. And. Or. Lowest — the conditional expression x if cond else y.
+
+Three common pitfalls. Not-x-equals-equals-y parses as not parens-x-equals-equals-y, not as parens-not-x-equals-equals-y — usually what you wanted, but worth knowing. Double-star is right-associative — two double-star three double-star two equals two double-star nine equals five-twelve, not sixty-four. Bitwise and, or, x-or bind tighter than comparison — x equals-equals one and two parses as x equals-equals one-and-two, which is rarely what you meant.

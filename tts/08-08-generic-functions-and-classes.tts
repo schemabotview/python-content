@@ -1,0 +1,11 @@
+Generic functions and classes.
+
+When you want code that works for any type but with the type checker tracking it, you use a type-var.
+
+Two syntaxes. Pre-three-point-twelve — t equals type-var of t, then def f of x colon t returning t. Three point twelve plus — def f square bracket t bracket of x colon t returning t — type parameter syntax baked into the language.
+
+The new form mirrors what most other languages — java, scala, typescript, rust — have always had. Use it in three point twelve plus code.
+
+In code, picture the old form. From typing import type-var. T equals type-var of t. Def first taking items colon list of t, returning t, body returns items at zero. First of a list of integers — type checker knows result is integer. First of a list of strings — type checker knows result is string.
+
+The new form. Def last square bracket t bracket taking items colon list of t, returning t. Same semantics, cleaner syntax. Generic class — class stack square bracket t bracket. Dunder-init creates an empty list of t. Push, pop, dunder-len. Bind s of type stack of int to a new stack, push three values, pop returns the last.

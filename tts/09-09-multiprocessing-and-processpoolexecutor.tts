@@ -1,0 +1,11 @@
+Multiprocessing and process-pool-executor.
+
+For c-p-u-bound work, you need actual parallelism — multiple python interpreters running on multiple cores. That is processes.
+
+The low-level application programming interface — multiprocessing, mirrors threading in shape but processes underneath. The high-level — and what you should reach for — concurrent dot futures dot process-pool-executor. Same interface as thread-pool-executor, different underlying mechanism.
+
+Each worker process has its own python interpreter and its own memory. No g-i-l contention between workers.
+
+The cost. Starting processes is slower than starting threads — tens of milliseconds versus sub-millisecond. And data passed between processes must be pickled — serialized to bytes, sent, deserialized.
+
+In code, picture def c-p-u-work taking n, returning sum of squares. The if-dunder-name-equals-dunder-main guard is required on spawn-based platforms — windows, mac default. Inside the guard, time the sequential run. Print multiprocessing dot c-p-u-count. In a script — not a notebook — process-pool-executor would actually parallelize across the available cores.

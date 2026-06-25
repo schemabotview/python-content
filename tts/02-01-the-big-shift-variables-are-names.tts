@@ -1,0 +1,11 @@
+The big shift — variables are names.
+
+Coming from a statically typed language, the natural mental model is — a variable is a box that contains a value. In python, that model is wrong, and it will produce subtle bugs.
+
+The right mental model. A variable is a name that refers to an object. Objects live on the heap. Assignment binds a name to an object — it does not copy the object.
+
+In code, picture a equals a list of one, two, three. Then b equals a — now b refers to the same list object as a. Append four to b, then print a. You see one, two, three, four. A sees the change too, because a and b point at the same list.
+
+This matters because mutation through one name is visible through every other name pointing at the same object. We will see this constantly with lists, dicts, and sets — and never with integer, float, string, tuple, because those are immutable. Mutating them just creates a new object.
+
+Reassigning a name does not mutate the object — it points the name elsewhere. Bind b to a new list of ninety-nine and one hundred. Now a still points at the original list of one through four, and b points at the new list. Two names, two objects.

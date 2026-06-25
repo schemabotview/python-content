@@ -1,0 +1,13 @@
+Scopes — l-e-g-b lookup.
+
+When you use a name in a function, python looks for it in four scopes, in order. Local — the current function's locals. Enclosing — locals of any enclosing function, for nested defs. Global — the module's top level. Built-in — names like print, l-e-n, int from the built-ins module.
+
+The first scope that has the name wins. This is the l-e-g-b rule.
+
+By default, assigning to a name inside a function makes it local to that function — even if there is a same-named global. To assign to a global or enclosing-function variable, you have to declare your intent with global or nonlocal.
+
+In code, picture greeting equals hello at the module level. Def f, body prints greeting — reads the global, fine. Then def g, body prints greeting and then assigns greeting equals hi. This fails — referenced before assignment — because python sees the assignment and makes greeting local for the whole function.
+
+Explicit opt-in to write to a global. Counter equals zero at the module level. Def tick — global counter, then counter plus-equals one. Call tick three times, counter is three.
+
+Nonlocal — write to an enclosing function's variable. Def make-counter, body has count equals zero. Inner def increment — nonlocal count, count plus-equals one, return count. Return increment. Bind c to make-counter, call c three times — you see one, two, three.

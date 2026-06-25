@@ -1,0 +1,7 @@
+Python two is dead. Python three point ten is the target.
+
+Python two reached end of life on january first, twenty twenty. It receives no security updates. Any new code should target python three. If you encounter python two code in the wild, treat it as a port-or-rewrite candidate.
+
+Within python three, every minor version brings real changes. The releases that materially affect what you can write. Three point six brought f-strings, the single most common feature you will use. Three point seven made built-in dict preserve insertion order — it was a c python detail before, now a language guarantee — and added data classes. Three point eight brought the walrus operator. Three point nine brought built-in generic types like list of integer instead of list-with-capital-L-of-integer. Three point ten brought structural pattern matching with match-case, parenthesized context managers, and better error messages. Three point eleven brought a significant interpreter speedup of ten to sixty percent, exception groups, and toml-lib. Three point twelve brought type parameter syntax for generics and more f-string flexibility. Three point thirteen brings an experimental no-g-i-l build and a just-in-time compiler.
+
+This track assumes python three point ten or later. The match-case shapes in notebook three are three point ten and up, and modern type hints in notebook eight assume three point ten and up syntax.

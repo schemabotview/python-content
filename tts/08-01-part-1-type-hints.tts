@@ -1,0 +1,9 @@
+Type hints and best practices.
+
+What is covered. Two adjacent topics — how to add type information to python code so that tools can check it, and the broader practices that keep a python codebase healthy.
+
+For type hints. The promise — types are documentation that tools can verify. Types are not enforced at runtime; they are checked by my-py, py-right, ruff. The simple cases — primitives, collections, callables, optionals. The pre-three-point-nine import dance versus the modern built-in form. Optional of t and t pipe none from python three point ten, and why none is opt-in. Union types. Literal for typing the exact set of allowed values. Typed-dict for typed dictionaries with known keys. Protocol — structural typing, python's answer to duck typing with a type. Generic functions and classes — type-var, and the python three point twelve def f square bracket t bracket syntax. Any, cast, and type-ignore — escape hatches. My-py and py-right — checking the code.
+
+For best practices. P-e-p eight, the style guide, and the tools that automate it — ruff and black. Naming conventions. Import sorting and grouping. Project layout — the source layout, py-project dot t-o-m-l, where tests go. The dunder-init patterns. Logging — the logging module, levels, structured logs. Print versus logging — when each fits. Configuration via environment variables, with python-dotenv for development. Performance — when to profile, what to measure, the c-profile and timeit starting points. And style choices that age well — small functions, explicit data, hard-to-misuse application programming interfaces.
+
+Part one — type hints.

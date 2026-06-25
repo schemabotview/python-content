@@ -1,0 +1,7 @@
+Date-time — dates, times, durations, time zones.
+
+Picture from date-time import date, time, date-time, time-delta, timezone. From zone-info import zone-info. Date dot today gives the current date. Date-time dot now of timezone dot u-t-c gives an aware u-t-c timestamp. Date-time dot now of zone-info of asia slash kolkata gives an aware local timestamp. Date of twenty twenty-six, one, one plus time-delta of days equals ninety adds a duration. Parsing — date-time dot from-iso-format of an i-s-o-formatted string. Formatting — date-time dot now dot s-t-r-f-time of a format string.
+
+Always use timezone-aware date-times for any timestamp that matters. Naive date-times — no t-z-info — are a footgun. They silently assume local time in ways that break across deployments.
+
+Zone-info since three point nine reads the system's i-a-n-a t-z-data. On windows, install t-z-data from py-p-i.

@@ -1,0 +1,9 @@
+Dict — the mapping workhorse.
+
+Dict maps keys to values. Keys must be hashable — immutable types like numbers, strings, tuples of hashables, frozen sets. Values can be anything.
+
+Since python three point seven, dicts preserve insertion order. This was a c python implementation detail in three point six and became a language guarantee in three point seven.
+
+Lookup has two forms. Unsafe — d square bracket key raises key-error if missing. Safe — d dot get of key returns none or a default. D dot get of key gives none. D dot get of key and default gives the default. D dot set-default of key and default inserts and returns the default if missing.
+
+In code, picture ages as a dict mapping three names to ages. Unsafe — ages of alice is thirty, ages of dave raises key-error. Safe — get of alice is thirty, get of dave is none, get of dave and negative one is negative one. Iteration — keys by default. For name in ages prints the names. For age in ages dot values prints the values. For name comma age in ages dot items prints both. Membership tests the keys, not the values. Alice in ages is true. Thirty in ages is false — thirty is a value, not a key. Thirty in ages dot values is true.

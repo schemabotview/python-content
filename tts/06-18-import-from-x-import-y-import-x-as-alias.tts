@@ -1,0 +1,9 @@
+Import, from-x-import-y, import-x-as-alias.
+
+Four forms, same machinery, different names brought into scope.
+
+Import math brings math, the module. Use as math dot square-root of two. Import math as m brings m. Use as m dot square-root of two. From math import square-root brings square-root. Use as square-root of two. From math import square-root as s-q brings s-q. Use as s-q of two. From math import star brings everything — do not do this. Pollutes the namespace, hides where names came from.
+
+The first form, import math, is the safest default — calls are clearly scoped to the module. The from-import form is appropriate for names you will use heavily. The as alias is a way out when the imported name would shadow a local one, or when the original name is long.
+
+In code, picture import math, from pathlib import path, import date-time as d-t. Math dot p-i, path dot c-w-d, d-t dot date-time dot now — all work.

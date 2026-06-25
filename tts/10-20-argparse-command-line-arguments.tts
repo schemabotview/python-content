@@ -1,0 +1,5 @@
+Arg-parse — command-line arguments.
+
+Picture import arg-parse. Parser equals arg-parse dot argument-parser with a description. Parser dot add-argument of input — positional. Add-argument of dash-o dash-dash output with default. Add-argument of dash-v dash-dash verbose with action equals store-true — a flag. Add-argument of dash-dash retries with type equals int and default three. Args equals parser dot parse-args. Now args dot input, args dot output, args dot verbose, args dot retries all hold the parsed values.
+
+Arg-parse is in the standard library and is enough for most command-line interfaces. For richer interfaces — subcommands, nicer help, type hints — the most-reached-for third-party tools are click and typer. Typer is built on click and uses type hints to define the interface.

@@ -1,0 +1,9 @@
+Test coverage — py-test dash cov.
+
+Coverage tells you which lines of your code were exercised by your tests. The standard tool is coverage dot p-y, wrapped for py-test by py-test dash cov.
+
+Pip install py-test dash cov. Py-test dash dash cov equals source slash my-project dash dash cov dash report equals term-missing. Output shows total coverage percentage and lists uncovered lines per file.
+
+Typical configuration in py-project dot t-o-m-l. Bracket tool dot coverage dot run bracket with source set to your package, branch equals true to also measure branch coverage. Bracket tool dot coverage dot report bracket with fail-under equals eighty to fail the continuous integration run if coverage drops below eighty percent, and exclude-lines for patterns like pragma no cover or raise not-implemented-error.
+
+One hundred percent coverage is not the goal. One hundred percent coverage with bad tests is worse than eighty percent with good ones. Aim for every important behaviour has a test that would fail if you broke it. Coverage is a signal that you have not even tried certain branches — useful as a floor, not as a target.

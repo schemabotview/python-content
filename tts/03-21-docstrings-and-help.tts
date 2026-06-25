@@ -1,0 +1,7 @@
+Docstrings and the help function.
+
+A string literal as the first statement in a function, class, or module becomes its docstring, accessible at runtime via func dot dunder-doc and rendered by help of func. The standard library, every well-maintained third-party library, and most professional python code base attach docstrings to public application programming interfaces.
+
+The conventional shape, see p-e-p two fifty-seven, is a one-line summary, optionally followed by a blank line and longer prose. Triple-quoted because they typically span multiple lines.
+
+In code, picture def normalize-email taking raw colon string returning string. The first statement is a triple-quoted docstring summarizing what the function does and noting its use case. Body returns raw dot strip dot lower. Then call normalize-email on a messy input — you get the cleaned form. Print the docstring directly via dunder-doc, or call help on the function — both surface the documentation.

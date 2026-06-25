@@ -1,0 +1,5 @@
+Positional versus keyword arguments.
+
+Every parameter can be passed positionally, by order, or by keyword, by name. At the call site, positional arguments come first, keyword arguments after. Keyword arguments make calls with many parameters much more readable.
+
+In code, picture def connect taking host, port, user, and ssl. All positional — connect of db.local, fifty four thirty-two, ganesh, true. Fragile when there are many parameters. All keyword — connect of user equals ganesh, host equals db.local, ssl equals true, port equals fifty four thirty-two. Order does not matter, intent is clear. Mixed — positional must come first, then keyword.

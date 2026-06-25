@@ -1,0 +1,7 @@
+The exception hierarchy.
+
+Every exception in python is an instance of a class deriving from base-exception. The shape, abbreviated. Base-exception at the root. Its direct children include system-exit, raised by s-y-s dot exit, which you should not catch. Keyboard-interrupt, raised by control-c, which you should also not catch. Generator-exit. And exception, which is what except blocks should target.
+
+Under exception. Arithmetic-error — zero-division-error, overflow-error. Lookup-error — key-error, index-error. Value-error — bad input to the right kind. Type-error — operation on wrong type. O-s-error — file, socket, process errors — file-not-found-error, permission-error. Attribute-error — object does not have that attribute. Runtime-error — catch-all for should-not-have-happened. And a long tail.
+
+The rule. Catch exception or a specific subclass, never base-exception, and never a bare except. The bare form catches keyboard-interrupt and system-exit, which means control-c stops working and s-y-s dot exit calls get swallowed.

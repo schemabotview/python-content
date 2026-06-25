@@ -1,0 +1,9 @@
+Writing your own context manager.
+
+Two paths. Class form — define dunder-enter and dunder-exit on a class. Dunder-exit returns true to suppress an exception, otherwise re-raises. At-context-manager decorator — write a generator function that yields once. Code before the yield runs on entry; code after runs on exit. Easier when you do not need exception suppression.
+
+The decorator form is usually cleaner.
+
+In code, picture the class form. Class timer with dunder-enter recording start time and returning self. Dunder-exit computing elapsed, returning false to not suppress. With timer as t, do some computation. Print t dot elapsed afterward.
+
+The decorator form. From contextlib import context-manager. At-context-manager def timed taking a label. Body — start equals current time. Try yield. Finally compute elapsed and print with label. With timed of computation, do some computation. The elapsed time prints automatically on exit.

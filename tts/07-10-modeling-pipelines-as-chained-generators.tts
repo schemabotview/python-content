@@ -1,0 +1,5 @@
+Modeling pipelines as chained generators.
+
+Generators compose into data pipelines that stream — no intermediate lists, constant memory. Each stage takes an iterable in, yields transformed elements out.
+
+In code, picture a pipeline. Def read-lines yields a series of strings. Def parse-ints takes lines, tries to int each one, skipping value-errors. Def positives takes ints, yields only those greater-equal zero. Chain them — positives of parse-ints of read-lines. Nothing runs until the final loop. I-slice three from the pipeline gives the first three positives. Only enough data flows through to produce the result.

@@ -1,0 +1,11 @@
+Parametrization — one test, many inputs.
+
+At-py-test dot mark dot parametrize takes a comma-separated string of parameter names and a list of tuples. Runs the same test function once per row, with each row's values bound to the named parameters.
+
+The pattern. At-parametrize of the string input comma expected, and a list of three tuples. Def test-parse-int takes input and expected, asserts int of input equals expected.
+
+Each row becomes a separate test case in py-test's output, named test-parse-int-bracket-row-values. When one fails, you see exactly which input row.
+
+Useful for table-driven tests, edge-case sweeps, golden-file comparisons. Reach for it whenever you find yourself writing three similar test functions in a row.
+
+In code, picture the parametrized test with four input-expected pairs. Then stacking — at-parametrize on x with three values, plus at-parametrize on y with two values, runs three times two equals six combinations of x and y.

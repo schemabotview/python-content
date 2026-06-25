@@ -1,0 +1,9 @@
+Hashability — what makes a key valid.
+
+A key in a dict, or an element in a set, must be hashable. An object is hashable if it has a dunder-hash method, which most built-in immutable types do. And equal objects produce equal hashes — a equals-equals b must imply hash of a equals hash of b.
+
+Practical version. Immutable built-in types are hashable. Mutable types — list, dict, set — are not. They would be a hazard, because mutating after insertion would corrupt the hash bucket.
+
+Custom classes from notebook five are hashable by default, using i-d. But if you override dunder-eq, you should also override dunder-hash to keep the contract.
+
+In code, picture hash of forty-two — gives an integer. Hash of hello, hash of the tuple one, two, three — all work. Tuples of hashables are hashable. Then try hash of a list — type-error, unhashable type list. Try hash of a set — type-error. But hash of frozen-set of one, two, three works fine.

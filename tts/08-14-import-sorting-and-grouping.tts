@@ -1,0 +1,7 @@
+Import sorting and grouping.
+
+P-e-p eight groups imports into three blocks, separated by a blank line. Standard library imports. Related third-party imports. Local application imports.
+
+Within each block, sort alphabetically. Standard library — import o-s, import s-y-s, from pathlib import path. Third-party — import pandas as p-d, import requests. Local — from my-project dot core import compute, from my-project dot utils import slugify.
+
+Ruff check with the i flag, or isort standalone, handles this automatically.

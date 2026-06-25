@@ -1,0 +1,9 @@
+Coroutines, the event loop, async and await.
+
+Asyncio is python's answer to thousands of concurrent i-o operations in one process, one thread, no thread overhead. It uses cooperative multitasking. Code voluntarily yields control with await; the event loop runs other coroutines while one is suspended.
+
+The shape. Import asyncio. Async def fetch takes a name and a delay. Prints starting. Await asyncio dot sleep of delay — yields control, event loop runs other tasks. Prints done. Returns a result. Async def main awaits asyncio dot gather of three fetch calls. Then asyncio dot run of main of parens.
+
+Key vocabulary. Coroutine function — async def f. Calling it returns a coroutine object; it does not run. Coroutine — the suspended object you get from calling f of parens. Runs when awaited or scheduled. Await expression — suspend, run expression which must be awaitable, resume with its result. Event loop — the runtime that drives coroutines. Asyncio dot run of coroutine starts a loop, runs the coroutine to completion, stops the loop. Task — a coroutine wrapped in a task object and scheduled on the loop. Created by asyncio dot create-task of coroutine or asyncio dot gather.
+
+In code, picture async def fetch taking name and delay, sleeping with asyncio dot sleep, returning a result. Async def sequential awaits three fetches in series — total time equals the sum. Async def concurrent awaits asyncio dot gather of three fetches — total time approximately equals the maximum. Both run end-to-end with asyncio dot run.

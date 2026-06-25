@@ -1,0 +1,5 @@
+The sequence protocol.
+
+A python sequence is any object that supports l-e-n of x for how many elements, x at i for indexed access — zero-based, negative indices count from the end. X at i colon j and x at i colon j colon k for slicing. For item in x for iteration. And item in x for membership.
+
+List, tuple, range, string, bytes, bytearray all satisfy this. That is why the same for-x-in-x-s, x-s at zero, x-s at one colon five syntax works across all of them.

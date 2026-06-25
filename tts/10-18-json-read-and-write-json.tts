@@ -1,0 +1,7 @@
+J-s-o-n — read and write.
+
+Json dot loads of a string gives the parsed python object. Json dot dumps of an object with indent and sort-keys gives a formatted j-s-o-n string. With-open of a file, json dot load of the file gives the parsed object. With-open of a file in write mode, json dot dump of the object and file writes it.
+
+Json handles dicts, lists, strings, numbers, bools, none. For date-times, custom classes, and so on, you need to provide a default equals function — or use a typed-j-s-o-n library like pydantic or orjson plus dataclass codecs.
+
+For performance-sensitive code — orjson, third-party — is several times faster than json and handles date-times and u-u-i-ds out of the box.

@@ -1,0 +1,9 @@
+Custom exception classes.
+
+Just subclass exception. The convention is to name them with an error suffix and to keep them as flat or as deep a hierarchy as you need for callers to discriminate.
+
+Class data-error of exception. Class validation-error of data-error. Class not-found-error of data-error.
+
+Now callers can except data-error to catch any of yours, or except not-found-error for the specific one. Same machinery as the standard library uses.
+
+In code, picture data-error as the base. Not-found-error stores the missing key. Validation-error as another subclass. Def find takes a key and a db, raises not-found-error if absent, otherwise returns the value. Calling find with a missing key and catching data-error catches the not-found-error. Inside the handler, is-instance check confirms it is a not-found-error, and you can read the bad key.

@@ -1,0 +1,9 @@
+Indexing and slicing.
+
+The full slice form is x-s at start colon stop colon step. All three are optional. Negative indices count from the end.
+
+X-s at i gives the item at index i, negative allowed. X-s at i colon j gives items from i inclusive to j exclusive. X-s at i colon j colon k gives every k-th item in that range. X-s at colon n is the first n items. X-s at n colon is from n onward. X-s at negative n colon is the last n items. X-s at colon colon negative one is the whole sequence reversed. X-s at colon colon two is every other item.
+
+Slicing always returns a new object of the same type — a new list from a list, a new string from a string. Out-of-range indices raise index-error. Out-of-range slices are silently clipped — x-s at one hundred colon two hundred on a short list is the empty list, not an error.
+
+In code, picture x-s as a list of eight integers from ten to eighty. Indexing — x-s at zero is ten. X-s at negative one is eighty, the last. X-s at negative three is sixty, third from end. Slicing — x-s at two colon five is thirty, forty, fifty. X-s at colon three is the first three. X-s at five colon is from sixty onward. X-s at negative three colon is the last three. X-s at colon colon two is every other. X-s at colon colon negative one is reversed. Out-of-range slice — x-s at one hundred colon two hundred is empty, silently clipped. Slice assignment mutates a sub-range — replacing positions two through four with four new items grows the list by one. Del with a slice deletes a range.

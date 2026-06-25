@@ -1,0 +1,7 @@
+The itertools module.
+
+Itertools ships a collection of iterator combinators — generic operations that compose with any iterable. Lazy, memory-efficient. The high-value ones.
+
+Chain takes multiple iterables and concatenates them. Chain dot from-iterable flattens one level. I-slice slices without materializing. Takewhile takes from the start while a predicate holds. Dropwhile drops from the start while a predicate holds. Filter-false filters but keeps the ones where the predicate is false. Accumulate gives running totals; default operator is plus. Group-by groups consecutive equal-key elements. Product gives the cartesian product. Permutations and combinations are combinatorics. Count is an infinite arithmetic sequence. Cycle repeats infinitely. Repeat repeats one value n times or forever. Zip-longest zips but does not truncate.
+
+In code, picture import itertools as i-t. Chain of three lists gives a flat sequence. I-slice of range twenty, with start five, stop fifteen, step two — gives five, seven, nine, eleven, thirteen. Take-while with a less-than-five predicate stops at the first five. Drop-while with the same predicate skips the initial prefix. Accumulate with a list of one through five gives the running sums one, three, six, ten, fifteen. Accumulate with a max operator gives the running max. Group-by on a sorted list grouping by first letter gives one group per letter. Product and combinations show their typical outputs.

@@ -1,0 +1,7 @@
+The with statement and context managers.
+
+With is python's resource-management construct — the equivalent of try-with-resources in java, using in c-sharp, defer in go. The shape — with open of a file as f colon, then a block. F is closed at the end of the block, even if an exception was raised inside.
+
+With calls the object's dunder-enter to set up and dunder-exit to tear down. Use it for anything that needs cleanup — files, network connections, locks, database transactions, temporary directories.
+
+Multiple resources at once — parenthesize since three point ten. With parens open of in dot t-x-t as source, open of out dot t-x-t in write mode as destination — close-paren — colon, then a block.

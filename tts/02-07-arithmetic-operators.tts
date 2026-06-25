@@ -1,0 +1,13 @@
+Arithmetic operators.
+
+The basics behave as you would expect. Three things worth flagging.
+
+Plus, minus, star — usual. Also defined on strings — a-b times three gives a-b-a-b-a-b. Forward slash — true division. Always returns float. Seven slash two equals three point five, even on ints. Double slash — floor division. Rounds toward negative infinity. Seven double-slash two equals three. Negative seven double-slash two equals negative four. Percent — modulo. Same sign as divisor. Negative seven modulo three equals two. Double star — exponentiation. Two double-star ten equals ten twenty-four. Divmod of a and b returns a tuple of the quotient and remainder in one call.
+
+The thing to remember. Forward slash always returns a float in python three — even when both operands are integers. Use double-slash when you want integer division. This is one of the biggest changes from python two.
+
+In code, picture seven slash two equals three point five — float. Seven double-slash two equals three — int. Floor division rounds toward negative infinity, not toward zero. Negative seven double-slash two is negative four, not negative three. Seven modulo negative three is negative two — modulo's sign matches the divisor.
+
+Exponentiation. Two double-star ten is ten twenty-four. Two double-star zero point five is the square root, gives a float. Ten double-star negative two is zero point zero one. Divmod of seventeen and five returns the pair three, two.
+
+Operators on strings. A-b times three gives a-b-a-b-a-b. Quote hello space comma plus quote world gives hello, world. Augmented assignment — n plus-equals one is n equals n plus one — but with one extra trick for mutables. X-s plus-equals a list extends in place for lists, the same as x-s dot extend.

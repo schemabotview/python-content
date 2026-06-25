@@ -1,0 +1,9 @@
+The if-dunder-name-equals-dunder-main idiom — script versus imported.
+
+When python runs a file, it sets the special variable dunder-name. If the file is being run as a script — python my-file dot p-y — dunder-name equals the string dunder-main. If the file is being imported by something else — import my-file — dunder-name equals the string my-file.
+
+The idiom. Def main and a body. Then if dunder-name equals-equals the string dunder-main, call main.
+
+This lets the same file be both an importable module — helper functions get reused — and a runnable script — the main only fires when you actually run it directly.
+
+You will see this in almost every standalone python script. Without it, import my-file would execute the entire script as a side effect.

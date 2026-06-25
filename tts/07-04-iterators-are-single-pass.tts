@@ -1,0 +1,7 @@
+Iterators are single-pass.
+
+An iterator is consumed as you iterate it. Once exhausted, it is done — you cannot restart it. If you need to iterate again, get a fresh iterator from the underlying iterable.
+
+This bites people who pass a generator to a function expecting to iterate it multiple times. The fix — materialize to a list once, or accept the iterable, not the iterator, and call iter yourself.
+
+In code, picture x-s as a list of one, two, three. Lists are iterables, not iterators — you can iterate them many times. List of x-s twice both return the list. Then i-t equals iter of x-s. List of i-t returns the list. List of i-t again returns empty — already consumed.

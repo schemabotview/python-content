@@ -1,0 +1,7 @@
+A minimal project layout.
+
+When you graduate past a single script, the conventional python project looks like this. A project directory at the top. A py-project dot t-o-m-l file for project metadata, dependencies, and build configuration. A read-me dot m-d. A dot git-ignore that includes dot venv slash, underscore-underscore-pycache-underscore-underscore slash, and dot p-y-c. A dot python dash version file for the py-env pin. A source directory called s-r-c containing the actual importable package directory, with its own underscore-underscore-init-underscore-underscore dot p-y and your module files. And a tests directory with test files.
+
+The source layout, where the package lives inside s-r-c, prevents a class of import bugs where you accidentally import the local source instead of the installed package. Notebook six covers the init file, the from-my-project-import-x mechanics, and packaging.
+
+For now, know that this is the target shape. Single-file scripts are fine for quick work; reach for this layout when the project starts to feel non-trivial.

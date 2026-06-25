@@ -1,0 +1,11 @@
+How a dot p-y file actually runs.
+
+Python is interpreted but there is a compile step you cannot avoid. Picture the pipeline this way. A file ending in dot p-y goes through the parser, which produces an abstract syntax tree. The tree goes through the compiler, which produces bytecode, cached on disk in a directory called underscore-underscore-pycache-underscore-underscore. The bytecode runs in the c python virtual machine, which is the bytecode interpreter written in c. Output then prints or returns.
+
+Three consequences worth absorbing now.
+
+Startup includes parse plus compile. The first run of a script reparses; subsequent runs hit the pycache directory for cached bytecode and skip the parse. This is why importing a large library is slow only the first time per python version.
+
+The bytecode is real and inspectable. Import d-i-s then call d-i-s dot d-i-s of your function and you see the bytecode. Most python programmers will go their whole careers without needing this — but knowing the layer exists demystifies a lot.
+
+The c python virtual machine is a single-threaded loop. This is the well-known global interpreter lock, or g-i-l. Only one thread executes python bytecode at a time. Notebook nine covers the implications for concurrency.

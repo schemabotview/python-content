@@ -1,0 +1,7 @@
+Any, cast, and type-ignore — escape hatches.
+
+Three ways to opt out of type checking when you have to. Any — the type that matches everything. Disables checking for that value. Use sparingly; an any infects anything it touches. Cast of t and x — tells the type checker treat x as type t, with no runtime conversion. Use when you know more than the checker does. Type-ignore — a comment that suppresses errors on a specific line. Use only when the type checker is genuinely wrong; otherwise fix the underlying issue.
+
+Treat these as flags, not solutions. Excessive any and type-ignore in a codebase usually means the types are wrong somewhere upstream.
+
+In code, picture def passthrough taking x of any, returning any. Accepts and returns anything. Then cast — import json. Data of any equals json dot loads of a string. Bind user to cast of dict of string-any from data. The checker now treats user as that dict type. Type-ignore — last resort. Result of int equals a string with a type-ignore-assignment comment suppresses the error.

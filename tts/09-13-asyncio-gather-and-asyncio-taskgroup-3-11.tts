@@ -1,0 +1,7 @@
+Asyncio dot gather and asyncio dot task-group since three point eleven.
+
+Two ways to run multiple coroutines concurrently. Asyncio dot gather of coroutines — schedule, await all, return results in order. If any raises, the others continue by default — or pass return-exceptions equals true to collect errors as values. Asyncio dot task-group since three point eleven — context-manager form. If any task fails, the others are cancelled, and the errors are surfaced as an exception-group. This is the modern structured-concurrency shape.
+
+Use task-group for new code. Gather is fine for simple fan-out but does not enforce structured cancellation.
+
+In code, picture async def task takes a name, delay, and an optional fail flag. With gather and return-exceptions equals true, three tasks where one fails — you get back the two successes plus the exception object. With task-group, three tasks — when one fails, the group raises an exception-group. The structured form gives stronger guarantees.

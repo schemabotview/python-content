@@ -1,0 +1,7 @@
+Temporary files and directories.
+
+The tempfile module gives you safe, auto-cleaning temp files and directories. Use them in tests, in pipelines that need scratch space, in any I need a path that nobody else will collide with situation.
+
+Tempfile dot temporary-directory is a context manager that creates a directory and deletes it on exit. Tempfile dot named-temporary-file is a context manager that creates a file with a unique name.
+
+In code, picture with tempfile dot temporary-directory as tmpdir colon. P equals path of tmpdir divided-by data dot t-x-t. P dot write-text of some scratch data. Print created and content. After the with block exits, the tmpdir and its contents are deleted automatically.

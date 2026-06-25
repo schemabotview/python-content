@@ -1,0 +1,9 @@
+The iteration protocol.
+
+A python iterable is anything that defines dunder-iter. That method returns an iterator — an object that defines dunder-next. Each call to dunder-next returns the next element, or raises stop-iteration when exhausted.
+
+Picture what for x in x-s does under the hood. It equals i-t equals iter of x-s — get an iterator. Then a while-true loop calling next of i-t and binding to x. When stop-iteration fires, break. The body runs once per element.
+
+This is why for works on every iterable type uniformly. Lists, tuples, dicts, sets, strings, files, generators — every one defines dunder-iter. So do user classes you write.
+
+In code, picture manual iteration. X-s equals a list of ten, twenty, thirty. I-t equals iter of x-s — prints as list-iterator object. Next of i-t returns ten, then twenty, then thirty. Another next raises stop-iteration.

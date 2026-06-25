@@ -1,0 +1,9 @@
+Relative imports — from dot import.
+
+Inside a package, you can import siblings with relative imports — from dot import sibling, from dot subpackage import thing. The dots are like c-d — one dot is this package, two dots is the parent package.
+
+Use relative imports for intra-package references. Use absolute imports — from my-project dot core import x — when crossing package boundaries or in scripts.
+
+Picture my-project with dunder-init dot p-y, core dot p-y containing from-dot-import-utils, and utils slash with dunder-init dot p-y containing from-dot-text-import-slugify, plus text dot p-y.
+
+Relative imports only work inside a package — they fail at the top level. If you see import-error attempted relative import with no known parent package, you tried a relative import from a script that was not packaged.

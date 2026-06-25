@@ -1,0 +1,9 @@
+Comparison operators and chain comparisons.
+
+Double-equals, not-equals, less-than, less-equal, greater-than, greater-equal work as expected. The python-specific feature — comparisons chain. A less-than b less-than c is shorthand for a less-than b and b less-than c, with b evaluated only once.
+
+Zero less-equal x less-than one hundred is natural — x is in the half-open interval. Three less-than x less-than ten less-than y less-than twenty works, but unreadable past two operators.
+
+The chain form is the right choice for the common case is x in some range. It is also the only place in python where and is implicit.
+
+In code, picture x equals forty-two. Zero less-equal x less-than one hundred is true — chain. The expanded form with explicit and is equivalent. Mixed-type comparisons are stricter in python three than in python two. One equals-equals one point zero is true — numeric comparison crosses int and float. But one less-than the string one raises type error — will not compare int and string. The all-different chain one less-than two less-than three less-than four is true. Identity in a chain works too — y equals none, y is none.

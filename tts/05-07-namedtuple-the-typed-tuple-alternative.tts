@@ -1,0 +1,5 @@
+Named-tuple — the typed tuple alternative.
+
+Typing dot named-tuple produces an immutable record that is also a real tuple. Use it when you want immutability and do not need anything beyond plain data — slightly less ceremony than at-dataclass frozen, and it is a tuple, so it supports indexing and unpacking.
+
+In code, picture from typing import named-tuple. Class point of named-tuple, with x integer and y integer. Construct p equals point of three and four. P dot x and p dot y for named access. P at zero and p at one — also indexable, it is a tuple. Tuple of p gives the literal tuple form. X comma y equals p unpacks like any tuple.

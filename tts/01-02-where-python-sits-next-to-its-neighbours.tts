@@ -1,0 +1,13 @@
+Where python sits next to its neighbours.
+
+A short comparison against the four languages this user is most likely coming from or going to.
+
+Versus go — python has far better libraries for data, machine learning, scripting, and integration. Trades go's compiled-binary deployment story and goroutine concurrency for python's read eval print loop ergonomics and ecosystem depth.
+
+Versus rust — orders of magnitude less ceremony for prototyping and data work. No borrow checker, no compile times. Trades raw performance and memory safety for productivity. Reach for rust when python is too slow; reach for python when you do not know yet whether speed will matter.
+
+Versus java — less ceremony, faster startup, better data-science tooling. Trades the java virtual machine's mature concurrency story and tooling for python's lighter touch. The two coexist in many companies — java for services, python for the analysis and glue around them.
+
+Versus javascript — a real standard library, a real type-hint story since python three point ten, no undefined-versus-null confusion, no module-system schism. Trades the browser as a deployment target for python's better fit on the server side.
+
+Python's centre of gravity is data work, scripting, and glue code. If your job involves analysing data, automating an operating-system task, calling several application programming interfaces and stitching results, or training a machine-learning model — python is almost certainly the right call. If your job is to ship a binary command-line interface, a desktop app, or a high-throughput web service from scratch in 2026, look harder before reaching for it.

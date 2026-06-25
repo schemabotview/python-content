@@ -1,0 +1,5 @@
+Threads do not help for c-p-u-bound work.
+
+The same thread-pool-executor, given pure-python c-p-u work, gets no speedup. The g-i-l serializes execution. Two threads computing in pure python end up running on one core, one at a time.
+
+In code, picture def c-p-u-busy taking n. Pure-python c-p-u work — does not release the g-i-l. Body computes the sum of squares up to n. Sequential — four c-p-u-busy calls of five million. Threaded — same four calls in a thread-pool-executor. The threaded version takes about the same time as the sequential, because the g-i-l serializes the pure-python work.

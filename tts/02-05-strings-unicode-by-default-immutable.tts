@@ -1,0 +1,11 @@
+Strings — unicode by default, immutable.
+
+String is python's text type. It is unicode by default — a string is a sequence of unicode code points, not bytes. The encoding question — u-t-f eight, u-t-f sixteen, a-s-c-i-i — only comes up at i-o boundaries, when you encode a string to bytes to write to a file or socket, or decode bytes back to a string when reading.
+
+String is immutable. Operations like dot upper, dot replace, dot strip return new strings. You cannot modify a string in place.
+
+There are several literal forms — same string, different parsing rules. Regular, with single or double quotes — normal string, backslash escapes. Raw, with an r prefix — backslashes are literal, no escapes. F-string, with an f prefix — values spliced in via braces. Triple-quoted — newlines allowed inside. Bytes, with a b prefix — binary bytes type, not string. Combined, like r-f prefix — raw and f-string at once.
+
+In code, picture print of quote line one backslash n line two — prints two lines. Print of r prefix quote c slash users slash ganesh slash file dot t-x-t — backslashes are literal. F-string examples. Bind name to ganesh, score to ninety-two point three four five. Print f-quote hello, brace name. Print f-quote score equals brace score colon point two f — format spec after colon, gives two decimal places. Print f-quote name length equals brace l-e-n of name — any expression works inside the braces. And the debug form, f-quote brace name equals — prints name equals quote ganesh quote — useful for trace lines since python three point eight.
+
+Triple-quoted strings for multi-line text. Bind s-q-l to a triple-quoted block containing a select statement with newlines, embedded quotes, no escaping. Then bytes versus string — different types. B equals b-quote hello, s equals quote hello. Type of each shows class bytes and class string. You cannot concatenate them. B dot decode of u-t-f dash eight equals s — the decoded bytes equal the string.

@@ -1,0 +1,5 @@
+While loops.
+
+While runs its body as long as the condition is truthy. The condition is checked before each iteration; if it is false at the start, the body never runs.
+
+In code, picture a classic counter. I equals zero. While i less-than five, print i and increment. Or while with a sentinel — terminate when condition flips. List of unsorted integers, target equals five. While i less-than length of x-s and x-s at i not-equals target, increment i. Then check whether we found it.

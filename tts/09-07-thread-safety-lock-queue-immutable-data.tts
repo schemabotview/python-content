@@ -1,0 +1,7 @@
+Thread safety — lock, queue, immutable data.
+
+When threads share mutable state, you need synchronization to prevent races. The standard library gives you threading dot lock — a mutex. With-lock ensures only one thread is in the block at a time. Queue dot queue — thread-safe queue. Producer-consumer patterns. Built-in locking; just put and get. And threading dot event, condition, semaphore — higher-level primitives.
+
+The pythonic preference. Share data via queues, not by sharing state through locks. Easier to reason about, fewer ways to deadlock. Treat objects you pass to a queue dot put as transferred — do not keep mutating them after.
+
+In code, picture a producer-consumer with a queue. Q equals queue dot queue. Def producer puts five items with small sleeps, then a none sentinel. Def consumer loops, gets items, breaks on none. Start both threads, join both. The consumer prints each item.

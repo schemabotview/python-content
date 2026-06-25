@@ -1,0 +1,7 @@
+The end of the track.
+
+That is the language. You now have a working python toolchain from notebook one. The value, operator, and control-flow semantics from notebooks two and three. The container types and the comprehension shorthand from notebook four. Object-oriented python with classes and data-classes from notebook five. Errors, files, modules, and the import system from notebook six. Iteration, generators, decorators from notebook seven. Type hints and the style automation that keeps code legible from notebook eight. Concurrency — threads, processes, asyncio — and when to reach for each from notebook nine. Testing with py-test, plus the standard-library map, from this notebook.
+
+What comes next is applied — the libraries and frameworks that build on this foundation. Data work with pandas and num-py. Web services with fast-a-p-i. Machine learning with scikit-learn and py-torch. Data engineering with apache spark — the apache-spark repo bridges directly, py-spark uses the same python you have learned here.
+
+The shapes from this track — data-class records, optional or none-aware code, for-x-in-x-s over iterables, decorators around hot paths, fixtures around tests — show up in every python codebase you will touch.

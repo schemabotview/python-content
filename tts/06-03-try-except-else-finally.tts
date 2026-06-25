@@ -1,0 +1,7 @@
+Try-except-else-finally.
+
+The full shape. Try a risky block. Except value-error as e — ran if a value-error was raised, handle it. Except the tuple of key-error and index-error — multiple types in a tuple, one handler for any of them. Except exception as e — catch-all for any other exception, not base-exception, log it and re-raise. Else — ran if no exception was raised, cleanup after success. Finally — always runs, exception or not, close resources.
+
+The else clause is the part people miss. It runs only when the try block succeeded with no exception. The distinction matters because code in the try block that you did not expect to throw might raise an exception that you do not want to be caught by the same except handlers.
+
+In code, picture def parse-int taking a string. Try n equals int of s. Except value-error as e, print not an integer with the error, return none. Else, print parsed n, return n. Finally, print done with the input. Parse-int of forty-two prints the success and parsed; parse-int of x-y-z prints the error and the finally line.

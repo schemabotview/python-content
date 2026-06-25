@@ -1,0 +1,9 @@
+The conditional expression — x if condition else y.
+
+Python's ternary, but spelled inside-out compared to c. The whole thing is an expression — it produces a value, and you can use it wherever an expression is allowed.
+
+Grade equals pass if score greater-equal sixty else fail. The order reads naturally as english — pass, if the score is at least sixty, else fail.
+
+Use it for small two-way choices that fit on one line. For three or more branches, the full if-elif-else is clearer.
+
+In code, picture score equals seventy-three. Label equals pass if score greater-equal sixty else fail. Print label gives pass. Useful in expressions where statements do not fit — for example, list comprehensions. X-s equals a list of one through five. Labels equals a comprehension — even if x modulo two equals zero else odd, for x in x-s. The result is a list mixing even and odd labels.

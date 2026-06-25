@@ -1,0 +1,5 @@
+Pathlib — paths.
+
+Deep-dived in notebook six. The recap. Path of data slash users dot t-x-t composes with the slash operator. Read-text, write-text, read-bytes, write-bytes for content i-o. Exists, is-file, is-dir, mkdir with parents and exist-ok. Glob of star dot c-s-v, r-glob of double-star slash star dot p-y. Resolve, relative-to, parent, stem, suffix.
+
+Never use o-s dot path dot join. Always use pathlib dot path.

@@ -1,0 +1,9 @@
+Multiple inheritance and the method resolution order.
+
+Python supports multiple inheritance. When several base classes define the same method, lookup follows the method resolution order — python's c-three linearization, a deterministic ordering of all ancestor classes.
+
+Picture class a, class b of a, class c of a, class d of b and c. D dot greet returns b arrow c arrow a. The method resolution order of d is bracket d, b, c, a, object bracket. Python finds b's implementation first. B's greet calls super dot greet — which in the resolution order goes to c's greet. C's greet calls super dot greet — which goes to a's greet.
+
+The rule for the diamond. Every class appears exactly once, in an order that respects each parent's ordering and puts subclasses before their parents. You inspect the order with c-l-s dot dunder-m-r-o or c-l-s dot m-r-o.
+
+In code, picture the diamond. A, b of a, c of a, d of b and c. D dot dunder-m-r-o shows the linearization. D dot greet returns the chained b-arrow-c-arrow-a. The method resolution order is computed once, deterministically, at class creation time.

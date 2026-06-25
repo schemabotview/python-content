@@ -1,0 +1,7 @@
+Class decorators.
+
+A class decorator is the same idea applied to a class — takes a class in, returns a class out. At-dataclass is the standard-library example — it inspects the class's annotations and adds dunder-init, dunder-repr, dunder-eq, and friends.
+
+You will write your own occasionally — to register classes in a global table, to add common methods, to enforce some structure. Most of the time, at-dataclass-like decorators from libraries cover the use cases.
+
+In code, picture a class decorator that registers subclasses. Handlers equals an empty dict. Def register taking a name. Inner def wrap takes c-l-s, stores c-l-s in handlers under that name, returns c-l-s. At-register of click on class click-handler with a handle method. At-register of scroll on class scroll-handler. Now handlers maps the names to the classes. Handlers of click parens parens dot handle of button gives the click result.

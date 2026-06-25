@@ -1,0 +1,13 @@
+Modern alternatives — u-v, poetry, pip-tools.
+
+Venv plus pip plus requirements dot t-x-t is the lowest common denominator. As of 2026 there are better tools — slower to learn but worth knowing.
+
+U-v from astral — written in rust, ten to a hundred times faster than pip. Replaces venv, pip, pip-tools, and py-env in one binary. U-v venv then u-v pip install is the same workflow but faster. Strong recommendation for new projects.
+
+Poetry — full project manager. Uses py-project dot t-o-m-l for declared dependencies and poetry dot lock for resolved ones. Opinionated. Popular in libraries and modern services.
+
+Pip-tools — separates what you want, in requirements dot in, from what was resolved, in requirements dot t-x-t. Lower friction than poetry, more discipline than raw pip.
+
+Conda and mamba — the data-science and machine-learning standard. Manages both python and non-python dependencies like cuda, b-l-a-s, and native libraries. Reach for it when working with the scientific python stack or machine-learning frameworks.
+
+For this track, venv plus pip is enough. When you start a real project in 2026, default to u-v unless your team has already picked something else.

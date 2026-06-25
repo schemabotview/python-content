@@ -1,0 +1,7 @@
+Identity versus equality — is versus double-equals.
+
+The line to internalize. Double-equals — do these objects compare equal. Calls the equals method. The right tool for value comparison. Is — are these the same object. Checks object identity. The right tool for sentinels — is none, is true.
+
+Python caches small integers and short strings as a performance optimization — five is five happens to be true. Do not rely on this. It is an implementation detail. One thousand is one thousand may or may not be true depending on how the literals were parsed. The rule. Use double-equals for values, is only for none and the like.
+
+In code, picture a equals five, b equals five. A is b is true — small ints are cached. A equals-equals b is true — equal values. Then c equals one thousand, d equals one thousand. C is d could be true or false depending on context. C equals-equals d is always true. For containers, double-equals is element-wise equality. Two equal-looking lists compare equal with double-equals but are different objects, so is returns false.

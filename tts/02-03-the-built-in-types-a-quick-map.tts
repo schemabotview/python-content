@@ -1,0 +1,17 @@
+The built-in types — a quick map.
+
+The types you will meet in the first hour, organized by mutability and shape.
+
+Numeric types — int, float, complex, and bool. All immutable. Int literals can be decimal, binary with zero-b prefix, octal with zero-o, or hex with zero-x. Float literals like three point one four. Complex literals like three plus four j. Bool literals true and false.
+
+Text and binary types. String is immutable, written with single or double quotes, or as an f-string with f-quote. Bytes is immutable, written with b-quote. Bytearray is mutable, constructed from bytes.
+
+None — the no-value singleton. Its type is none-type.
+
+Sequence types — list, mutable, square brackets. Tuple, immutable, parentheses or just comma-separated. Range, immutable, range of n.
+
+Mapping type — dict, mutable, braces with key colon value.
+
+Set types — set, mutable, braces with just values. Frozenset, immutable.
+
+Notebook four covers the collection types properly. This notebook focuses on the scalar atomic types.

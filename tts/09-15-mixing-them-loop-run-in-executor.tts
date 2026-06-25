@@ -1,0 +1,9 @@
+Mixing them — loop dot run-in-executor.
+
+When you have an async program but need to call a blocking function — for example, a sync library — do not call it directly. That would block the event loop and freeze every coroutine. Instead, offload it to a thread, or process, with loop dot run-in-executor.
+
+Picture async def fetch-via-thread takes a u-r-l. Loop equals asyncio dot get-running-loop. Response equals await loop dot run-in-executor of none — meaning default executor, thread pool — then requests dot get and the u-r-l. Return response dot text.
+
+None for the executor means default thread pool. Pass a process-pool-executor if you need to offload c-p-u-bound work from an async server.
+
+The reverse direction — using asyncio from a thread — uses asyncio dot run-coroutine-threadsafe of coroutine and loop. Rare.

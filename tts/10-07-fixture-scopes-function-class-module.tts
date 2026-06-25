@@ -1,0 +1,9 @@
+Fixture scopes — function, class, module, session.
+
+By default, a fixture runs once per test that requests it — scope equals function. Sometimes setup is expensive — opening a database connection, starting a process. You do not want to pay that cost per test.
+
+At-py-test dot fixture with scope equals module runs the fixture once per module, reused by every test in that file. Scope equals session runs once for the entire py-test invocation.
+
+Fixtures can also yield instead of returning — code before the yield is setup, code after is teardown. Use it for cleanup.
+
+In code, picture three fixtures. Cheap-thing with default function scope. Expensive-connection with module scope — prints opening on first use, yields the connection, prints closing at module teardown. App-config with session scope — runs once for the whole pytest run.

@@ -1,0 +1,7 @@
+Mixins — composition via inheritance, done right.
+
+A mixin is a class designed to be inherited from in combination with others, providing a focused set of methods. Mixins usually do not have dunder-init and do not make sense on their own.
+
+The convention. Mixin class names end in mixin, or with an able suffix like comparable, iterable. The pattern shows up across the standard library and django.
+
+In code, picture serializable-mixin with a to-dict method that returns the instance's dunder-dict filtered to public keys. Printable-mixin with a show method that calls to-dict and prints each entry. Class user of serializable-mixin and printable-mixin, with dunder-init taking name and email. Construct u, call u dot to-dict and u dot show — both methods compose cleanly.

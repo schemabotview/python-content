@@ -1,0 +1,11 @@
+A decorator is a function that takes a function.
+
+The mental model. A decorator is just a higher-order function. It takes a function as input, returns a function as output. The at-decorator syntax above a def is sugar for — pass this function through decorator, rebind the name to the result.
+
+At-my-decorator on def f is exactly the same as def f followed by f equals my-decorator of f.
+
+That is it. Everything else is variations on this shape.
+
+The reason to use one — wrap a function with extra behaviour like logging, timing, caching, access control, retry — without modifying the function itself, and without writing the wrapper plumbing at every call site.
+
+In code, picture def log-calls taking func. Inner def wrapper takes star-args double-star-kwargs. Prints the call, runs func, prints the return, returns the result. Returns wrapper. At-log-calls on def add. Calling add of three and four prints both lines and returns seven. The at-log-calls above is exactly equivalent to assigning multiply equals log-calls of multiply after the def.

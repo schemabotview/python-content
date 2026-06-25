@@ -1,0 +1,13 @@
+The global interpreter lock — what it is.
+
+The global interpreter lock, or g-i-l, is a mutex inside c python that ensures only one thread executes python bytecode at a time. It exists because c python's memory management — reference counting — is not thread-safe; the lock protects every interpreter operation.
+
+What the g-i-l means in practice. Two threads can be scheduled by the operating system, but only one actually runs python at any instant. The other waits.
+
+The g-i-l is released during i-o — file reads, socket reads, time dot sleep, every blocking system call. Inside many c extensions like num-py, pandas, l-x-m-l when they enter native code. And periodically — every about five milliseconds by default — to let other threads make progress.
+
+The g-i-l is not released during pure-python c-p-u work. A tight loop computing primes in pure python serializes across threads.
+
+This single fact is why use-threads-to-make-my-python-code-faster is sometimes a great idea — for i-o — and sometimes a complete waste — for pure-python c-p-u work.
+
+Python three point thirteen plus has an experimental free-threaded build without the g-i-l. It is not yet the default; p-e-p seven oh three sets a multi-year migration. For now, assume the g-i-l exists.

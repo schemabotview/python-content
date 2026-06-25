@@ -1,0 +1,9 @@
+Dunder-init patterns.
+
+Dunder-init dot p-y runs when its package is first imported. Three common patterns.
+
+Empty — the file just marks the directory as a package. Most subpackages. Re-exports — from-dot-core-import-x-y-z so users can write from-my-project-import-x instead of from-my-project-dot-core-import-x. Common in the package root. And dunder-all — a list of names exported by from-package-import-star. Documentation, mostly; the modern bias is to not use star imports at all.
+
+Keep dunder-init dot p-y files small. Big logic in dunder-init runs on every import and is hard to debug.
+
+In code, picture my-project slash dunder-init dot p-y. From-dot-core import compute and normalize. From-dot-utils-dot-text import slugify. Set dunder-version to the project version. Set dunder-all to the public list.

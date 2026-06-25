@@ -1,0 +1,7 @@
+The basic shape — def test-foo.
+
+Py-test discovers any file matching test-underscore-star dot p-y, or star-underscore-test dot p-y. And any function or method matching test-underscore-star. The test passes if it does not raise. The simplest test is one line — def test-addition colon, assert one plus one equals two.
+
+When an assertion fails, py-test does not just print assertion-error. It introspects the expression and shows you what each side actually was. This is why plain assert is enough; no assert-equal needed.
+
+In code, picture what a test file looks like, in tests slash test-math dot p-y. Def test-addition asserts one plus one equals two. Def test-string-methods asserts hello dot upper equals capital hello. Def test-list-contains asserts two in a list. Def test-failure-introspection asserts that two unequal dicts are equal — would fail, and py-test would show the diff. You run with py-test from the project root. Or py-test tests slash test-math dot p-y for one file. Or py-test tests slash test-math dot p-y double-colon test-addition for one test.

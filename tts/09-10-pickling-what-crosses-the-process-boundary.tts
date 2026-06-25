@@ -1,0 +1,9 @@
+Pickling — what crosses the process boundary.
+
+Arguments to a process-pool task and its return value must be picklable. The standard library's pickle module handles most built-in types, but there are gotchas.
+
+Lambdas and local functions are not picklable. Use module-level functions. Open file handles, locks, threads are not picklable. Class instances must be defined at the module top level, not inside other functions.
+
+The size of pickled data also matters. Large payloads make process-pool fan-out expensive. For very small jobs, the pickling overhead can dominate. Batch small jobs into bigger ones, or use shared memory — multiprocessing dot shared-memory — for big arrays.
+
+The simplification. For numerical workloads, use num-py or numba-compiled code that releases the g-i-l instead of multiprocessing. You get parallelism inside a single process, with no pickling cost.

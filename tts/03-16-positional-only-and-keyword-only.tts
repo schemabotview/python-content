@@ -1,0 +1,19 @@
+Star-args collects any extra positional arguments into a tuple named args. Double-star-kwargs collects any extra keyword arguments into a dict named kwargs.
+
+The names args and kwargs are convention — what matters is the star and the double-star. You can rename them if it reads better in context.
+
+At the call site, the same star and double-star are used to unpack an existing iterable or dict into the parameter list.
+
+In code, picture def show-call taking a label, then star-args, then double-star-kwargs. Body prints the label, the args tuple, and the kwargs dict. Call it three ways — with extra positional, with mixed positional and keyword, with keyword only. Each prints the corresponding tuples and dicts.
+
+Unpacking at the call site. Def add taking a, b, c. Bind nums to a list of one, two, three. Add of star-nums passes the list as three positional arguments — returns six. Bind config to a dict mapping a, b, c to integers. Add of double-star-config passes the dict as three keyword arguments — returns the sum.
+
+Positional-only forward-slash and keyword-only star.
+
+Two markers that constrain how parameters can be passed.
+
+Forward-slash — every parameter before the slash is positional-only. Callers cannot pass them by name. Star — every parameter after the star is keyword-only. Callers must pass them by name.
+
+You use these to lock down an application programming interface. Keyword-only for rare configuration flags, forcing callers to spell out ssl equals true rather than passing a bare true. Positional-only for parameters whose names are implementation details you do not want to commit to.
+
+In code, picture def connect taking host, port, forward-slash, user, star, ssl with default false, timeout with default thirty. Host and port are positional-only. Ssl and timeout are keyword-only. Allowed — connect of db, fifty four thirty-two, ganesh. Connect of the same plus ssl equals true. Connect of the same with user as keyword and timeout sixty. Not allowed — passing host as a keyword, or passing ssl positionally.

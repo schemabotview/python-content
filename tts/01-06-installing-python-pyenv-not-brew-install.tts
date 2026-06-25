@@ -1,0 +1,11 @@
+Installing python — py-env, not brew install python.
+
+The mac default is to install python with homebrew, brew install python. This works for casual use but creates real problems the moment you have more than one project. Different projects need different python versions — three point ten here, three point twelve there. Upgrading the system python can break older projects that pinned a version. A new mac o-s release ships its own python that conflicts.
+
+The right tool is py-env, a python version manager. It installs each version side by side, lets you pin one per directory, and never touches the system python.
+
+The workflow. Brew install py-env. Py-env install of a specific version like three point twelve point four. Py-env global of that version to set it as the default. Or py-env local of that version inside a project directory to pin it just for that project — creates a dot python dash version file.
+
+Run python dash dash version and you should see the version you picked. Run which python and the path should be inside dot py-env, not slash usr slash bin or slash opt slash homebrew slash bin.
+
+If you have already used brew install python — it does no harm, but reach for py-env going forward and let the brew version stay where it is.

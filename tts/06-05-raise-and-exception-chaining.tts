@@ -1,0 +1,9 @@
+Raise and exception chaining.
+
+Raise raises an exception. Used three ways. Raise some-exception of message — raise a new exception. Raise alone, inside an except block — re-raise the current exception, preserving the traceback. Raise new-exception from original — raise a new exception, but link it to the cause via dunder-cause. The default printer shows both — this caused that.
+
+The from form is the right way to translate a low-level exception into a domain-level one without losing the original context.
+
+In code, picture re-raising. Def step calls int of x-y-z inside a try. Except value-error, print logging, then raise. At the top level, the value-error propagates with its original traceback intact.
+
+Chaining. Class config-error of exception. Def load-port takes a string. Try int of s. Except value-error as e, raise config-error of a custom message from e. The from clause attaches the original value-error as the cause. Calling load-port with a-b-c and catching config-error lets you read both the new message and the original cause via dunder-cause.

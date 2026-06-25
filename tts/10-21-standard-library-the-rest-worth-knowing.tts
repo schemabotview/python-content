@@ -1,0 +1,7 @@
+Standard library — the rest worth knowing.
+
+Brief pointers. Logging for structured logging — covered in notebook eight. Collections for default-dict, counter, named-tuple, ordered-dict — notebook four. Itertools for iterator combinators — notebook seven. Functools for cache, l-r-u-cache, partial, reduce, single-dispatch — notebooks seven and eight.
+
+O-s for environment variables and process info. For paths use pathlib instead. S-y-s for s-y-s dot argv, s-y-s dot exit, s-y-s dot path, s-y-s dot version-info. Subprocess for running external commands — subprocess dot run of a list of arguments with capture-output equals true. U-r-l-lib for basic hypertext transfer protocol; prefer requests for real work. C-s-v for read-write c-s-v files. S-q-lite three for a real s-q-l database in the standard library.
+
+Toml-lib for reading t-o-m-l since three point eleven; for writing use third-party tomli dash w. Dataclasses for typed records — notebook five. Enum for enumerations. Hash-lib for cryptographic hashes — s-h-a two fifty-six and friends. Secrets for crypto-safe random — for tokens and passwords. U-u-i-d for u-u-i-d generation. Decimal for exact decimal arithmetic — notebook two. Statistics for mean, median, standard deviation — for quick stats without num-py.

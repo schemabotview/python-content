@@ -1,0 +1,7 @@
+When not to write a class.
+
+A function is simpler than a class. Reach for a class only when you have a reason. The good reasons. The thing has state that survives across multiple operations. The thing has multiple operations that all share that state. The thing has identity — two with the same fields are not necessarily the same thing.
+
+The wrong reasons, which are signs you should write a function instead. I want to organize related functions — use a module. I want to attach configuration to a few methods — use a closure or functools dot partial. I want named arguments and a repr — use an at-dataclass, not a hand-written class. I want one of these — use a module-level constant or an at-dataclass frozen literal.
+
+The python idiom prefers the simplest tool that does the job. A function is simpler than a closure. A closure is simpler than a class. An at-dataclass is simpler than a hand-written class with dunder-init. Reach down the ladder only when you need more.

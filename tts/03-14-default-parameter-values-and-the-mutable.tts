@@ -1,0 +1,9 @@
+Default parameter values — and the mutable-default trap.
+
+A parameter can have a default value. Callers that omit it get the default.
+
+The trap. Default values are evaluated once, at function-definition time, not on every call. For immutable defaults — zero, none, empty string — this does not matter. For mutable defaults — empty list, empty dict, empty set — it matters a lot. The same list is reused across calls, and mutations stick.
+
+The fix. Default to none, then construct the mutable inside the body.
+
+In code, picture the wrong form. Def append-item-buggy taking item, with into equals an empty list as default. Body appends item to into and returns into. Call it three times with different items. You see one, then one-two, then one-two-three — the same list. The right form. Def append-item with into equals none. Inside, if into is none, into equals an empty list. Then append and return. Now each call gets a fresh list.

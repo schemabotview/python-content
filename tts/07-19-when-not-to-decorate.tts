@@ -1,0 +1,11 @@
+When not to decorate.
+
+The readability cliff. One call site — if a function is only called from one place, just write the wrapping logic inline. Decorators pay off when the same wrapping fires in many places.
+
+Behaviour that fundamentally changes the function's contract — a decorator that turns def f of x into something that takes different arguments will confuse every reader.
+
+Hidden state — a decorator that introduces global state, like caches or registries, makes test isolation harder. Be explicit about it.
+
+Order matters and is non-obvious — stacked decorators interact in ways that are not always intuitive. Keep stacks short.
+
+Decorators are a force multiplier when they capture a real cross-cutting concern — logging, timing, retry, caching. They are a footgun when used to clever-hide ordinary logic.

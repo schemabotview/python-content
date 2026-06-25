@@ -1,0 +1,5 @@
+Generators are memory-efficient.
+
+A generator produces values one at a time. Where a list comprehension materializes the entire result, a generator expression streams. This matters when the full sequence would not fit in memory. When you only need a prefix of the sequence — the generator stops being asked for values. When you are piping through several transformations — keeping them lazy means data flows through in chunks instead of building intermediate lists at each step.
+
+In code, picture reading a large file-like object line by line, counting those matching a condition. Def lines-containing takes a file and a needle. For line in file, if needle in line, yield the stripped line. Memory is constant regardless of file size. Loop over lines-containing for a million-line input, break after a few — total memory stays tiny.

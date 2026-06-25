@@ -1,0 +1,7 @@
+Yield — turning a function into a generator.
+
+Any function with a yield statement is a generator function. Calling it does not run the body — it returns a generator object. The body runs each time you advance the generator with next, pausing at each yield and resuming on the next next call.
+
+Picture def count-up of n, with i starting at zero, a while loop yielding i and incrementing. The body is paused state — local variables persist between calls, loops and conditionals continue from exactly where they left off. This is exactly what makes generators useful for representing streams — you can write iteration logic with normal control flow, and the runtime handles the suspend and resume.
+
+In code, picture count-up with print statements before and after the yield, so you see the suspend and resume. Calling g equals count-up of three does not run the body. Print g shows the generator object. The first next prints starting and about-to-yield-zero, then returns zero. The next next prints resumed-after-yield-zero, about-to-yield-one, returns one. And so on until the loop exits and stop-iteration fires.

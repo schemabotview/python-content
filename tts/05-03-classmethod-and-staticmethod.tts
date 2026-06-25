@@ -1,0 +1,7 @@
+At-classmethod and at-staticmethod.
+
+Three kinds of methods on a class. Instance method, first arg is self, operates on one instance. At-classmethod, first arg is c-l-s, operates on the class itself — factories, alternative constructors. At-staticmethod, no first arg, logically grouped with the class but uses no instance or class state.
+
+At-classmethod is the python idiom for alternative constructors. The standard library uses it constantly — dict dot from-keys, date-time dot from-timestamp, path dot c-w-d.
+
+In code, picture from date-time import date. Class person with dunder-init taking name and year-of-birth. Instance method age computes current year minus year of birth. Class method from-age takes name and age, and returns c-l-s constructed with the computed birth year — an alternative constructor. Static method is-adult takes age and returns age greater-equal eighteen — doesn't touch instance or class state. Instance call — p equals person of ganesh and nineteen ninety-five, then p dot age. Class method call — person dot from-age of alice and thirty. Static method call — person dot is-adult of seventeen returns false.

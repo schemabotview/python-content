@@ -1,0 +1,11 @@
+The python read eval print loop, i-python, and jupyter.
+
+Three ways to run python interactively, in order of feature richness.
+
+The python command with no arguments — the built-in read eval print loop. Spartan. No syntax highlighting, no tab completion of object attributes, no multi-line editing past the basics. Useful for a one-line check; not for exploration.
+
+I-python — installed via pip install i-python. Same python, much better front-end. Tab completion, syntax highlighting, question mark for inline help, two question marks for the source code, magic commands like percent time, percent timeit, percent run. Reach into the shell with the bang operator. The right default for command-line exploration.
+
+Jupyter notebooks — pip install jupyter, then jupyter lab. Web-based. Cells alternate between markdown and code. Outputs — text, tables, plots — render inline. The right tool for this track and for most exploratory data work.
+
+These notebooks you are reading are jupyter notebooks. The cells with code in them run in a jupyter kernel — a python interpreter listening for cell submissions.

@@ -1,0 +1,5 @@
+Walrus in a comprehension.
+
+The walrus operator shines inside comprehensions when you want to compute a value once and reuse it in both the filter and the projection.
+
+In code, picture this. Without walrus, result-one equals bracket math dot square-root of x for x in range of ten if math dot square-root of x greater-than one point five — the square root is computed twice per element. With walrus, result-two equals bracket y for x in range of ten if parens y walrus math dot square-root of x parens greater-than one point five — the square root is computed once, bound to y, and used in both the filter and the projection.

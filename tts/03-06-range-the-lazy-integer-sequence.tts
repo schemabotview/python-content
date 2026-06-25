@@ -1,0 +1,9 @@
+Range — the lazy integer sequence.
+
+Range produces integers without materializing a list. It is the right thing to use when you really do need a numeric loop.
+
+Range of n produces zero through n minus one. Range of start and stop produces start, start plus one, up to stop minus one. Range of start, stop, step produces step-spaced sequence.
+
+Range is lazy and memory-cheap — range of ten to the ninth allocates almost nothing. It is also indexable — range of ten at position three equals three — and has a length, l-e-n of range of ten equals ten.
+
+In code, picture for i in range of five, print i with end space. Then with start and stop — range of ten and fifteen prints ten through fourteen. Then with step — range of zero, twenty, three prints the step-three sequence. Negative step — range of ten, zero, negative one counts down. And range is cheap regardless of size. Bind huge to range of ten to the ninth. L-e-n of huge is a billion. Huge at position zero is zero. Huge at negative one is the last value.

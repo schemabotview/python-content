@@ -1,0 +1,7 @@
+Python dash i — the hybrid that is underused.
+
+Python dash i my-script dot p-y runs the script to completion and then drops you into a read eval print loop with everything the script defined still in scope. The fastest possible let-me-poke-at-this loop.
+
+Picture this. You run python dash i my-data-loader dot p-y. The script runs, and then the triple-greater-than prompt appears with d-f, my-function, and everything else still available. You can then poke at the loaded data interactively.
+
+This is the closest c python gets to the common lisp slime experience. Combined with i-python — i-python dash i my-script dot p-y — it is an underrated workflow.

@@ -1,0 +1,9 @@
+String — sequence of characters.
+
+String is also a sequence, but with so many string-specific methods that it deserves its own focus. Notebook two covered literals and f-strings. Here are the methods you will reach for daily.
+
+S dot split of separator splits on separator, defaulting to any whitespace. Separator dot join of iterable joins with separator as the joiner. S dot strip, l-strip, r-strip remove leading or trailing whitespace. S dot replace of old and new substitutes. S dot starts-with and ends-with test prefixes and suffixes. S dot upper, lower, title convert case. S dot find returns the first index or negative one. S dot index is the same but raises. S dot count counts non-overlapping occurrences. S dot format is older interpolation — prefer f-strings now. S dot split-lines splits on line endings.
+
+Strings are immutable — these all return new strings.
+
+In code, picture s equals the quick brown fox. S dot split gives the four-word list. S dot split with max-split equals one gives the two-piece list. Comma dot join of a list of strings gives the comma-joined form. Strip of a padded hello gives bare hello. Replace of hello with hi gives the substituted string. Starts-with of the returns true. Ends-with of fox returns true. Upper, title give the cased forms. Find of brown returns ten. Find of zebra returns negative one. Split plus join is a common transformation idiom — split a comma-separated string with extra whitespace, strip each part in a comprehension, then join with a pipe.

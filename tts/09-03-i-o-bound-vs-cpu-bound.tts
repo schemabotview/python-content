@@ -1,0 +1,13 @@
+I-o-bound versus c-p-u-bound.
+
+The single most useful question to ask before choosing a concurrency tool.
+
+I-o-bound — your program spends most of its time waiting on a network, a disk, a database, a subprocess. The c-p-u is mostly idle. Examples — a web scraper, an application programming interface client fanning out one hundred requests, a log shipper reading from disk.
+
+C-p-u-bound — your program spends most of its time computing in tight python loops, doing math, parsing strings. The c-p-u is pegged. Examples — image processing, simulation, anything number-crunchy that you wrote in pure python.
+
+For i-o-bound work, threads or asyncio both work. The program spends most of its time blocked on a system call, and the g-i-l is released during that block. Many things wait in parallel.
+
+For c-p-u-bound work, only processes give you real parallelism under the g-i-l. Threads will not help — they will fight over the g-i-l and run sequentially.
+
+How to know which one you have — profile it. Top shows your process at one hundred percent c-p-u on one core means c-p-u-bound. Stuck at ten percent c-p-u with high wall-clock time means i-o-bound.

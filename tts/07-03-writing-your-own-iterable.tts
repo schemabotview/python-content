@@ -1,0 +1,7 @@
+Writing your own iterable.
+
+To make your class iterable, give it a dunder-iter method that returns an iterator. The iterator must have a dunder-next method.
+
+You have two choices. Return self — make the class itself the iterator. Quick but single-pass. Return a separate iterator object — usually a generator from the next section. Cleaner; supports multiple concurrent iterations of the same container.
+
+In code, picture a long form. Class count-up takes n. Dunder-iter sets self dot i to zero and returns self. Dunder-next checks if i is past n, raises stop-iteration if so. Otherwise returns the current i and increments. For x in count-up of five prints zero through four. List of count-up of three works. Then the generator form — def count-up-gen of n, with a while loop that yields i and increments. Three lines instead of ten. List of count-up-gen of five gives the same result.

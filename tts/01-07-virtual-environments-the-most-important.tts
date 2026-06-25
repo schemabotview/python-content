@@ -1,0 +1,17 @@
+Virtual environments — the most important hygiene rule.
+
+A virtual environment, or venv, is an isolated python installation, scoped to one project. It contains its own python binary, usually a symlink back to the version py-env installed. Its own pip. And its own site-packages directory where installed libraries live.
+
+Why this matters. Without a venv, every pip install modifies your global python install. Project a wants requests version two point twenty-eight. Project b wants requests version two point thirty-two. You install one, the other breaks. The mess compounds. With a venv per project, each one has its own dependency closure and they cannot interfere.
+
+The rule. Every python project gets its own virtual environment, always, no exceptions.
+
+The standard library ships venv since python three point three. No install needed. Create and activate one with two commands.
+
+In code, picture this. Python dash m venv dot venv creates a venv in the dot venv directory — that is the convention. Source dot venv slash bin slash activate switches your shell into it. Confirm with which python and which pip — both should now point inside dot venv. Deactivate when you are done.
+
+What activation actually does. It prepends dot venv slash bin to your path, so when you type python you get the one in the venv instead of the system one. It also sets the virtual-env environment variable so tools like pip know which environment they are in. Nothing magic, and deactivate simply undoes it.
+
+Convention. Name the directory dot venv, with the leading dot, at the project root. Add dot venv slash to dot git-ignore — virtual environments are local and machine-specific, never committed.
+
+You will forget to activate. Everyone does. The symptom — pip install putting things in the wrong place, or import mysteriously failing. Always check which python if something is acting strange — that tells you which environment is in play.

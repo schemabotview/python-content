@@ -1,0 +1,7 @@
+Logging — print versus the logging module.
+
+Print is fine for scripts and notebooks. For anything that runs as a service, a job, or a library, use the logging module instead.
+
+Logging respects levels — debug, info, warning, error, critical. Filter by level in production. Logging includes timestamp, module, line. Print does not. Logging respects configuration — one config in your entry point routes log lines to standard error, a file, a structured-log shipper — without changing the call sites. Logging is composable across libraries. A library that does logger equals logging dot get-logger of dunder-name and logs to it lets the app decide where the logs go.
+
+In code, picture import logging. Logging dot basic-config with level equals logging dot info and a format string showing time, level, name, message. Logger equals logging dot get-logger of dunder-name — convention. Logger dot debug, info, warning, error — info and above print; debug is filtered out. Do not pre-format the message; let logging do it — logger dot info of a format string with percent-s and percent-d, then the arguments. This avoids work when the level filters the message out.

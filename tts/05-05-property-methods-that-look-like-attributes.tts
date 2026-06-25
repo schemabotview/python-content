@@ -1,0 +1,7 @@
+At-property — methods that look like attributes.
+
+At-property turns a method into a read-only attribute lookup. Callers write object dot value instead of object dot value with parens. The decorator binds an at-property dot setter and at-property dot deleter for the write and delete cases.
+
+The win. You can start with a plain attribute, later replace it with a property when you need validation or computation, and callers do not have to change. This is the python answer to java's getter and setter ceremony — write a plain attribute first, promote it to a property if and when you need to.
+
+In code, picture class temperature with dunder-init taking celsius — assigning to self dot celsius invokes the setter below. At-property def celsius returns self dot underscore-celsius. At-celsius dot setter def celsius takes a value, validates it is at or above absolute zero, and stores self dot underscore-celsius. At-property def fahrenheit computes on the fly from underscore-celsius — no setter, so it is read-only. From the outside, t dot celsius and t dot fahrenheit look like attribute access. Setting t dot celsius invokes the setter and validates. Setting to a value below absolute zero raises value-error.

@@ -1,0 +1,11 @@
+Protocol — structural typing.
+
+A protocol is python's answer to any class with these methods counts as one of these. It is structural — no inheritance needed; the type checker accepts any object whose shape matches.
+
+This is the typed version of duck typing. Iterable, sized, iterator, sequence, mapping in collections dot a-b-c are all protocols.
+
+Picture class greetable of protocol with abstract greet returning string. Def announce takes thing of type greetable, prints thing dot greet. Class cat — not a subclass of greetable — defines greet. Announce of cat works — cat structurally satisfies greetable.
+
+Use protocols when you want to type anything with these methods without forcing inheritance. They are the right modern answer instead of a-b-c for most interface cases.
+
+In code, picture two protocols — sized with dunder-len, hashable with dunder-hash. Def describe-size takes thing of type sized, returns the size string. Any object with dunder-len works — list, string, dict — no inheritance needed. A custom class inventory implementing only dunder-len also works.

@@ -1,0 +1,9 @@
+Nested comprehensions.
+
+Comprehensions can have multiple for clauses, and if guards anywhere. The leftmost for is the outer loop; the rightmost is the inner. The order is as you would write it as nested loops.
+
+Pairs equals bracket the tuple x, y for x in one, two, three for y in a, b bracket. Equivalent to a nested for loop appending to a list.
+
+Up to two levels of nesting is usually still readable. Past that, switch to explicit loops — the comprehension becomes write-only.
+
+In code, picture the cartesian product. Pairs equals bracket parens x, y parens for x in one through three for y in a, b — gives six pairs. Flatten a list of lists — flat equals bracket n for row in matrix for n in row. Transpose a matrix — comprehension over zip of star matrix gives the columns. Filter on the inner loop — even-pairs equals all parens x, y parens where x plus y is even.

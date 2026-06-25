@@ -1,0 +1,9 @@
+My-py and py-right — the checkers.
+
+The runtime never checks annotations. A separate tool does. My-py — dropbox's checker. The original. Strong, mature, sometimes slow on large codebases. Py-right — microsoft's checker. Fast, what v-s code's python extension uses under the hood. Stricter defaults than my-py. Pyre — meta's checker. Less common outside that orbit. Ruff — primarily a linter and formatter, but ships with type-checking integration now.
+
+Usage is the same in shape — my-py source slash, py-right source slash. Add to continuous integration so type regressions block merge.
+
+Configuration goes in py-project dot t-o-m-l. Bracket tool dot my-py bracket with strict equals true and python-version equals three point twelve. Bracket tool dot py-right bracket with type-checking-mode equals strict and python-version equals three point twelve.
+
+For new projects, start strict. Loosening later is harder than tightening from the beginning.

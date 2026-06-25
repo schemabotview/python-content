@@ -1,0 +1,9 @@
+Pip and requirements dot t-x-t.
+
+Pip is python's package installer. With your venv active, pip install of a package downloads from the python package index and installs into the venv's site-packages.
+
+The dependency-declaration convention for simple projects is requirements dot t-x-t — one package per line, with optional version pins. The standard workflow. Pip install of a package, then pip freeze redirected into requirements dot t-x-t records exact versions. On another machine, or after blowing away the venv, pip install dash r requirements dot t-x-t recreates the same environment.
+
+Pip freeze writes every installed package and its exact version, including transitive dependencies. That is good for reproducing an environment exactly. For declaring what your project actually needs, modern projects prefer to list direct dependencies in py-project dot t-o-m-l and let a tool like pip-tools or u-v resolve the rest.
+
+In code, picture a typical project setup from scratch. Make a new project directory and change into it. Py-env local of three point twelve point four. Python dash m venv dot venv to create the venv. Source the activate script. Pip install of requests, py-test, pandas. Pip freeze redirected to requirements dot t-x-t. Then verify with python dash dash version, which python, and pip list.

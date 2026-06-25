@@ -1,0 +1,9 @@
+For-else and while-else — the loop's else clause.
+
+Python lets you attach an else block to a for or while loop. The else runs only if the loop completed normally — not if it exited via break.
+
+The natural use is search; if not found, do this. For x in x-s, if matches of x, process and break. Else — only runs if the loop did not break — handle the not-found case.
+
+This shape divides opinion. Some pythonistas love it as a concise search idiom. Others find it confusing because else does not usually mean if not broken. If your team is not familiar with it, prefer a flag variable or a function with early return.
+
+In code, picture target equals seven. List of integers. For x in x-s, if x equals target, print found and break. Else, print target not in list.

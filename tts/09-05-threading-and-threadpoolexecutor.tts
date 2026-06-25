@@ -1,0 +1,7 @@
+Threading and thread-pool-executor.
+
+The low-level application programming interface is the threading module. The high-level application programming interface — and what you should reach for in most code — is concurrent dot futures dot thread-pool-executor, which manages a pool of worker threads and gives you a submit, as-completed, and map interface.
+
+The pattern. Submit functions, get back future objects, collect results.
+
+In code, picture def slow-i-o taking a name and seconds. Body prints starting, sleeps for the duration — which releases the g-i-l — prints done, returns a result string. Sequential — three slow-i-o calls — total time equals the sum of the sleeps. Threaded — with thread-pool-executor of max-workers four, submit all three, collect results — total time approximately equals the maximum of the sleeps. Three concurrent sleeps complete in roughly the time of one.

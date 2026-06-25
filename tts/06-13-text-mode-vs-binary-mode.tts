@@ -1,0 +1,9 @@
+Text mode versus binary mode.
+
+Text mode operates on string. Lines are split on newlines; line endings are normalized to backslash-n regardless of platform. Decoded and encoded using the specified encoding.
+
+Binary mode operates on bytes. No newline translation, no encoding. Use for images, executables, anything non-text — and for text files when you need byte-exact control.
+
+You cannot mix them — opening a binary file with the r text mode will eventually fail on something that is not valid u-t-f eight.
+
+In code, picture writing binary — open with w-b, write the bytes of a six-byte sequence. Then read binary — open with r-b, f dot read returns the raw bytes. Print the hex representation.

@@ -1,0 +1,5 @@
+Naming conventions.
+
+Modules and packages use lowercase-with-underscores, like my-module or data-pipeline. Classes use cap-words, like user-account or j-s-o-n-parser. Functions, methods, variables use lowercase-with-underscores, like find-user or total-count. Constants use uppercase-with-underscores, like max-retries or default-timeout. Internal-use names get a single leading underscore, like underscore-helper. Name-mangled names get a double leading underscore, like double-underscore-secret — rare, mostly for class internals. Dunder names have double underscores on both sides, like dunder-init or dunder-repr — reserved for python.
+
+The most common violation is title-case methods because the writer came from java. Run ruff once and it becomes a non-issue.

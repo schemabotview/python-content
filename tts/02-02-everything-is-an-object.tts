@@ -1,0 +1,7 @@
+Everything is an object.
+
+Every value in python — the number forty-two, the string hello, a list, a function you defined, the int type itself, the module you imported — is an object. Objects have three things. An identity, a unique number you can see with i-d of x. Effectively the memory address in c python. A type, visible with type of x. Lives in the object's header. And a value — the actual data.
+
+Functions, classes, and modules are objects too. You can pass a function as an argument, assign a class to a variable, store modules in a dictionary. This makes a lot of python idioms feel natural — decorators in notebook seven are just functions taking other functions; metaclasses are classes whose instances are classes themselves.
+
+In code, picture x equals forty-two. I-d of x gives some integer, the object's identity. Type of x gives class int. Then a function — def greet of name returns f-string hi name. Type of greet gives class function. Greet dot name dash dash returns the string greet. Bind my-alias equals greet — functions can be assigned to variables. Call my-alias of ganesh and you get hi ganesh. And types themselves are objects. Type of int gives class type. Int by itself prints as class int — the type object. A list of types is perfectly valid — bind numeric-types to list of int, float, complex, then loop and call each one with zero.

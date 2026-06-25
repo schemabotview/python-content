@@ -1,0 +1,11 @@
+Async versus threads — when each fits.
+
+Both work for i-o-bound concurrency. The decision rule.
+
+Use threads when the libraries you call are blocking — most of the standard library, requests, j-d-b-c drivers, classic database clients. When you have hundreds of concurrent operations. When you need to call into c-extension code that may block. When you want incremental adoption — sprinkling threads here and there.
+
+Use asyncio when the libraries are async-native — h-t-t-p-x, aiohttp, asyncpg, aioredis. When you have thousands or more of concurrent operations. When you are writing servers, web crawlers, message-queue consumers. When you are starting from scratch and can commit to async-throughout.
+
+The color problem. In asyncio, every function in the call chain that wants to await must itself be async def. You cannot call an await from a sync function. This bifurcates your codebase — sync functions and async functions form two near-disjoint sets. Adopting asyncio incrementally is painful. Adopting threads incrementally is easy.
+
+For new services with available async libraries — asyncio wins on raw concurrency. For existing codebases — threads usually slot in with less rewrite.
