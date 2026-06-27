@@ -8,8 +8,8 @@
       "status": "built"
     },
     {
-      "id": "python-anatomy",
-      "title": "Python — Anatomy",
+      "id": "python-model",
+      "title": "Python — Model",
       "status": "built"
     }
   ],
@@ -179,11 +179,11 @@
       "id": "02-values-types-operators-expressions",
       "title": "Values, Types, Operators & Expressions",
       "notebook": "notebooks/02-values-types-operators-expressions.ipynb",
-      "defaultScene": "python-anatomy",
+      "defaultScene": "python-model",
       "sections": [
         {
           "heading": "The big shift — variables are names",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "role": "hook",
           "highlight": [
@@ -197,7 +197,7 @@
         },
         {
           "heading": "Everything is an object",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-value",
@@ -210,7 +210,7 @@
         },
         {
           "heading": "The built-in types — a quick map",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-type",
@@ -223,7 +223,7 @@
         },
         {
           "heading": "Numeric types — int, float, Decimal, Fraction, complex",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-t-prim-int",
@@ -236,7 +236,7 @@
         },
         {
           "heading": "Strings — Unicode by default, immutable",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-t-prim-str",
@@ -249,7 +249,7 @@
         },
         {
           "heading": "`None` — and the `is None` rule",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-t-optional"
@@ -261,7 +261,7 @@
         },
         {
           "heading": "Arithmetic operators",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-value-primitive"
@@ -273,7 +273,7 @@
         },
         {
           "heading": "Comparison operators and chain comparisons",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-ctrl-bool"
@@ -285,7 +285,7 @@
         },
         {
           "heading": "Boolean operators and short-circuit evaluation",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-ctrl-bool"
@@ -297,7 +297,7 @@
         },
         {
           "heading": "Identity vs equality — `is` vs `==`",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-mem-stack",
@@ -310,7 +310,7 @@
         },
         {
           "heading": "Truthiness — what counts as false",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-ctrl-if"
@@ -322,7 +322,7 @@
         },
         {
           "heading": "Mutable vs immutable — the property that explains aliasing",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-mem-heap",
@@ -335,7 +335,7 @@
         },
         {
           "heading": "Type conversion — explicit only",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-type"
@@ -347,7 +347,7 @@
         },
         {
           "heading": "The walrus operator `:=`",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-ctrl-walrus"
@@ -359,7 +359,7 @@
         },
         {
           "heading": "Operator precedence — the table you bookmark",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-value-primitive"
@@ -375,11 +375,11 @@
       "id": "03-control-flow-and-functions",
       "title": "Control Flow & Functions",
       "notebook": "notebooks/03-control-flow-and-functions.ipynb",
-      "defaultScene": "python-anatomy",
+      "defaultScene": "python-model",
       "sections": [
         {
           "heading": "Part 1 — Control Flow",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "role": "hook",
           "highlight": [
@@ -393,7 +393,7 @@
         },
         {
           "heading": "`if` / `elif` / `else`",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-ctrl-if"
@@ -405,7 +405,7 @@
         },
         {
           "heading": "The conditional expression — `x if cond else y`",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-ctrl-tern"
@@ -417,7 +417,7 @@
         },
         {
           "heading": "`while` loops",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-loop-while"
@@ -429,7 +429,7 @@
         },
         {
           "heading": "`for` loops — and what they actually do",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-loop-for"
@@ -441,7 +441,7 @@
         },
         {
           "heading": "`range()` — the lazy integer sequence",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-loop-for"
@@ -453,7 +453,7 @@
         },
         {
           "heading": "`break` and `continue`",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-loop-break"
@@ -465,7 +465,7 @@
         },
         {
           "heading": "`for-else` and `while-else` — the loop's `else` clause",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-loop-break"
@@ -477,7 +477,7 @@
         },
         {
           "heading": "`match` / `case` — structural pattern matching (3.10+)",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-match",
@@ -491,7 +491,7 @@
         },
         {
           "heading": "`pass` — the no-op statement",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-ctrl-if"
@@ -503,7 +503,7 @@
         },
         {
           "heading": "Part 2 — Functions",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-fn"
@@ -515,7 +515,7 @@
         },
         {
           "heading": "`def` — the basic shape",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-fn-def"
@@ -527,7 +527,7 @@
         },
         {
           "heading": "Positional vs keyword arguments",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-fn-def"
@@ -539,7 +539,7 @@
         },
         {
           "heading": "Default parameter values — and the mutable-default trap",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-fn-varargs",
@@ -552,7 +552,7 @@
         },
         {
           "heading": "`*args` and `**kwargs` — variable-length parameters",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-fn-varargs"
@@ -564,7 +564,7 @@
         },
         {
           "heading": "Positional-only `/` and keyword-only `*`",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-fn-def"
@@ -576,7 +576,7 @@
         },
         {
           "heading": "`lambda` — small anonymous functions",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-fn-def",
@@ -589,7 +589,7 @@
         },
         {
           "heading": "Scopes — LEGB lookup",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-mem-stack"
@@ -601,7 +601,7 @@
         },
         {
           "heading": "Closures — capturing state in a function",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-value-fn",
@@ -614,7 +614,7 @@
         },
         {
           "heading": "First-class functions",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-value-fn"
@@ -626,7 +626,7 @@
         },
         {
           "heading": "Docstrings and `help()`",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-fn-def"
@@ -642,11 +642,11 @@
       "id": "04-collections-and-comprehensions",
       "title": "Collections & Comprehensions",
       "notebook": "notebooks/04-collections-and-comprehensions.ipynb",
-      "defaultScene": "python-anatomy",
+      "defaultScene": "python-model",
       "sections": [
         {
           "heading": "Part 1 — Sequences",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "role": "hook",
           "highlight": [
@@ -659,7 +659,7 @@
         },
         {
           "heading": "The sequence protocol",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-loop-for"
@@ -671,7 +671,7 @@
         },
         {
           "heading": "`list` — the mutable workhorse",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-value-container"
@@ -683,7 +683,7 @@
         },
         {
           "heading": "Indexing and slicing",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-value-container"
@@ -695,7 +695,7 @@
         },
         {
           "heading": "Unpacking — the `*` in assignment and literals",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-ctx-unpack",
@@ -708,7 +708,7 @@
         },
         {
           "heading": "`tuple` — the immutable cousin",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-value-container"
@@ -720,7 +720,7 @@
         },
         {
           "heading": "`str` — sequence of characters",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-t-prim-str"
@@ -732,7 +732,7 @@
         },
         {
           "heading": "Part 2 — Keyed collections",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-value-container"
@@ -744,7 +744,7 @@
         },
         {
           "heading": "`dict` — the mapping workhorse",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-comp-dict",
@@ -757,7 +757,7 @@
         },
         {
           "heading": "Updating dicts — `update`, `setdefault`, the `|` merge",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-value-container"
@@ -769,7 +769,7 @@
         },
         {
           "heading": "`collections` — the specialized containers",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-value-container"
@@ -781,7 +781,7 @@
         },
         {
           "heading": "`set` and `frozenset`",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-comp-set",
@@ -794,7 +794,7 @@
         },
         {
           "heading": "Hashability — what makes a key valid",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-mem-heap-type"
@@ -806,7 +806,7 @@
         },
         {
           "heading": "Part 3 — Comprehensions",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-comp"
@@ -818,7 +818,7 @@
         },
         {
           "heading": "List comprehensions — the shape",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-comp-list"
@@ -830,7 +830,7 @@
         },
         {
           "heading": "Set and dict comprehensions",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-comp-set",
@@ -843,7 +843,7 @@
         },
         {
           "heading": "Generator expressions — the parenthesized cousin",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-comp-gen"
@@ -855,7 +855,7 @@
         },
         {
           "heading": "Nested comprehensions",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-comp-list"
@@ -867,7 +867,7 @@
         },
         {
           "heading": "Walrus in a comprehension",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-ctrl-walrus",
@@ -880,7 +880,7 @@
         },
         {
           "heading": "When NOT to comprehensionify",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-comp"
@@ -896,11 +896,11 @@
       "id": "05-oop",
       "title": "Object-Oriented Programming",
       "notebook": "notebooks/05-oop.ipynb",
-      "defaultScene": "python-anatomy",
+      "defaultScene": "python-model",
       "sections": [
         {
           "heading": "`class` — the basic shape",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "role": "hook",
           "highlight": [
@@ -913,7 +913,7 @@
         },
         {
           "heading": "Instance attributes vs class attributes",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-mem-heap-val"
@@ -925,7 +925,7 @@
         },
         {
           "heading": "`@classmethod` and `@staticmethod`",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-fn-deco"
@@ -937,7 +937,7 @@
         },
         {
           "heading": "Visibility — convention, not enforcement",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-name"
@@ -949,7 +949,7 @@
         },
         {
           "heading": "`@property` — methods that look like attributes",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-fn-deco"
@@ -961,7 +961,7 @@
         },
         {
           "heading": "`@dataclass` — boilerplate-free data records",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-fn-deco",
@@ -974,7 +974,7 @@
         },
         {
           "heading": "`NamedTuple` — the typed tuple alternative",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-value-container",
@@ -987,7 +987,7 @@
         },
         {
           "heading": "Inheritance — `class Sub(Base):` and `super()`",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-oop-mammal",
@@ -1000,7 +1000,7 @@
         },
         {
           "heading": "Multiple inheritance and the MRO",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-oop-animal",
@@ -1014,7 +1014,7 @@
         },
         {
           "heading": "Mixins — composition via inheritance, done right",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-oop-walker"
@@ -1026,7 +1026,7 @@
         },
         {
           "heading": "Abstract base classes",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-oop-animal",
@@ -1039,7 +1039,7 @@
         },
         {
           "heading": "Dunder methods — the protocol catalog",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-fn-def"
@@ -1051,7 +1051,7 @@
         },
         {
           "heading": "`__slots__` — the memory and speed knob",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-mem-heap",
@@ -1064,7 +1064,7 @@
         },
         {
           "heading": "`isinstance`, `issubclass`, and the duck-typing alternative",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-t-protocol",
@@ -1077,7 +1077,7 @@
         },
         {
           "heading": "When NOT to write a class",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-value-fn"
@@ -1093,11 +1093,11 @@
       "id": "06-errors-files-modules",
       "title": "Errors, Files & Modules",
       "notebook": "notebooks/06-errors-files-modules.ipynb",
-      "defaultScene": "python-anatomy",
+      "defaultScene": "python-model",
       "sections": [
         {
           "heading": "Part 1 — Errors",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "role": "hook",
           "highlight": [
@@ -1110,7 +1110,7 @@
         },
         {
           "heading": "The exception hierarchy",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-ret-raise"
@@ -1122,7 +1122,7 @@
         },
         {
           "heading": "`try` / `except` / `else` / `finally`",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-ret-raise"
@@ -1134,7 +1134,7 @@
         },
         {
           "heading": "Catching exceptions",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-ret-raise"
@@ -1146,7 +1146,7 @@
         },
         {
           "heading": "`raise` and exception chaining",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-ret-raise"
@@ -1158,7 +1158,7 @@
         },
         {
           "heading": "Custom exception classes",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-ret-raise",
@@ -1171,7 +1171,7 @@
         },
         {
           "heading": "EAFP vs LBYL",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-ret-raise"
@@ -1183,7 +1183,7 @@
         },
         {
           "heading": "The `with` statement and context managers",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-ctx-with"
@@ -1195,7 +1195,7 @@
         },
         {
           "heading": "Writing your own context manager",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-ctx-with"
@@ -1207,7 +1207,7 @@
         },
         {
           "heading": "`ExceptionGroup` and `except*` — 3.11+",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-ret-raise"
@@ -1219,7 +1219,7 @@
         },
         {
           "heading": "Part 2 — Files",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-ctx-with"
@@ -1231,7 +1231,7 @@
         },
         {
           "heading": "`open()` — the basics",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-ctx-with"
@@ -1243,7 +1243,7 @@
         },
         {
           "heading": "Text mode vs binary mode",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-ctx-with"
@@ -1255,7 +1255,7 @@
         },
         {
           "heading": "`pathlib.Path` — use this, not `os.path`",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-value-object"
@@ -1267,7 +1267,7 @@
         },
         {
           "heading": "Temporary files and directories",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-ctx-with"
@@ -1371,11 +1371,11 @@
       "id": "07-iterators-generators-decorators",
       "title": "Iterators, Generators & Decorators",
       "notebook": "notebooks/07-iterators-generators-decorators.ipynb",
-      "defaultScene": "python-anatomy",
+      "defaultScene": "python-model",
       "sections": [
         {
           "heading": "Part 1 — Iteration",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "role": "hook",
           "highlight": [
@@ -1388,7 +1388,7 @@
         },
         {
           "heading": "The iteration protocol",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-loop-for"
@@ -1400,7 +1400,7 @@
         },
         {
           "heading": "Writing your own iterable",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-loop-for",
@@ -1413,7 +1413,7 @@
         },
         {
           "heading": "Iterators are single-pass",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-loop-for"
@@ -1425,7 +1425,7 @@
         },
         {
           "heading": "`itertools` — the standard library's iterator toolbox",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-comp-gen"
@@ -1437,7 +1437,7 @@
         },
         {
           "heading": "Part 2 — Generators",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-loop-yield",
@@ -1450,7 +1450,7 @@
         },
         {
           "heading": "`yield` — turning a function into a generator",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-loop-yield",
@@ -1463,7 +1463,7 @@
         },
         {
           "heading": "Generators are memory-efficient",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-comp-gen",
@@ -1476,7 +1476,7 @@
         },
         {
           "heading": "`yield from` — delegating to another iterable",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-loop-yield"
@@ -1488,7 +1488,7 @@
         },
         {
           "heading": "Modeling pipelines as chained generators",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-comp-gen",
@@ -1501,7 +1501,7 @@
         },
         {
           "heading": "Two-way generators — `.send()`, `.throw()`, `.close()`",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-loop-yield"
@@ -1513,7 +1513,7 @@
         },
         {
           "heading": "Part 3 — Decorators",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-fn-deco"
@@ -1525,7 +1525,7 @@
         },
         {
           "heading": "A decorator is a function that takes a function",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-fn-deco",
@@ -1538,7 +1538,7 @@
         },
         {
           "heading": "`functools.wraps` — preserve metadata",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-fn-deco"
@@ -1550,7 +1550,7 @@
         },
         {
           "heading": "Decorators that take arguments — the three-level shape",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-fn-deco"
@@ -1562,7 +1562,7 @@
         },
         {
           "heading": "Class decorators",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-fn-deco",
@@ -1575,7 +1575,7 @@
         },
         {
           "heading": "Stacking decorators",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-fn-deco"
@@ -1587,7 +1587,7 @@
         },
         {
           "heading": "Common standard-library decorators",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-fn-deco"
@@ -1599,7 +1599,7 @@
         },
         {
           "heading": "When NOT to decorate",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-fn-deco"
@@ -1615,11 +1615,11 @@
       "id": "08-type-hints-and-best-practices",
       "title": "Type Hints & Best Practices",
       "notebook": "notebooks/08-type-hints-and-best-practices.ipynb",
-      "defaultScene": "python-anatomy",
+      "defaultScene": "python-model",
       "sections": [
         {
           "heading": "Part 1 — Type hints",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "role": "hook",
           "highlight": [
@@ -1632,7 +1632,7 @@
         },
         {
           "heading": "The promise — and what they don't do",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-type"
@@ -1644,7 +1644,7 @@
         },
         {
           "heading": "The basics — primitives, collections, callables",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-t-prim",
@@ -1658,7 +1658,7 @@
         },
         {
           "heading": "`Optional[T]`, `T | None`, and union types",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-t-optional"
@@ -1670,7 +1670,7 @@
         },
         {
           "heading": "`Literal[...]` — exact set of allowed values",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-t-custom"
@@ -1682,7 +1682,7 @@
         },
         {
           "heading": "`TypedDict` — typed dictionaries",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-t-generic"
@@ -1694,7 +1694,7 @@
         },
         {
           "heading": "`Protocol` — structural typing",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-t-protocol"
@@ -1706,7 +1706,7 @@
         },
         {
           "heading": "Generic functions and classes",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-t-generic",
@@ -1719,7 +1719,7 @@
         },
         {
           "heading": "`Any`, `cast`, and `# type: ignore` — escape hatches",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-type"
@@ -1731,7 +1731,7 @@
         },
         {
           "heading": "`mypy` and `pyright` — the checkers",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-type"
@@ -1743,7 +1743,7 @@
         },
         {
           "heading": "Part 2 — Best practices",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-name"
@@ -1755,7 +1755,7 @@
         },
         {
           "heading": "PEP 8 and the tools that automate it",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-name"
@@ -1767,7 +1767,7 @@
         },
         {
           "heading": "Naming conventions",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-name"
@@ -1779,7 +1779,7 @@
         },
         {
           "heading": "Import sorting and grouping",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-value-module"
@@ -1791,7 +1791,7 @@
         },
         {
           "heading": "Project layout — the `src/` layout",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-value-module"
@@ -1803,7 +1803,7 @@
         },
         {
           "heading": "`__init__.py` patterns",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-value-module"
@@ -1815,7 +1815,7 @@
         },
         {
           "heading": "Logging — `print` vs `logging`",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-ret-mutate"
@@ -1827,7 +1827,7 @@
         },
         {
           "heading": "Configuration — environment variables, `.env` for development",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-value-module"
@@ -1839,7 +1839,7 @@
         },
         {
           "heading": "Performance — measure before you optimize",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-mem-heap"
@@ -1851,7 +1851,7 @@
         },
         {
           "heading": "Style choices that age well",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-name"
@@ -2105,11 +2105,11 @@
       "id": "10-testing-with-pytest",
       "title": "Testing with pytest & the Standard Library",
       "notebook": "notebooks/10-testing-with-pytest.ipynb",
-      "defaultScene": "python-anatomy",
+      "defaultScene": "python-model",
       "sections": [
         {
           "heading": "Part 1 — Pytest",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "role": "hook",
           "highlight": [
@@ -2122,7 +2122,7 @@
         },
         {
           "heading": "Why pytest",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-ret-value"
@@ -2134,7 +2134,7 @@
         },
         {
           "heading": "The basic shape — `def test_foo():`",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-fn-def"
@@ -2146,7 +2146,7 @@
         },
         {
           "heading": "Discovery — where pytest looks",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-value-module"
@@ -2158,7 +2158,7 @@
         },
         {
           "heading": "`pytest.raises` — testing for exceptions",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-ret-raise"
@@ -2170,7 +2170,7 @@
         },
         {
           "heading": "Fixtures — `@pytest.fixture`",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-fn-deco"
@@ -2182,7 +2182,7 @@
         },
         {
           "heading": "Fixture scopes — `function`, `class`, `module`, `session`",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-fn-deco"
@@ -2194,7 +2194,7 @@
         },
         {
           "heading": "Built-in fixtures — `tmp_path`, `monkeypatch`, `capsys`, `caplog`",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-ctx-with"
@@ -2206,7 +2206,7 @@
         },
         {
           "heading": "Parametrization — one test, many inputs",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-fn-deco"
@@ -2218,7 +2218,7 @@
         },
         {
           "heading": "Markers — skip, xfail, custom",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-fn-deco"
@@ -2230,7 +2230,7 @@
         },
         {
           "heading": "`conftest.py` — sharing fixtures",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-value-module"
@@ -2242,7 +2242,7 @@
         },
         {
           "heading": "Mocking — `unittest.mock` and `monkeypatch`",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-ret-mutate"
@@ -2254,7 +2254,7 @@
         },
         {
           "heading": "Test coverage — `pytest-cov`",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-ret-value"
@@ -2266,7 +2266,7 @@
         },
         {
           "heading": "CI integration — what to run, what to gate on",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-ret-value"
@@ -2278,7 +2278,7 @@
         },
         {
           "heading": "Part 2 — Standard library essentials",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-value-module"
@@ -2290,7 +2290,7 @@
         },
         {
           "heading": "`datetime` — dates, times, durations, time zones",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-value-object"
@@ -2302,7 +2302,7 @@
         },
         {
           "heading": "`pathlib` — paths",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-value-object"
@@ -2314,7 +2314,7 @@
         },
         {
           "heading": "`json` — read and write JSON",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "highlight": [
             "pa-value-container"
@@ -2326,7 +2326,7 @@
         },
         {
           "heading": "`re` — regular expressions",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-t-prim-str"
@@ -2338,7 +2338,7 @@
         },
         {
           "heading": "`argparse` — command-line arguments",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-value-module"
@@ -2350,7 +2350,7 @@
         },
         {
           "heading": "Standard library — the rest worth knowing",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": false,
           "highlight": [
             "pa-value-module"
@@ -2362,7 +2362,7 @@
         },
         {
           "heading": "The end of the track",
-          "scene": "python-anatomy",
+          "scene": "python-model",
           "spine": true,
           "audio": "audio/10-22-the-end-of-the-track.wav"
         }
